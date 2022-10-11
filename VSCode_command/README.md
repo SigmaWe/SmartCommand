@@ -6,7 +6,7 @@ To reproduce the same result (on macOS, the steps on Windows/Linux could be a bi
 
 1. Download and install the latest Visual Studo Code, the version that I use is `1.72.0`;
 1. Open the VS Code Palette by `view->Command Palette`;
-2. In the palette, search `open default keyboard shortcuts`, then a file will open;
+2. In the palette, search `Open Default Keyboard Shortcuts (JSON)`, then a file will open;
 3. Copy and paste all the contents into `raw_commands.txt`;
 4. Run `python3 clean_command.py`, it will return `cleaned_commands.txt`.
 
