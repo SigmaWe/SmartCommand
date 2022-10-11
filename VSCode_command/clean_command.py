@@ -5,6 +5,7 @@ with open('raw_commands.txt') as f:
     lines = f.read()
 f.close()
 
+# test regex: https://regex101.com/
 # regex1 extracts those commands that have a key with it
 regex1 = '(?<="command": ")([a-zA-Z0-9\.]*)'
 # regex2 extracts those commands that have no key with it
