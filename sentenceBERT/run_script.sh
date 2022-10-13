@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
 #SBATCH --mem=8G
-#SBATCH --time=00:01:00
+#SBATCH --time=00:20:00
 
 module load ml-gpu
 cd /work/LAS/cjquinn-lab/zefuh/text2command/text2command/sentenceBERT
