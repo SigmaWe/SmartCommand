@@ -30,11 +30,13 @@ def semantic_search(query:str, documents:typing.List[str], embedder, number_of_m
 
 
 f = open(os.path.join(FOLDER, FILE_NAME),'r')
-commands = [this_command for this_command in f.readlines()]
+commands = []
+for this_command in f.readlines():
+    this_command = this_command.split('.')[-1].split('_')
+    this_command = " ".join(this_command)
+    commands.append(this_command)
 f.close()
 for this_query in NL_COMMANDS:
-    this_query = this_query.split('.')[-1].split('_')
-    this_query = ' '.join(this_query)
     print(f"Current command:{this_query}")
     _ = semantic_search(this_query, commands, embedder, number_of_matches=5)
     print('-'*80)
