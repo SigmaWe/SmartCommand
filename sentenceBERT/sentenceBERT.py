@@ -24,7 +24,7 @@ def semantic_search(query:str, documents:typing.List[str], embedder, number_of_m
     top_matching_documents = [(documents[idx], score) for score, idx in zip(top_matches[0], top_matches[1]) ]
 
     for document, score in top_matching_documents:
-        print (document.ljust(80, "-"), " {:.2f}% match".format(score*100))
+        print (document.ljust(40, "-"), " {:.2f}% match".format(score*100))
 
     return top_matching_documents
 
