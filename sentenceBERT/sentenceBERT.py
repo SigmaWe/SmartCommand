@@ -32,7 +32,7 @@ def semantic_search(query:str, documents:typing.List[str], embedder, number_of_m
 f = open(os.path.join(FOLDER, FILE_NAME),'r')
 VS_COMMANDS = []
 for this_command in f.readlines():
-    this_command = this_command.split('.')[-1].split('_')
+    this_command = this_command.strip().split('.')[-1].split('_')
     this_command = " ".join(this_command)
     VS_COMMANDS.append(this_command)
 f.close()
