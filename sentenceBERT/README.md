@@ -2,7 +2,11 @@
 
 This folder aims to achieve the text to command using the EMNLP2019 paper [sentenceBERT](https://arxiv.org/abs/1908.10084). I will use the associated implemented package [SentenceTransformers](https://www.sbert.net/).
 
-I also borrow a lot of code from [Dr. Bao's NLP class](https://github.com/forrestbao/pebble/blob/master/NLP/semantic_search.ipynb)
+I also borrow a lot of code from [Dr. Bao's NLP class](https://github.com/forrestbao/pebble/blob/master/NLP/semantic_search.ipynb).
+
+The code is tested on Pronto, if you want to run the code on your local machine, after installing the package above, in the current folder, run
+
+`python sentenceBERT.py`
 
 # Sample text commands:
 
