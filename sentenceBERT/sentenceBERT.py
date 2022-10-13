@@ -5,7 +5,7 @@ import typing
 
 embedder = sentence_transformers.SentenceTransformer('all-MiniLM-L6-v2')
 
-def semantic_search(query:str, documents:typing.List[str], nembedder, umber_of_matches = 5):
+def semantic_search(query:str, documents:typing.List[str], embedder, number_of_matches = 5):
     """Search a list of _documents_ against a query
     """
 
@@ -29,5 +29,7 @@ documents = [
     "We love ramen.",
     "Suits is what we wear and our favorite show."      
 ]
-_ = query = "U.S.A."
+query = "U.S.A."
+
+_ = semantic_search(query, documents, embedder, number_of_matches=len(documents))
 
