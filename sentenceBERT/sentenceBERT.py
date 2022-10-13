@@ -1,4 +1,11 @@
-def semantic_search(query:str, documents:typing.List[str], number_of_matches = 5):
+import torch
+import sentence_transformers
+import typing
+
+
+embedder = sentence_transformers.SentenceTransformer('all-MiniLM-L6-v2')
+
+def semantic_search(query:str, documents:typing.List[str], nembedder, umber_of_matches = 5):
     """Search a list of _documents_ against a query
     """
 
@@ -14,4 +21,13 @@ def semantic_search(query:str, documents:typing.List[str], number_of_matches = 5
 
     return top_matching_documents
 
+documents = [
+    "We helped Alibaba go IPO in the U.S.",
+    "We defended our clients in the United States.",
+    "We have practiced laws for 20 years in America.", 
+    "We have offices in California, Delaware, and Iowa.",
+    "We love ramen.",
+    "Suits is what we wear and our favorite show."      
+]
+_ = query = "U.S.A."
 
