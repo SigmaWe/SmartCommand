@@ -14,6 +14,9 @@ The VS Code Palette has the associated built-in commands but will not return cor
 4. `close all windows` <> `close window`;
 
 # Result:
+
+The result is also in the `log` file.
+
 ```
 Current command:preview markdown file
 change to markdown----------------------  66.02% match
