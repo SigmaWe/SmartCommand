@@ -1,7 +1,14 @@
 import torch
 import sentence_transformers
 import typing
+import os
 
+FOLDER = '../VSCode_command/'
+FILE_NAME = 'cleaned_commands.txt'
+NL_COMMANDS = ['preview markdown file',
+               'open another VS code',
+               'create an empty file',
+               'close all windows']
 
 embedder = sentence_transformers.SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -21,15 +28,13 @@ def semantic_search(query:str, documents:typing.List[str], embedder, number_of_m
 
     return top_matching_documents
 
-documents = [
-    "We helped Alibaba go IPO in the U.S.",
-    "We defended our clients in the United States.",
-    "We have practiced laws for 20 years in America.", 
-    "We have offices in California, Delaware, and Iowa.",
-    "We love ramen.",
-    "Suits is what we wear and our favorite show."      
-]
-query = "U.S.A."
 
-_ = semantic_search(query, documents, embedder, number_of_matches=len(documents))
-
+f = open(os.path.join(FOLDER, FILE_NAME),'r')
+commands = [this_command for this_command in f.readlines()]
+f.close()
+for this_query in NL_COMMANDS:
+    this_query = this_query.split('.')[-1].split('_')
+    this_query = ' '.join(this_query)
+    print(f"Current command:{this_query}")
+    _ = semantic_search(this_query, commands, embedder, number_of_matches=5)
+    print('-'*80)
