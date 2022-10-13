@@ -2,13 +2,11 @@
 
 This folder aims to achieve the text to command using the EMNLP2019 paper [sentenceBERT](https://arxiv.org/abs/1908.10084). I will use the associated implemented package [SentenceTransformers](https://www.sbert.net/).
 
-I also borrow a lot of code from
-
-[Dr. Bao's NLP class](https://github.com/forrestbao/pebble/blob/master/NLP/semantic_search.ipynb)
+I also borrow a lot of code from [Dr. Bao's NLP class](https://github.com/forrestbao/pebble/blob/master/NLP/semantic_search.ipynb)
 
 # Sample text commands:
 
-The VS Code Palette has the associated built-in commands but will not return correct built-in commands if using the following sample natural search:
+The VS Code Palette has the associated built-in commands but will not return correct built-in commands if using the following sample natural language search:
 
 1. `preview markdown file` <> `Markdown Open Preview`;
 2. `open another VS code` <> `New Window`;
