@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Query Collection
+    </title>
+</head>
+
+<body>
+  <main id="main">
+    <div class="container" align="center">
+
+      <h1>Welcome to the VSCode command search queries collection server!</h1>
+      <p>Thank you so much for joining us!</p> 
+      <p>If you have any questions, please contact Zefu Hu at <strong>zefuh@iastate.edu</strong></p>
+      <br>
+      <p>Please enter whatever queries you want VSCode to search in the box below:</p>
+      
+      <form id="query">
+        <textarea name = "inputquery" id="inputquery" rows="5" cols="30" required>e.g. preview the markdown file</textarea>
+        <br>
+        <button id="searchquery">Search</button>
+      </form>
+    </div>
+    
+    <div id="narration" align="center">
+      <p style="display:inline">The response by the model is:</p>
+    </div>
+
+    <div id="responseField" align="center" style="display:none">
+      <br>
+      <p style="display:inline"><strong>SentenceBERT</strong></p>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <p style="display:inline"><strong>BERTScore</strong></p>
+      <br>
+      <input type="radio" id="SentenceBERTpred1" name="SentenceBERTprediction">
+      <label for="SentenceBERTpred1"></label>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <input type="radio" id="BERTScorePred1" name="BERTScorePrediction">
+      <label for="BERTScorePred1"></label>
+      <br>
+      <input type="radio" id="SentenceBERTpred2" name="SentenceBERTprediction">
+      <label for="SentenceBERTpred2"></label>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <input type="radio" id="BERTScorePred2" name="BERTScorePrediction">
+      <label for="BERTScorePred2"></label>
+      <br>
+      <input type="radio" id="SentenceBERTpred3" name="SentenceBERTprediction">
+      <label for="SentenceBERTpred3"></label>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <input type="radio" id="BERTScorePred3" name="BERTScorePrediction">
+      <label for="BERTScorePred3"></label>
+      <br>
+      <input type="radio" id="SentenceBERTpred4" name="SentenceBERTprediction">
+      <label for="SentenceBERTpred4"></label>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <input type="radio" id="BERTScorePred4" name="BERTScorePrediction">
+      <label for="BERTScorePred4"></label>
+      <br>
+      <input type="radio" id="SentenceBERTpred5" name="SentenceBERTprediction">
+      <label for="SentenceBERTpred5"></label>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <input type="radio" id="BERTScorePred5" name="BERTScorePrediction">
+      <label for="BERTScorePred5"></label>
+      <br>
+      <input type="radio" id="SentenceBERTNone" name="SentenceBERTprediction">
+      <label for="SentenceBERTNone">None of above</label>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      <input type="radio" id="BERTScorePredNone" name="BERTScorePrediction">
+      <label for="BERTScorePredNone">None of above</label>
+      <br>
+      <p>Please try to search using the above predictions in VSCode command palette and select the one that best describs the result.</p>
+      <p>You can open it by: <strong>Ctrl+Shift+P</strong> (Windows/Liux) or <strong>Command+Shift+P</strong> (MacOS)</p>
+      <button id="confirmGT">Submit the ground truth</button>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
