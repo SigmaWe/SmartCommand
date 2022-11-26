@@ -24,11 +24,11 @@ def splitCommand(commands):
 # regex1 extracts those commands that have a key with it
 regex1 = '(?<="command": ")([a-zA-Z0-9\.]*)'
 # regex2 extracts those commands that have no key with it
-regex2 = '(?<=\/\/ - )([a-zA-Z0-9\.]*)'
+# regex2 = '(?<=\/\/ - )([a-zA-Z0-9\.]*)'
 commands_1st_half = re.findall(regex1, lines)
-commands_2nd_half = re.findall(regex2, lines)
+# commands_2nd_half = re.findall(regex2, lines)
 cleaned_commands_1st_half = splitCommand(commands_1st_half)
-cleaned_commands_2nd_half = splitCommand(commands_2nd_half)
+# cleaned_commands_2nd_half = splitCommand(commands_2nd_half)
 
 clean_command_file_name = "cleaned_commands.txt"
 try:
@@ -39,6 +39,6 @@ except OSError:
 with open(clean_command_file_name,'a') as f:
     for this_command in cleaned_commands_1st_half:
         f.write(f"{this_command}\n")
-    for this_command in cleaned_commands_2nd_half:
-        f.write(f"{this_command}\n")
+    # for this_command in cleaned_commands_2nd_half:
+    #     f.write(f"{this_command}\n")
 f.close()
