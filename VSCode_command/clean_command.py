@@ -10,7 +10,7 @@ def splitCommand(commands):
     for this_command in commands:
         splited_command = this_command.split('.')
         this_cleaned_command = re.split('(?=[A-Z])',splited_command[-1])
-        this_cleaned_command = [this_str.lower() for this_str in this_cleaned_command]
+        this_cleaned_command = [this_str for this_str in this_cleaned_command]
         this_cleaned_command = '_'.join(this_cleaned_command)
         if len(splited_command) > 1:
             splited_command[-1] = this_cleaned_command
