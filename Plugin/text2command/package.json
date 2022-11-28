@@ -1,0 +1,70 @@
+{
+  "name": "text2command",
+  "displayName": "text2command",
+  "description": "Search for command smartly",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:text2command.NLPSearch"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "text2command.NLPSearch",
+        "title": "NLPSearch"
+      }
+    ],
+    "keybindings": [
+      {
+          "command": "text2command.NLPSearch",
+          "key": "ctrl+alt+q",
+          "mac": "shift+cmd+q"
+      }
+    ],
+      "configuration": [
+        {
+          "id": "configuration",
+          "title": "text2command",
+          "order": 2,
+          "properties": {
+            "conf.data.collection": {
+              "type": "boolean",
+              "default": false,
+              "description": "Enable/disable the user feedback data collection."
+            }
+          }
+        }
+      ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.72.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.24.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "publisher": "SigmaWe"
+}
