@@ -14,69 +14,69 @@ async function SingleStepSearch() {
     //const allCommands = await vscode.commands.getCommands(true);
     const query = await vscode.window.showInputBox();
     const [id, response] = await main(query);
-    /*
-    const result1 = await window.showQuickPick(response, {
-        placeHolder: 'Select a command for the first model.',
+    const result = await vscode_1.window.showQuickPick(response, {
+        placeHolder: 'Select a command.',
         //onDidSelectItem: item => window.showInformationMessage(`Focus ${++i} option: ${item}`)
     });
+    /*
     const result2 = await window.showQuickPick(response, {
         placeHolder: 'Select a command for the second model.',
         //onDidSelectItem: item => window.showInformationMessage(`Focus ${++i} option: ${item}`)
     });
-    const selection_id1 = response1.indexOf(result1);
-    const selection_id2 = response2.indexOf(result2);
-    if (typeof result1 == 'string' && typeof result2 == 'string'){
+    */
+    vscode.commands.executeCommand(result);
+    const selection_id = response.indexOf(result);
+    const collection_flag = vscode.workspace.getConfiguration().get('conf.data.collection');
+    //const selection_id2 = response2.indexOf(result2);
+    if (typeof result == 'string' && collection_flag) {
         const confirm = await fetch('https://querycollection-app.icymeadow-3b7ab52d.centralus.azurecontainerapps.io/updatequery/', {
             method: 'PUT',
-            body: JSON.stringify([{'id':id, 'selection': selection_id1},{'id':id, 'selection': selection_id2}]),
-            headers: {'accept': 'application/json', 'Content-Type': 'application/json'}
-          }).then((confirm: any) => confirm.json());
-        if (confirm[id].status==1){
-            window.showInformationMessage(`Finish uploading feedback. Thank you!`);
-        }else{
-            window.showInformationMessage(`The data collection failed. Please try again.`);
-        }
-    }
-    else
-    {
-        window.showInformationMessage(`Do not skip the selection! Try again please.`);
-    }
-    */
-    const collection_flag = vscode.workspace.getConfiguration().get('conf.data.collection');
-    const decision = await vscode.window.showInformationMessage(`Do you want to execute function ${response}?`, ...['YES', 'CANCEL']).then(selection => {
-        if (selection === 'YES') {
-            vscode.commands.executeCommand(response);
-            return 1;
+            body: JSON.stringify([{ 'id': id, 'selection': result }]),
+            headers: { 'accept': 'application/json', 'Content-Type': 'application/json' }
+        }).then((confirm) => confirm.json());
+        if (confirm[id].status == 1) {
+            vscode_1.window.showInformationMessage(`Finish uploading feedback. Thank you!`);
         }
         else {
-            return 0;
-        }
-    });
-    if (collection_flag) {
-        if (decision) {
-            const selection = await vscode.window.showInformationMessage(`Is this what you want?`, ...['YES', 'NO']).then(selection => {
-                if (selection === 'YES') {
-                    return 0;
-                }
-                else {
-                    return 1;
-                }
-            });
-            const confirm = await fetch('https://querycollection-app.icymeadow-3b7ab52d.centralus.azurecontainerapps.io/updatequery/', {
-                method: 'PUT',
-                body: JSON.stringify([{ 'id': id, 'selection': selection }]),
-                headers: { 'accept': 'application/json', 'Content-Type': 'application/json' }
-            }).then((confirm) => confirm.json());
-            if (confirm[id].status == 1) {
-                vscode_1.window.showInformationMessage(`Finish uploading feedback. Thank you!`);
-            }
-            else {
-                vscode_1.window.showInformationMessage(`The data collection failed. Please try again.`);
-            }
-            ;
+            vscode_1.window.showInformationMessage(`The data collection failed. Please try again.`);
         }
     }
-    ;
+    /*
+    const decision = await vscode.window.showInformationMessage(`Do you want to execute function ${response}?`, ...['YES', 'CANCEL']).then(selection => {
+        if (selection === 'YES')
+        {
+            vscode.commands.executeCommand(response);
+            return 1 as const;
+        }else
+        {
+            return 0 as const;
+        }
+    });
+    if (collection_flag){
+    if (decision){
+    const selection = await vscode.window.showInformationMessage(`Is this what you want?`, ...['YES', 'NO']).then(selection => {
+        if (selection === 'YES')
+        {
+            return 0 as const;
+        }
+        else
+        {
+            return 1 as const;
+        }
+    });
+    const confirm = await fetch('https://querycollection-app.icymeadow-3b7ab52d.centralus.azurecontainerapps.io/updatequery/', {
+        method: 'PUT',
+        body: JSON.stringify([{'id':id, 'selection': selection}]),
+        headers: {'accept': 'application/json', 'Content-Type': 'application/json'}
+      }).then((confirm: any) => confirm.json());
+    if (confirm[id].status==1){
+        window.showInformationMessage(`Finish uploading feedback. Thank you!`);
+    }else{
+        window.showInformationMessage(`The data collection failed. Please try again.`);
+    };
+    }
+    };
+    */
 }
 exports.SingleStepSearch = SingleStepSearch;
 ;
@@ -91,10 +91,10 @@ async function main(query) {
         headers: { 'accept': 'application/json', 'Content-Type': 'application/json' }
     }).then((response) => response.json());
     if (typeof response.BERTScore !== 'undefined') {
-        return [response.BERTScore.id, response.BERTScore.first_pred];
+        return [response.BERTScore.id, response.BERTScore.predictions];
     }
     else if (typeof response.sentenceBERT !== 'undefined') {
-        return [response.sentenceBERT.id, response.sentenceBERT.first_pred];
+        return [response.sentenceBERT.id, response.sentenceBERT.predictions];
     }
 }
 exports.main = main;
