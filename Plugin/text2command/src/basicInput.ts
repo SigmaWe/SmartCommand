@@ -13,21 +13,24 @@ export async function SingleStepSearch() {
 	//const allCommands = await vscode.commands.getCommands(true);
 	const query = await vscode.window.showInputBox();
 	const [id, response] = await main(query);
-	/*
-	const result1 = await window.showQuickPick(response, {
-		placeHolder: 'Select a command for the first model.',
+
+	const result = await window.showQuickPick(response, {
+		placeHolder: 'Select a command.',
 		//onDidSelectItem: item => window.showInformationMessage(`Focus ${++i} option: ${item}`)
 	});
+	/*
 	const result2 = await window.showQuickPick(response, {
 		placeHolder: 'Select a command for the second model.',
 		//onDidSelectItem: item => window.showInformationMessage(`Focus ${++i} option: ${item}`)
 	});
-	const selection_id1 = response1.indexOf(result1);
-	const selection_id2 = response2.indexOf(result2);
-	if (typeof result1 == 'string' && typeof result2 == 'string'){
+	*/
+	const selection_id = response.indexOf(result);
+	const collection_flag = vscode.workspace.getConfiguration().get('conf.data.collection');
+	//const selection_id2 = response2.indexOf(result2);
+	if (typeof result == 'string' && collection_flag){
 		const confirm = await fetch('https://querycollection-app.icymeadow-3b7ab52d.centralus.azurecontainerapps.io/updatequery/', {
 			method: 'PUT', 
-			body: JSON.stringify([{'id':id, 'selection': selection_id1},{'id':id, 'selection': selection_id2}]),
+			body: JSON.stringify([{'id':id, 'selection': result}]),
 			headers: {'accept': 'application/json', 'Content-Type': 'application/json'}
 		  }).then((confirm: any) => confirm.json());
 		if (confirm[id].status==1){
@@ -36,13 +39,8 @@ export async function SingleStepSearch() {
 			window.showInformationMessage(`The data collection failed. Please try again.`);
 		}
 	}
-	else
-	{
-		window.showInformationMessage(`Do not skip the selection! Try again please.`);
-	}
-	*/
-	const collection_flag = vscode.workspace.getConfiguration().get('conf.data.collection');
 
+	/*
 	const decision = await vscode.window.showInformationMessage(`Do you want to execute function ${response}?`, ...['YES', 'CANCEL']).then(selection => {
 		if (selection === 'YES')
 		{
@@ -77,6 +75,7 @@ export async function SingleStepSearch() {
 	};
 	}	
 	};
+	*/
 };
 
 export async function main(query: any) {
@@ -91,11 +90,11 @@ export async function main(query: any) {
   }).then((response: any) => response.json());
   if (typeof response.BERTScore !== 'undefined')
   {
-	return [response.BERTScore.id, response.BERTScore.first_pred] as const;
+	return [response.BERTScore.id, response.BERTScore.predictions] as const;
   }
   else if (typeof response.sentenceBERT !== 'undefined')
   {
-	return [response.sentenceBERT.id, response.sentenceBERT.first_pred] as const;
+	return [response.sentenceBERT.id, response.sentenceBERT.predictions] as const;
   }
 }
 /*
