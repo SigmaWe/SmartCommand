@@ -7,7 +7,6 @@ Make sure you have Node.js and Git installed, then install Yeoman and VS Code Ex
 
 `npm install -g yo generator-code`
 
-Then download the folder Plugin as zip from (git repo)[https://github.com/SigmaWe/text2command/tree/main/Plugin] and unzip it.
 
 ## Run the plugin locally
 
