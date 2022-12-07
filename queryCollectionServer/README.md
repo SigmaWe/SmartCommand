@@ -3,7 +3,7 @@ This folder means to collect queries for VSCode smart/fuzzy command search plugi
 
 # How to develop locally?
 
-The query collection server and the plug-in itself can and should be developed separately,
+The query collection server and the plug-in can and should be developed separately,
 so this README file will focus on how to set up and develop the query collection server locally.
 
 1. Download and install the latest docker desktop from [the docker website](https://www.docker.com/products/docker-desktop/)
@@ -31,7 +31,7 @@ export RUNNING_IN_PRODUCTION=1
 
 4. Finally, start the docker desktop, in this folder, run `docker compose up`
 
-5. After the server is up, you can go to http://127.0.0.1:8000/docs to test your API. If you need more details about this API,
+5. After the server is up, you can go to http://127.0.0.1:8000/docs to test the API. If you need more details about this API,
 please refer to [FastAPI](https://fastapi.tiangolo.com/)
 
 6. To access the database, you can use your favorite DB managment system and connect to the `Postgres SQL` using the following info:
