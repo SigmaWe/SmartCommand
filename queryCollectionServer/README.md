@@ -1,5 +1,5 @@
 # QueryCollection
-This folder means to collect queries for VSCode text2command plugin development
+This folder means to collect queries for VSCode smart/fuzzy command search plugin
 
 # How to develop locally?
 
