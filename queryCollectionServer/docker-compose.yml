@@ -2,17 +2,7 @@ version: "3.8"
 
 
 services:
-  # window:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #   ports:
-  #   - 30:30
-  #   volumes:
-  #   - ./frontend:/fronted
-  #   depends_on:
-  #   - model
-
+  
   model:
     build:
       context: ./backend
