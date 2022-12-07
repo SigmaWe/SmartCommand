@@ -41,4 +41,5 @@ HOST: pgsql
 DB: database
 USERNAME: service
 PASSWORD: password
+PORT: 54320
 ```
