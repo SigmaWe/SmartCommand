@@ -34,7 +34,7 @@ export RUNNING_IN_PRODUCTION=1
 5. After the server is up, you can go to http://127.0.0.1:8000/docs to test the API. If you need more details about this API,
 please refer to [FastAPI](https://fastapi.tiangolo.com/)
 
-6. To access the database, you can use your favorite DB managment system and connect to the `Postgres SQL` using the following info:
+6. To access the database, open your favorite DB managment system and connect to the `Postgres SQL` using the following info:
 
 ```
 HOST: localhost
