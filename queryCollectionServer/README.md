@@ -29,7 +29,7 @@ export RUNNING_IN_PRODUCTION=1
 # export LOCAL_PASSWORD=password
 ```
 
-4. Finally, open the docker desktop, in this folder, run `docker compose up`
+4. Finally, start the docker desktop, in this folder, run `docker compose up`
 
 5. After the server is up, you can go to http://127.0.0.1:8000/docs to test your API. If you need more details about this API,
 please refer to [FastAPI](https://fastapi.tiangolo.com/)
