@@ -37,7 +37,7 @@ please refer to [FastAPI](https://fastapi.tiangolo.com/)
 6. To access the database, you can use your favorite DB managment system and connect to the `Postgres SQL` using the following info:
 
 ```
-HOST: pgsql
+HOST: localhost
 DB: database
 USERNAME: service
 PASSWORD: password
