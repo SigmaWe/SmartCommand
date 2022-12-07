@@ -1,0 +1,39 @@
+version: "3.8"
+
+
+services:
+  # window:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #   - 30:30
+  #   volumes:
+  #   - ./frontend:/fronted
+  #   depends_on:
+  #   - model
+
+  model:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+    - 8000:8000
+    volumes:
+    - ./backend:/backend
+    depends_on:
+    - pgsql
+  
+  pgsql:
+    image: postgres:15
+    ports:
+      - 54320:5432
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+    environment:
+      - POSTGRES_USER=service
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database
+
+volumes:
+  pgdata:
