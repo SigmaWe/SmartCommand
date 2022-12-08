@@ -45,7 +45,7 @@ PORT: 54320
 ```
 
 P.S. You don't need the plugin to test the API. But if you want
-to test whether the plugin works correctly or not, you need to change the API address to:
+to test whether the plugin works correctly or not locally, you need to change the API address to:
 
 ```
 Create query: http://127.0.0.1:8000/createquery/
