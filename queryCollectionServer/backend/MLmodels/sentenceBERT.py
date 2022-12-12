@@ -8,12 +8,18 @@ from .helper import recover_command, FOLDER, FILE_NAME
 
 embedder = sentence_transformers.SentenceTransformer('all-MiniLM-L6-v2')
 
+
+def pre_embedding(embedder,vs_commands):
+    document_embeddings = embedder.encode(vs_commands, convert_to_tensor=True)
+    torch.save(document_embeddings, os.path.join(FOLDER, 'command_embedding.pt'))
+
+
 def semantic_search(query:str, documents:typing.List[str], embedder, number_of_matches = 50):
     """Search a list of _documents_ against a query
     """
-
     query_embedding = embedder.encode(query, convert_to_tensor=True)
-    document_embeddings = embedder.encode(documents, convert_to_tensor=True)
+    # document_embeddings = embedder.encode(documents, convert_to_tensor=True)
+    document_embeddings = torch.load(os.path.join(FOLDER, 'command_embedding.pt'))
     cos_scores = sentence_transformers.util.cos_sim(query_embedding, document_embeddings)[0]
     top_matches = torch.topk(cos_scores, k=number_of_matches)
     

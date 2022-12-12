@@ -4,11 +4,12 @@ from typing import List, Dict
 from sqlalchemy.orm import Session
 from database import Sessionlocal, engine
 from fastapi.middleware.cors import CORSMiddleware
-from MLmodels.sentenceBERT import sentenceBERT
+from MLmodels.sentenceBERT import sentenceBERT, pre_embedding, embedder, VS_COMMANDS_FULL
 from MLmodels.BERTScore import BERTScore
 from MLmodels.helper import recover_command, FOLDER,FILE_NAME
 import random
 import contextlib
+import os
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -49,7 +50,8 @@ def fake_model(query: str) -> dict:
     # fake_prediction_SentenceBERT = ['this_is_prediction1','this_is_prediction2','this_is_prediction3',
     #                     'this_is_prediction4','this_is_prediction5']
     # predictions = {"BERTScore":fake_prediction_BERTScore,"sentenceBERT":fake_prediction_SentenceBERT}
-    model_name = random.choice(['BERTScore','sentenceBERT'])
+    # model_name = random.choice(['BERTScore','sentenceBERT'])
+    model_name = 'sentenceBERT'
     if model_name == 'BERTScore':
         model_predictions = BERTScore(query,50)
     elif model_name == 'sentenceBERT':
@@ -61,6 +63,10 @@ def fake_model(query: str) -> dict:
 
 @app.on_event("startup")
 async def startup_event():
+    if not os.path.isfile(os.path.join(FOLDER, 'command_embedding.pt')):
+        print("Pre-embed the commands for sentence BERT:")
+        pre_embedding(embedder,VS_COMMANDS_FULL)
+    pre_embedding(embedder,VS_COMMANDS_FULL)
     with get_db_wrapper() as db:
         commands_needed = recover_command(FOLDER,FILE_NAME)
         commands_have = crud.count_command(db)
