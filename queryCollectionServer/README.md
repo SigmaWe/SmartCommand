@@ -11,7 +11,7 @@ so this README file will focus on how to set up and develop the query collection
 2. Start the docker desktop, in this folder, run `docker compose up`
 
 3. After the server is up, go to http://127.0.0.1:8000/docs to test the API. If you need more details about the API,
-please refer to [FastAPI](https://fastapi.tiangolo.com/)
+please refer to [FastAPI](https://fastapi.tiangolo.com/) in general and `API_doc.docx` for this specific project.
 
 4. To access the database, open your favorite DB managment system and connect to the `Postgres SQL` using the following info:
 
