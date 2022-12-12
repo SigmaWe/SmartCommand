@@ -24,10 +24,10 @@ PORT: 54320
 ```
 
 P.S. You don't need the plugin to test the API. But if you want
-to test whether the plugin works correctly or not locally, you need to change the API address in the plugin to:
+to test whether the plugin works correctly or not locally, you need to change the API address in the plugin as follows:
 
-```
-Create query: http://127.0.0.1:8000/createquery/
-Update query: http://127.0.0.1:8000/updatequery/
-```
-Please refer to the `API_doc.docx` for more details.
+Replace the [createURL](https://github.com/SigmaWe/text2command/blob/f71fc51bc3b4105fbb02c3abb7ba5de2e6ac98f7/Plugin/text2command/src/basicInput.ts#L83) with `http://127.0.0.1:8000/createquery/`
+
+Replace the [updateURL](https://github.com/SigmaWe/text2command/blob/main/Plugin/text2command/src/basicInput.ts#L32) with `http://127.0.0.1:8000/updatequery/`
+
+For how those two URL works, please refer to the `API_doc.docx` for more details.
