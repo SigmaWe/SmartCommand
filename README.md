@@ -1,5 +1,7 @@
 # text2command
 
+The VSCode extension is available at the VSCode Market named `smart command`.
+
 ## Instruction on the building scaffolding package locally
 
 ### Prepare required software and files
