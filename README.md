@@ -1,8 +1,72 @@
-# text2command
+# SmartCommand 4 VSCode: semantic fuzzy command palette for VSCode
 
-The VSCode extension is available at the VSCode Market named `smart command`. After installation from the VSCode market place, simply type `NLPSearch` in the command palette or use the key binding `ctrl+alt+q` (`shift+cmd+q` on Mac) to call our function. Then type in the description of your desired command. The extension will show a list of candidate commands after a few seconds. We also porive an option in the setting to enable/disable the data collection, which is disabled by default. The user data is only used for model improvement.
+SmartCommand is a VSCode plug-in to allow users find commands without precisely using the right words in the Command Palette fashion. 
+Currently, VSCode's default and official Command Palette (`Ctrl-Shift-P`) does only string matching. 
+You cannot even set the Python interpreter using the query "set Python kernel", because in Command Palette the right command is "Python: Select Interpreter". 
+In short, it's like a chatGPT-powered Command Palette. 
 
-## Instruction on the building scaffolding package locally
+SmartCommand is available at [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=SigmaWe.smart-command). 
+After installation, press the shortcut key binding `ctrl+alt+q` (`shift+cmd+q` on Mac) to bring up the SmartCommand palette, which you can use as in the official Command Palette. 
+
+If you want to help us improve its model, you can enable the data collection option which is disabled by default. 
+We promise that SmartCommand will keep the models trained using your data open to the general public. 
+
+SmartCommand is open source and we are deciding between MIT, Apache, and BSD, in terms of the license.
+
+## File structure
+* NLP: All scripts related to the NLP core part of this project, including preprocessing data, pre-embedding commands, testing different strategies. 
+* Backend: The backend server. 
+* Plugin: The VSCode plug-in itself. 
+
+## Architecture
+
+```mermaid
+graph TD;
+
+    A(User In VSCode)-->|Launch SmartCommand|B(SmartCommand window); 
+    B-->|Enter query|C(Query, e.g., set Python kernel);
+    G(Command selected, e.g, Python: Select Interpreter);
+
+
+    subgraph Backend
+        E(Pre-embedded command candidates);
+        D[Computing cosinse similarity];
+        F(Command list ranked);
+        E-->D;
+        C-->D;
+        D-->F;
+    end
+
+
+    F-->|Select a command|G;
+    G-->|Fine-tune|E;
+
+```
+
+## Backend
+
+At our backend, we leverage two language models, the original BERT-base-uncased and the Sentence-Transformer (also known as the SBERT or Sentence-BERT). 
+
+### Backend end points
+
+1. `Search`: 
+    * Method: GET
+    * Request body and example: 
+        ```json
+        {
+            "q": "markdown preview"
+        }
+        ```
+    * Response: 
+        ```json
+        ["command 1", "command 2", "command 3"]
+        ```
+
+        The response list can be just a single entry `["None of above"]` in case the confidence is too low for all candidate commands.
+2. `Feedback`: not implemented yet
+
+
+## Building and running the plug-in locally
 
 ### Prepare required software and files
 
@@ -25,40 +89,6 @@ Then copy the folder `plugin/smart-command` to the new extension and replace the
 
 Open the folder Plugin/text2command in VSCode locally. Use F5 to run the plugin and it will open a new VSCode window. Open command palette in that new VSCode window and search NLPSearch command. Check the plugin Readme file for extension usage guides.
 
-### Notice
+### Known issues
 
 If it shows error after press F5 to run the plugin, one can choose debug anyway to temporaily ignore it and continue.
-
-## QueryCollection API
-This folder means to collect queries for VSCode smart/fuzzy command search plugin
-
-### How to develop locally?
-
-The query collection server and the plug-in can and should be developed separately,
-so this README file will focus on how to set up and develop the query collection server locally.
-
-1. Download and install the latest docker desktop from [the docker website](https://www.docker.com/products/docker-desktop/)
-
-2. Start the docker desktop, in this folder, run `docker compose up`
-
-3. After the server is up, go to http://127.0.0.1:8000/docs to test the API. If you need more details about the API,
-please refer to [FastAPI](https://fastapi.tiangolo.com/) in general and `API_doc.docx` for this specific project.
-
-4. To access the database, open your favorite DB managment system and connect to the `Postgres SQL` using the following info:
-
-```
-HOST: localhost
-DB: database
-USERNAME: service
-PASSWORD: password
-PORT: 54320
-```
-
-P.S. You don't need the plugin to test the API. But if you want
-to test whether the plugin works correctly or not locally, you need to change the API address in the plugin as follows:
-
-Replace the Micrsoft Azure [createURL](https://github.com/SigmaWe/text2command/blob/f71fc51bc3b4105fbb02c3abb7ba5de2e6ac98f7/Plugin/text2command/src/basicInput.ts#L83) with the localhost one `http://127.0.0.1:8000/createquery/`
-
-Replace the Micrsoft Azure [updateURL](https://github.com/SigmaWe/text2command/blob/main/Plugin/text2command/src/basicInput.ts#L32) with the localhost one `http://127.0.0.1:8000/updatequery/`
-
-For how those two URL works, please refer to the `API_doc.docx` for more details.
