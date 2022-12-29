@@ -13,24 +13,12 @@
   },
   {
     "key": "escape",
-    "command": "closeReferenceSearch",
-    "when": "inReferenceSearchEditor && !config.editor.stablePeek",
-    "to_ebd": "close reference search"
-  },
-  {
-    "key": "escape",
     "command": "editor.closeTestPeek",
     "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek",
     "to_ebd": "editor close test peek"
   },
   {
     "key": "shift+escape",
-    "command": "cancelSelection",
-    "when": "editorHasSelection && textInputFocus",
-    "to_ebd": "cancel selection"
-  },
-  {
-    "key": "escape",
     "command": "cancelSelection",
     "when": "editorHasSelection && textInputFocus",
     "to_ebd": "cancel selection"
@@ -168,12 +156,6 @@
     "to_ebd": "delete left"
   },
   {
-    "key": "backspace",
-    "command": "deleteLeft",
-    "when": "textInputFocus",
-    "to_ebd": "delete left"
-  },
-  {
     "key": "delete",
     "command": "deleteRight",
     "when": "textInputFocus",
@@ -198,11 +180,6 @@
   },
   {
     "key": "ctrl+shift+z",
-    "command": "redo",
-    "to_ebd": "redo"
-  },
-  {
-    "key": "ctrl+y",
     "command": "redo",
     "to_ebd": "redo"
   },
@@ -284,31 +261,13 @@
     "to_ebd": "remove secondary cursors"
   },
   {
-    "key": "escape",
-    "command": "removeSecondaryCursors",
-    "when": "editorHasMultipleSelections && textInputFocus",
-    "to_ebd": "remove secondary cursors"
-  },
-  {
     "key": "f12",
     "command": "goToNextReference",
     "when": "inReferenceSearchEditor || referenceSearchVisible",
     "to_ebd": "go to next reference"
   },
   {
-    "key": "f4",
-    "command": "goToNextReference",
-    "when": "inReferenceSearchEditor || referenceSearchVisible",
-    "to_ebd": "go to next reference"
-  },
-  {
     "key": "shift+f12",
-    "command": "goToPreviousReference",
-    "when": "inReferenceSearchEditor || referenceSearchVisible",
-    "to_ebd": "go to previous reference"
-  },
-  {
-    "key": "shift+f4",
     "command": "goToPreviousReference",
     "when": "inReferenceSearchEditor || referenceSearchVisible",
     "to_ebd": "go to previous reference"
@@ -332,12 +291,6 @@
     "to_ebd": "notebook cell quit edit"
   },
   {
-    "key": "meta+enter",
-    "command": "notebook.cell.quitEdit",
-    "when": "inputFocus && notebookEditorFocused && notebookCellType == 'markup'",
-    "to_ebd": "notebook cell quit edit"
-  },
-  {
     "key": "ctrl+f",
     "command": "actions.find",
     "when": "editorFocus || editorIsOpen",
@@ -351,12 +304,6 @@
   },
   {
     "key": "shift+escape",
-    "command": "closeBreakpointWidget",
-    "when": "breakpointWidgetVisible && textInputFocus",
-    "to_ebd": "close breakpoint widget"
-  },
-  {
-    "key": "escape",
     "command": "closeBreakpointWidget",
     "when": "breakpointWidgetVisible && textInputFocus",
     "to_ebd": "close breakpoint widget"
@@ -422,12 +369,6 @@
     "to_ebd": "editor action auto fix"
   },
   {
-    "key": "shift+alt+.",
-    "command": "editor.action.autoFix",
-    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/",
-    "to_ebd": "editor action auto fix"
-  },
-  {
     "key": "ctrl+shift+a",
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly",
@@ -457,11 +398,6 @@
   },
   {
     "key": "shift+insert",
-    "command": "editor.action.clipboardPasteAction",
-    "to_ebd": "editor action clipboard paste action"
-  },
-  {
-    "key": "ctrl+v",
     "command": "editor.action.clipboardPasteAction",
     "to_ebd": "editor action clipboard paste action"
   },
@@ -574,19 +510,7 @@
     "to_ebd": "editor action in place replace down"
   },
   {
-    "key": "ctrl+shift+.",
-    "command": "editor.action.inPlaceReplace.down",
-    "when": "editorTextFocus && !editorReadonly",
-    "to_ebd": "editor action in place replace down"
-  },
-  {
     "key": "ctrl+[IntlBackslash]",
-    "command": "editor.action.inPlaceReplace.up",
-    "when": "editorTextFocus && !editorReadonly",
-    "to_ebd": "editor action in place replace up"
-  },
-  {
-    "key": "ctrl+shift+,",
     "command": "editor.action.inPlaceReplace.up",
     "when": "editorTextFocus && !editorReadonly",
     "to_ebd": "editor action in place replace up"
@@ -622,12 +546,6 @@
     "to_ebd": "editor action insert cursor above"
   },
   {
-    "key": "shift+alt+up",
-    "command": "editor.action.insertCursorAbove",
-    "when": "editorTextFocus",
-    "to_ebd": "editor action insert cursor above"
-  },
-  {
     "key": "shift+alt+i",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus",
@@ -635,12 +553,6 @@
   },
   {
     "key": "ctrl+shift+down",
-    "command": "editor.action.insertCursorBelow",
-    "when": "editorTextFocus",
-    "to_ebd": "editor action insert cursor below"
-  },
-  {
-    "key": "shift+alt+down",
     "command": "editor.action.insertCursorBelow",
     "when": "editorTextFocus",
     "to_ebd": "editor action insert cursor below"
@@ -724,12 +636,6 @@
     "to_ebd": "editor action next match find action"
   },
   {
-    "key": "enter",
-    "command": "editor.action.nextMatchFindAction",
-    "when": "editorFocus && findInputFocussed",
-    "to_ebd": "editor action next match find action"
-  },
-  {
     "key": "ctrl+f3",
     "command": "editor.action.nextSelectionMatchFindAction",
     "when": "editorFocus",
@@ -769,12 +675,6 @@
     "key": "shift+f3",
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus",
-    "to_ebd": "editor action previous match find action"
-  },
-  {
-    "key": "shift+enter",
-    "command": "editor.action.previousMatchFindAction",
-    "when": "editorFocus && findInputFocussed",
     "to_ebd": "editor action previous match find action"
   },
   {
@@ -843,11 +743,6 @@
     "to_ebd": "editor action show accessibility help"
   },
   {
-    "key": "shift+alt+f1",
-    "command": "editor.action.showAccessibilityHelp",
-    "to_ebd": "editor action show accessibility help"
-  },
-  {
     "key": "shift+f10",
     "command": "editor.action.showContextMenu",
     "when": "textInputFocus",
@@ -895,12 +790,6 @@
   },
   {
     "key": "ctrl+i",
-    "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly",
-    "to_ebd": "editor action trigger suggest"
-  },
-  {
-    "key": "ctrl+space",
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly",
     "to_ebd": "editor action trigger suggest"
@@ -1290,12 +1179,6 @@
     "to_ebd": "workbench action hide comment"
   },
   {
-    "key": "escape",
-    "command": "workbench.action.hideComment",
-    "when": "commentEditorFocused",
-    "to_ebd": "workbench action hide comment"
-  },
-  {
     "key": "ctrl+enter",
     "command": "workbench.action.submitComment",
     "when": "commentEditorFocused",
@@ -1326,12 +1209,6 @@
     "to_ebd": "close find widget"
   },
   {
-    "key": "escape",
-    "command": "closeFindWidget",
-    "when": "editorFocus && findWidgetVisible && !isComposing",
-    "to_ebd": "close find widget"
-  },
-  {
     "key": "ctrl+alt+enter",
     "command": "editor.action.replaceAll",
     "when": "editorFocus && findWidgetVisible",
@@ -1341,12 +1218,6 @@
     "key": "ctrl+shift+1",
     "command": "editor.action.replaceOne",
     "when": "editorFocus && findWidgetVisible",
-    "to_ebd": "editor action replace one"
-  },
-  {
-    "key": "enter",
-    "command": "editor.action.replaceOne",
-    "when": "editorFocus && findWidgetVisible && replaceInputFocussed",
     "to_ebd": "editor action replace one"
   },
   {
@@ -1410,31 +1281,13 @@
     "to_ebd": "leave snippet"
   },
   {
-    "key": "escape",
-    "command": "leaveSnippet",
-    "when": "editorTextFocus && inSnippetMode",
-    "to_ebd": "leave snippet"
-  },
-  {
     "key": "shift+escape",
     "command": "closeDirtyDiff",
     "when": "dirtyDiffVisible",
     "to_ebd": "close dirty diff"
   },
   {
-    "key": "escape",
-    "command": "closeDirtyDiff",
-    "when": "dirtyDiffVisible",
-    "to_ebd": "close dirty diff"
-  },
-  {
     "key": "shift+escape",
-    "command": "closeMarkersNavigation",
-    "when": "editorFocus && markersNavigationVisible",
-    "to_ebd": "close markers navigation"
-  },
-  {
-    "key": "escape",
     "command": "closeMarkersNavigation",
     "when": "editorFocus && markersNavigationVisible",
     "to_ebd": "close markers navigation"
@@ -1452,19 +1305,7 @@
     "to_ebd": "close parameter hints"
   },
   {
-    "key": "escape",
-    "command": "closeParameterHints",
-    "when": "editorFocus && parameterHintsVisible",
-    "to_ebd": "close parameter hints"
-  },
-  {
     "key": "alt+down",
-    "command": "showNextParameterHint",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible",
-    "to_ebd": "show next parameter hint"
-  },
-  {
-    "key": "down",
     "command": "showNextParameterHint",
     "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible",
     "to_ebd": "show next parameter hint"
@@ -1476,19 +1317,7 @@
     "to_ebd": "show prev parameter hint"
   },
   {
-    "key": "up",
-    "command": "showPrevParameterHint",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible",
-    "to_ebd": "show prev parameter hint"
-  },
-  {
     "key": "shift+tab",
-    "command": "acceptAlternativeSelectedSuggestion",
-    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
-    "to_ebd": "accept alternative selected suggestion"
-  },
-  {
-    "key": "shift+enter",
     "command": "acceptAlternativeSelectedSuggestion",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
     "to_ebd": "accept alternative selected suggestion"
@@ -1500,31 +1329,13 @@
     "to_ebd": "accept selected suggestion"
   },
   {
-    "key": "enter",
-    "command": "acceptSelectedSuggestion",
-    "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus",
-    "to_ebd": "accept selected suggestion"
-  },
-  {
     "key": "ctrl+i",
     "command": "focusSuggestion",
     "when": "suggestWidgetVisible && textInputFocus && !config.editor.suggest.selectQuickSuggestions && !suggestWidgetHasFocusedSuggestion",
     "to_ebd": "focus suggestion"
   },
   {
-    "key": "ctrl+space",
-    "command": "focusSuggestion",
-    "when": "suggestWidgetVisible && textInputFocus && !config.editor.suggest.selectQuickSuggestions && !suggestWidgetHasFocusedSuggestion",
-    "to_ebd": "focus suggestion"
-  },
-  {
     "key": "shift+escape",
-    "command": "hideSuggestWidget",
-    "when": "suggestWidgetVisible && textInputFocus",
-    "to_ebd": "hide suggest widget"
-  },
-  {
-    "key": "escape",
     "command": "hideSuggestWidget",
     "when": "suggestWidgetVisible && textInputFocus",
     "to_ebd": "hide suggest widget"
@@ -1554,19 +1365,7 @@
     "to_ebd": "select next page suggestion"
   },
   {
-    "key": "pagedown",
-    "command": "selectNextPageSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
-    "to_ebd": "select next page suggestion"
-  },
-  {
     "key": "ctrl+down",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
-    "to_ebd": "select next suggestion"
-  },
-  {
-    "key": "down",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
     "to_ebd": "select next suggestion"
@@ -1578,31 +1377,13 @@
     "to_ebd": "select prev page suggestion"
   },
   {
-    "key": "pageup",
-    "command": "selectPrevPageSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
-    "to_ebd": "select prev page suggestion"
-  },
-  {
     "key": "ctrl+up",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
     "to_ebd": "select prev suggestion"
   },
   {
-    "key": "up",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
-    "to_ebd": "select prev suggestion"
-  },
-  {
     "key": "ctrl+i",
-    "command": "toggleSuggestionDetails",
-    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
-    "to_ebd": "toggle suggestion details"
-  },
-  {
-    "key": "ctrl+space",
     "command": "toggleSuggestionDetails",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
     "to_ebd": "toggle suggestion details"
@@ -1632,19 +1413,7 @@
     "to_ebd": "cancel linked editing input"
   },
   {
-    "key": "escape",
-    "command": "cancelLinkedEditingInput",
-    "when": "LinkedEditingInputVisible && editorTextFocus",
-    "to_ebd": "cancel linked editing input"
-  },
-  {
     "key": "shift+escape",
-    "command": "cancelRenameInput",
-    "when": "editorFocus && renameInputVisible",
-    "to_ebd": "cancel rename input"
-  },
-  {
-    "key": "escape",
     "command": "cancelRenameInput",
     "when": "editorFocus && renameInputVisible",
     "to_ebd": "cancel rename input"
@@ -1668,19 +1437,7 @@
     "to_ebd": "breadcrumbs focus and select"
   },
   {
-    "key": "ctrl+shift+.",
-    "command": "breadcrumbs.focusAndSelect",
-    "when": "breadcrumbsPossible && breadcrumbsVisible",
-    "to_ebd": "breadcrumbs focus and select"
-  },
-  {
     "key": "ctrl+right",
-    "command": "breadcrumbs.focusNext",
-    "when": "breadcrumbsActive && breadcrumbsVisible",
-    "to_ebd": "breadcrumbs focus next"
-  },
-  {
-    "key": "right",
     "command": "breadcrumbs.focusNext",
     "when": "breadcrumbsActive && breadcrumbsVisible",
     "to_ebd": "breadcrumbs focus next"
@@ -1692,19 +1449,7 @@
     "to_ebd": "breadcrumbs focus previous"
   },
   {
-    "key": "left",
-    "command": "breadcrumbs.focusPrevious",
-    "when": "breadcrumbsActive && breadcrumbsVisible",
-    "to_ebd": "breadcrumbs focus previous"
-  },
-  {
     "key": "ctrl+enter",
-    "command": "breadcrumbs.revealFocused",
-    "when": "breadcrumbsActive && breadcrumbsVisible",
-    "to_ebd": "breadcrumbs reveal focused"
-  },
-  {
-    "key": "space",
     "command": "breadcrumbs.revealFocused",
     "when": "breadcrumbsActive && breadcrumbsVisible",
     "to_ebd": "breadcrumbs reveal focused"
@@ -1722,31 +1467,13 @@
     "to_ebd": "breadcrumbs select focused"
   },
   {
-    "key": "enter",
-    "command": "breadcrumbs.selectFocused",
-    "when": "breadcrumbsActive && breadcrumbsVisible",
-    "to_ebd": "breadcrumbs select focused"
-  },
-  {
     "key": "ctrl+shift+[IntlBackslash]",
     "command": "breadcrumbs.toggleToOn",
     "when": "!config.breadcrumbs.enabled",
     "to_ebd": "breadcrumbs toggle to on"
   },
   {
-    "key": "ctrl+shift+.",
-    "command": "breadcrumbs.toggleToOn",
-    "when": "!config.breadcrumbs.enabled",
-    "to_ebd": "breadcrumbs toggle to on"
-  },
-  {
     "key": "shift+escape",
-    "command": "closeAccessibilityHelp",
-    "when": "accessibilityHelpWidgetVisible && editorFocus",
-    "to_ebd": "close accessibility help"
-  },
-  {
-    "key": "escape",
     "command": "closeAccessibilityHelp",
     "when": "accessibilityHelpWidgetVisible && editorFocus",
     "to_ebd": "close accessibility help"
@@ -1782,21 +1509,9 @@
     "to_ebd": "copy file path"
   },
   {
-    "key": "ctrl+k ctrl+alt+c",
-    "command": "copyFilePath",
-    "when": "editorFocus",
-    "to_ebd": "copy file path"
-  },
-  {
     "key": "ctrl+shift+alt+c",
     "command": "copyRelativeFilePath",
     "when": "!editorFocus",
-    "to_ebd": "copy relative file path"
-  },
-  {
-    "key": "ctrl+k ctrl+shift+alt+c",
-    "command": "copyRelativeFilePath",
-    "when": "editorFocus",
     "to_ebd": "copy relative file path"
   },
   {
@@ -1806,19 +1521,7 @@
     "to_ebd": "debug open breakpoint to side"
   },
   {
-    "key": "ctrl+enter",
-    "command": "debug.openBreakpointToSide",
-    "when": "breakpointsFocused",
-    "to_ebd": "debug open breakpoint to side"
-  },
-  {
     "key": "ctrl+f5",
-    "command": "debug.openView",
-    "when": "!debuggersAvailable",
-    "to_ebd": "debug open view"
-  },
-  {
-    "key": "f5",
     "command": "debug.openView",
     "when": "!debuggersAvailable",
     "to_ebd": "debug open view"
@@ -1920,19 +1623,7 @@
     "to_ebd": "history show next"
   },
   {
-    "key": "down",
-    "command": "history.showNext",
-    "when": "historyNavigationForwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible",
-    "to_ebd": "history show next"
-  },
-  {
     "key": "alt+up",
-    "command": "history.showPrevious",
-    "when": "historyNavigationBackwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible",
-    "to_ebd": "history show previous"
-  },
-  {
-    "key": "up",
     "command": "history.showPrevious",
     "when": "historyNavigationBackwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible",
     "to_ebd": "history show previous"
@@ -2071,12 +1762,6 @@
   },
   {
     "key": "f3",
-    "command": "list.find",
-    "when": "listFocus && listSupportsFind",
-    "to_ebd": "list find"
-  },
-  {
-    "key": "ctrl+f",
     "command": "list.find",
     "when": "listFocus && listSupportsFind",
     "to_ebd": "list find"
@@ -2298,24 +1983,6 @@
     "to_ebd": "notebook focus bottom"
   },
   {
-    "key": "down",
-    "command": "notebook.focusNextEditor",
-    "when": "config.notebook.navigation.allowNavigateToSurroundingCells && notebookCursorNavigationMode && notebookEditorFocused && !notebookCellMarkdownEditMode && notebookCellType == 'markup'",
-    "to_ebd": "notebook focus next editor"
-  },
-  {
-    "key": "ctrl+down",
-    "command": "notebook.focusNextEditor",
-    "when": "notebookEditorFocused && notebookOutputFocused",
-    "to_ebd": "notebook focus next editor"
-  },
-  {
-    "key": "up",
-    "command": "notebook.focusPreviousEditor",
-    "when": "config.notebook.navigation.allowNavigateToSurroundingCells && notebookCursorNavigationMode && notebookEditorFocused && !notebookCellMarkdownEditMode && notebookCellType == 'markup'",
-    "to_ebd": "notebook focus previous editor"
-  },
-  {
     "key": "ctrl+home",
     "command": "notebook.focusTop",
     "when": "notebookEditorFocused && !inputFocus",
@@ -2323,12 +1990,6 @@
   },
   {
     "key": "left",
-    "command": "notebook.fold",
-    "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'",
-    "to_ebd": "notebook fold"
-  },
-  {
-    "key": "ctrl+shift+[",
     "command": "notebook.fold",
     "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'",
     "to_ebd": "notebook fold"
@@ -2347,12 +2008,6 @@
   },
   {
     "key": "right",
-    "command": "notebook.unfold",
-    "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'",
-    "to_ebd": "notebook unfold"
-  },
-  {
-    "key": "ctrl+shift+]",
     "command": "notebook.unfold",
     "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'",
     "to_ebd": "notebook unfold"
@@ -2382,31 +2037,13 @@
     "to_ebd": "notification toggle"
   },
   {
-    "key": "space",
-    "command": "notification.toggle",
-    "when": "notificationFocus",
-    "to_ebd": "notification toggle"
-  },
-  {
     "key": "home",
     "command": "notifications.focusFirstToast",
     "when": "notificationFocus && notificationToastsVisible",
     "to_ebd": "notifications focus first toast"
   },
   {
-    "key": "pageup",
-    "command": "notifications.focusFirstToast",
-    "when": "notificationFocus && notificationToastsVisible",
-    "to_ebd": "notifications focus first toast"
-  },
-  {
     "key": "end",
-    "command": "notifications.focusLastToast",
-    "when": "notificationFocus && notificationToastsVisible",
-    "to_ebd": "notifications focus last toast"
-  },
-  {
-    "key": "pagedown",
     "command": "notifications.focusLastToast",
     "when": "notificationFocus && notificationToastsVisible",
     "to_ebd": "notifications focus last toast"
@@ -2592,19 +2229,7 @@
     "to_ebd": "search action replace all in file"
   },
   {
-    "key": "ctrl+shift+1",
-    "command": "search.action.replaceAllInFile",
-    "when": "fileMatchFocus && replaceActive && searchViewletVisible",
-    "to_ebd": "search action replace all in file"
-  },
-  {
     "key": "ctrl+shift+enter",
-    "command": "search.action.replaceAllInFolder",
-    "when": "folderMatchFocus && replaceActive && searchViewletVisible",
-    "to_ebd": "search action replace all in folder"
-  },
-  {
-    "key": "ctrl+shift+1",
     "command": "search.action.replaceAllInFolder",
     "when": "folderMatchFocus && replaceActive && searchViewletVisible",
     "to_ebd": "search action replace all in folder"
@@ -2848,23 +2473,12 @@
     "to_ebd": "workbench action close quick open"
   },
   {
-    "key": "escape",
-    "command": "workbench.action.closeQuickOpen",
-    "when": "inQuickOpen",
-    "to_ebd": "workbench action close quick open"
-  },
-  {
     "key": "ctrl+k u",
     "command": "workbench.action.closeUnmodifiedEditors",
     "to_ebd": "workbench action close unmodified editors"
   },
   {
     "key": "ctrl+shift+w",
-    "command": "workbench.action.closeWindow",
-    "to_ebd": "workbench action close window"
-  },
-  {
-    "key": "alt+f4",
     "command": "workbench.action.closeWindow",
     "to_ebd": "workbench action close window"
   },
@@ -3154,11 +2768,6 @@
     "to_ebd": "workbench action last editor in group"
   },
   {
-    "key": "alt+0",
-    "command": "workbench.action.lastEditorInGroup",
-    "to_ebd": "workbench action last editor in group"
-  },
-  {
     "key": "ctrl+k down",
     "command": "workbench.action.moveActiveEditorGroupDown",
     "to_ebd": "workbench action move active editor group down"
@@ -3328,11 +2937,6 @@
     "to_ebd": "workbench action quick open"
   },
   {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpen",
-    "to_ebd": "workbench action quick open"
-  },
-  {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
     "when": "!activeEditorGroupEmpty",
@@ -3386,11 +2990,6 @@
     "to_ebd": "workbench action show commands"
   },
   {
-    "key": "ctrl+shift+p",
-    "command": "workbench.action.showCommands",
-    "to_ebd": "workbench action show commands"
-  },
-  {
     "key": "ctrl+k ctrl+i",
     "command": "workbench.action.showTreeHover",
     "when": "customTreeView && listFocus && !inputFocus",
@@ -3437,21 +3036,9 @@
     "to_ebd": "workbench action terminal find next"
   },
   {
-    "key": "shift+enter",
-    "command": "workbench.action.terminal.findNext",
-    "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported",
-    "to_ebd": "workbench action terminal find next"
-  },
-  {
     "key": "shift+f3",
     "command": "workbench.action.terminal.findPrevious",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-    "to_ebd": "workbench action terminal find previous"
-  },
-  {
-    "key": "enter",
-    "command": "workbench.action.terminal.findPrevious",
-    "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported",
     "to_ebd": "workbench action terminal find previous"
   },
   {
@@ -3473,12 +3060,6 @@
     "to_ebd": "workbench action terminal focus next pane"
   },
   {
-    "key": "alt+right",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-    "to_ebd": "workbench action terminal focus next pane"
-  },
-  {
     "key": "ctrl+pageup",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus",
@@ -3491,12 +3072,6 @@
     "to_ebd": "workbench action terminal focus previous pane"
   },
   {
-    "key": "alt+left",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-    "to_ebd": "workbench action terminal focus previous pane"
-  },
-  {
     "key": "ctrl+shift+\\",
     "command": "workbench.action.terminal.focusTabs",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus",
@@ -3504,12 +3079,6 @@
   },
   {
     "key": "shift+escape",
-    "command": "workbench.action.terminal.hideFind",
-    "when": "terminalFindVisible && terminalFocus && terminalHasBeenCreated || terminalFindVisible && terminalFocus && terminalProcessSupported",
-    "to_ebd": "workbench action terminal hide find"
-  },
-  {
-    "key": "escape",
     "command": "workbench.action.terminal.hideFind",
     "when": "terminalFindVisible && terminalFocus && terminalHasBeenCreated || terminalFindVisible && terminalFocus && terminalProcessSupported",
     "to_ebd": "workbench action terminal hide find"
@@ -3539,12 +3108,6 @@
     "to_ebd": "workbench action terminal navigation mode focus next"
   },
   {
-    "key": "ctrl+down",
-    "command": "workbench.action.terminal.navigationModeFocusNext",
-    "when": "accessibilityModeEnabled && terminalA11yTreeFocus && terminalProcessSupported || accessibilityModeEnabled && terminalFocus && terminalProcessSupported",
-    "to_ebd": "workbench action terminal navigation mode focus next"
-  },
-  {
     "key": "pagedown",
     "command": "workbench.action.terminal.navigationModeFocusNextPage",
     "when": "accessibilityModeEnabled && terminalA11yTreeFocus && terminalNavigationModeActive && terminalProcessSupported || accessibilityModeEnabled && terminalFocus && terminalNavigationModeActive && terminalProcessSupported",
@@ -3554,12 +3117,6 @@
     "key": "up",
     "command": "workbench.action.terminal.navigationModeFocusPrevious",
     "when": "accessibilityModeEnabled && terminalA11yTreeFocus && terminalNavigationModeActive && terminalProcessSupported || accessibilityModeEnabled && terminalFocus && terminalNavigationModeActive && terminalProcessSupported",
-    "to_ebd": "workbench action terminal navigation mode focus previous"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "workbench.action.terminal.navigationModeFocusPrevious",
-    "when": "accessibilityModeEnabled && terminalA11yTreeFocus && terminalProcessSupported || accessibilityModeEnabled && terminalFocus && terminalProcessSupported",
     "to_ebd": "workbench action terminal navigation mode focus previous"
   },
   {
@@ -3680,69 +3237,6 @@
     "to_ebd": "workbench action terminal send sequence"
   },
   {
-    "key": "alt+space",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'",
-    "args": {
-      "text": "\u001b[24~b"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
-    "key": "shift+enter",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'",
-    "args": {
-      "text": "\u001b[24~c"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
-    "key": "ctrl+backspace",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus",
-    "args": {
-      "text": "\u0017"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
-    "key": "ctrl+delete",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus",
-    "args": {
-      "text": "\u001bd"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
-    "key": "ctrl+shift+2",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus",
-    "args": {
-      "text": "\u0000"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
-    "key": "ctrl+shift+6",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus",
-    "args": {
-      "text": "\u001e"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
-    "key": "ctrl+/",
-    "command": "workbench.action.terminal.sendSequence",
-    "when": "terminalFocus",
-    "args": {
-      "text": "\u001f"
-    },
-    "to_ebd": "workbench action terminal send sequence"
-  },
-  {
     "key": "alt+z",
     "command": "workbench.action.terminal.sizeToContentWidth",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported",
@@ -3822,22 +3316,7 @@
     "to_ebd": "workbench action zoom in"
   },
   {
-    "key": "ctrl+shift+=",
-    "command": "workbench.action.zoomIn",
-    "to_ebd": "workbench action zoom in"
-  },
-  {
-    "key": "ctrl+=",
-    "command": "workbench.action.zoomIn",
-    "to_ebd": "workbench action zoom in"
-  },
-  {
     "key": "ctrl+numpad_subtract",
-    "command": "workbench.action.zoomOut",
-    "to_ebd": "workbench action zoom out"
-  },
-  {
-    "key": "ctrl+-",
     "command": "workbench.action.zoomOut",
     "to_ebd": "workbench action zoom out"
   },
@@ -3865,19 +3344,7 @@
     "to_ebd": "workbench banner focus next action"
   },
   {
-    "key": "right",
-    "command": "workbench.banner.focusNextAction",
-    "when": "bannerFocused",
-    "to_ebd": "workbench banner focus next action"
-  },
-  {
     "key": "up",
-    "command": "workbench.banner.focusPreviousAction",
-    "when": "bannerFocused",
-    "to_ebd": "workbench banner focus previous action"
-  },
-  {
-    "key": "left",
     "command": "workbench.banner.focusPreviousAction",
     "when": "bannerFocused",
     "to_ebd": "workbench banner focus previous action"
@@ -3929,19 +3396,7 @@
     "to_ebd": "workbench status bar focus next"
   },
   {
-    "key": "right",
-    "command": "workbench.statusBar.focusNext",
-    "when": "statusBarFocused",
-    "to_ebd": "workbench status bar focus next"
-  },
-  {
     "key": "up",
-    "command": "workbench.statusBar.focusPrevious",
-    "when": "statusBarFocused",
-    "to_ebd": "workbench status bar focus previous"
-  },
-  {
-    "key": "left",
     "command": "workbench.statusBar.focusPrevious",
     "when": "statusBarFocused",
     "to_ebd": "workbench status bar focus previous"
@@ -4061,12 +3516,6 @@
     "to_ebd": "delete file"
   },
   {
-    "key": "delete",
-    "command": "deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus",
-    "to_ebd": "delete file"
-  },
-  {
     "key": "escape",
     "command": "editor.closeCallHierarchy",
     "when": "callHierarchyVisible && !config.editor.stablePeek",
@@ -4181,18 +3630,6 @@
     "to_ebd": "workbench action debug step into"
   },
   {
-    "key": "shift+escape",
-    "command": "closeReferenceSearch",
-    "when": "referenceSearchVisible && !config.editor.stablePeek",
-    "to_ebd": "close reference search"
-  },
-  {
-    "key": "escape",
-    "command": "closeReferenceSearch",
-    "when": "referenceSearchVisible && !config.editor.stablePeek",
-    "to_ebd": "close reference search"
-  },
-  {
     "key": "escape",
     "command": "notifications.hideList",
     "when": "notificationCenterVisible",
@@ -4217,12 +3654,6 @@
     "to_ebd": "workbench action quick open navigate next in file picker"
   },
   {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
-    "when": "inFilesPicker && inQuickOpen",
-    "to_ebd": "workbench action quick open navigate next in file picker"
-  },
-  {
     "key": "ctrl+r",
     "command": "workbench.action.quickOpenNavigateNextInRecentFilesPicker",
     "when": "inQuickOpen && inRecentFilesPicker",
@@ -4236,12 +3667,6 @@
   },
   {
     "key": "ctrl+shift+e",
-    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-    "when": "inFilesPicker && inQuickOpen",
-    "to_ebd": "workbench action quick open navigate previous in file picker"
-  },
-  {
-    "key": "ctrl+shift+p",
     "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
     "when": "inFilesPicker && inQuickOpen",
     "to_ebd": "workbench action quick open navigate previous in file picker"
@@ -4271,12 +3696,6 @@
     "to_ebd": "workbench action toggle dev tools"
   },
   {
-    "key": "escape",
-    "command": "notifications.hideToasts",
-    "when": "notificationFocus && notificationToastsVisible",
-    "to_ebd": "notifications hide toasts"
-  },
-  {
     "key": "f10",
     "command": "extension.node-debug.startWithStopOnEntry",
     "when": "!inDebugMode && debugConfigurationType == 'node' || !inDebugMode && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && debugConfigurationType == 'pwa-node'",
@@ -4299,12 +3718,6 @@
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider",
     "to_ebd": "references-view find references"
-  },
-  {
-    "key": "f11",
-    "command": "extension.node-debug.startWithStopOnEntry",
-    "when": "!inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'node' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-node'",
-    "to_ebd": "extension node-debug start with stop on entry"
   },
   {
     "key": "ctrl+k ctrl+n",
@@ -4349,12 +3762,6 @@
     "to_ebd": "jupyter exec selection interactive"
   },
   {
-    "key": "f",
-    "command": "notebook.find",
-    "when": "notebookEditorFocused && !inputFocus",
-    "to_ebd": "notebook find"
-  },
-  {
     "key": "shift+enter",
     "command": "python.execSelectionInTerminal",
     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'",
@@ -4365,12 +3772,6 @@
     "command": "jupyter.runcurrentcelladvance",
     "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused",
     "to_ebd": "jupyter runcurrentcelladvance"
-  },
-  {
-    "key": "k",
-    "command": "list.focusUp",
-    "when": "notebookEditorFocused && !inputFocus",
-    "to_ebd": "list focus up"
   },
   {
     "key": "ctrl+r",
@@ -4385,12 +3786,6 @@
     "to_ebd": "jupyter runcurrentcell"
   },
   {
-    "key": "j",
-    "command": "list.focusDown",
-    "when": "notebookEditorFocused && !inputFocus",
-    "to_ebd": "list focus down"
-  },
-  {
     "key": "alt+enter",
     "command": "jupyter.runcurrentcellandaddbelow",
     "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused",
@@ -4401,12 +3796,6 @@
     "command": "notebook.cell.insertCodeCellAboveAndFocusContainer",
     "when": "notebookEditorFocused && !inputFocus",
     "to_ebd": "notebook cell insert code cell above and focus container"
-  },
-  {
-    "key": "shift+enter",
-    "command": "interactive.execute",
-    "when": "!notebookKernel && resourceScheme == 'vscode-interactive' || resourceScheme == 'vscode-interactive' && notebookKernel =~ /^ms-toolsai.jupyter\\//",
-    "to_ebd": "interactive execute"
   },
   {
     "key": "b",
@@ -4421,34 +3810,16 @@
     "to_ebd": "interactive input clear"
   },
   {
-    "key": "d d",
-    "command": "notebook.cell.delete",
-    "when": "notebookEditorFocused && !inputFocus",
-    "to_ebd": "notebook cell delete"
-  },
-  {
     "key": "ctrl+; s",
     "command": "jupyter.insertCellBelowPosition",
     "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused",
     "to_ebd": "jupyter insert cell below position"
   },
   {
-    "key": "z",
-    "command": "undo",
-    "when": "notebookEditorFocused && !inputFocus",
-    "to_ebd": "undo"
-  },
-  {
     "key": "ctrl+; b",
     "command": "jupyter.insertCellBelow",
     "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused",
     "to_ebd": "jupyter insert cell below"
-  },
-  {
-    "key": "s",
-    "command": "workbench.action.files.save",
-    "when": "notebookEditorFocused && !inputFocus",
-    "to_ebd": "workbench action files save"
   },
   {
     "key": "ctrl+; a",
@@ -4529,12 +3900,6 @@
     "to_ebd": "jupyter change cell to markdown"
   },
   {
-    "key": "ctrl+shift+-",
-    "command": "notebook.cell.split",
-    "when": "editorTextFocus && inputFocus && notebookEditorFocused",
-    "to_ebd": "notebook cell split"
-  },
-  {
     "key": "ctrl+; c",
     "command": "jupyter.changeCellToCode",
     "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused",
@@ -4551,12 +3916,6 @@
     "command": "jupyter.gotoNextCellInFile",
     "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused",
     "to_ebd": "jupyter goto next cell in file"
-  },
-  {
-    "key": "shift+enter",
-    "command": "notebook.cell.executeAndSelectBelow",
-    "when": "notebookCellListFocused && notebookCellType == 'code' || editorTextFocus && inputFocus && notebookEditorFocused",
-    "to_ebd": "notebook cell execute and select below"
   },
   {
     "key": "ctrl+alt+[",
@@ -4613,19 +3972,7 @@
     "to_ebd": "accept selected code action"
   },
   {
-    "key": "enter",
-    "command": "acceptSelectedCodeAction",
-    "when": "actionWidgetVisible",
-    "to_ebd": "accept selected code action"
-  },
-  {
     "key": "shift+escape",
-    "command": "hideCodeActionWidget",
-    "when": "actionWidgetVisible",
-    "to_ebd": "hide code action widget"
-  },
-  {
-    "key": "escape",
     "command": "hideCodeActionWidget",
     "when": "actionWidgetVisible",
     "to_ebd": "hide code action widget"
@@ -4643,19 +3990,7 @@
     "to_ebd": "select next code action"
   },
   {
-    "key": "down",
-    "command": "selectNextCodeAction",
-    "when": "actionWidgetVisible",
-    "to_ebd": "select next code action"
-  },
-  {
     "key": "ctrl+up",
-    "command": "selectPrevCodeAction",
-    "when": "actionWidgetVisible",
-    "to_ebd": "select prev code action"
-  },
-  {
-    "key": "up",
     "command": "selectPrevCodeAction",
     "when": "actionWidgetVisible",
     "to_ebd": "select prev code action"
@@ -4691,18 +4026,6 @@
   {
     "command": "callStack.collapse",
     "to_ebd": "call stack collapse"
-  },
-  {
-    "command": "cell",
-    "to_ebd": "cell"
-  },
-  {
-    "command": "cell",
-    "to_ebd": "cell"
-  },
-  {
-    "command": "cell",
-    "to_ebd": "cell"
   },
   {
     "command": "cell",
@@ -4951,38 +4274,6 @@
   {
     "command": "debug.toggleReplIgnoreFocus",
     "to_ebd": "debug toggle repl ignore focus"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
-  },
-  {
-    "command": "default",
-    "to_ebd": "default"
   },
   {
     "command": "default",
@@ -5665,86 +4956,6 @@
     "to_ebd": "extension js"
   },
   {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
-    "command": "extension.js",
-    "to_ebd": "extension js"
-  },
-  {
     "command": "extension.jsProfileVisualizer.table.clearCodeLenses",
     "to_ebd": "extension js profile visualizer table clear code lenses"
   },
@@ -6089,10 +5300,6 @@
     "to_ebd": "git open file"
   },
   {
-    "command": "git.openFile",
-    "to_ebd": "git open file"
-  },
-  {
     "command": "git.openHEADFile",
     "to_ebd": "git open head file"
   },
@@ -6377,10 +5584,6 @@
     "to_ebd": "javascript"
   },
   {
-    "command": "javascript",
-    "to_ebd": "javascript"
-  },
-  {
     "command": "javascript.goToProjectConfig",
     "to_ebd": "javascript go to project config"
   },
@@ -6419,26 +5622,6 @@
   {
     "command": "json.clearCache",
     "to_ebd": "json clear cache"
-  },
-  {
-    "command": "jupyter",
-    "to_ebd": "jupyter"
-  },
-  {
-    "command": "jupyter",
-    "to_ebd": "jupyter"
-  },
-  {
-    "command": "jupyter",
-    "to_ebd": "jupyter"
-  },
-  {
-    "command": "jupyter",
-    "to_ebd": "jupyter"
-  },
-  {
-    "command": "jupyter",
-    "to_ebd": "jupyter"
   },
   {
     "command": "jupyter",
@@ -6857,46 +6040,6 @@
     "to_ebd": "merge"
   },
   {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge",
-    "to_ebd": "merge"
-  },
-  {
-    "command": "merge.acceptAllInput",
-    "to_ebd": "merge accept all input"
-  },
-  {
     "command": "merge.acceptAllInput",
     "to_ebd": "merge accept all input"
   },
@@ -6965,16 +6108,8 @@
     "to_ebd": "merge toggle active conflict input"
   },
   {
-    "command": "merge.toggleActiveConflictInput",
-    "to_ebd": "merge toggle active conflict input"
-  },
-  {
     "command": "mergeEditor.acceptMerge",
     "to_ebd": "merge editor accept merge"
-  },
-  {
-    "command": "mergeEditor.compareInput",
-    "to_ebd": "merge editor compare input"
   },
   {
     "command": "mergeEditor.compareInput",
@@ -7521,10 +6656,6 @@
     "to_ebd": "python exec in terminal"
   },
   {
-    "command": "python.execInTerminal",
-    "to_ebd": "python exec in terminal"
-  },
-  {
     "command": "python.execSelectionInDjangoShell",
     "to_ebd": "python exec selection in django shell"
   },
@@ -7643,362 +6774,6 @@
   {
     "command": "references",
     "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "references",
-    "to_ebd": "references"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
-  },
-  {
-    "command": "remote",
-    "to_ebd": "remote"
   },
   {
     "command": "remote",
@@ -8345,10 +7120,6 @@
     "to_ebd": "timeline toggle exclude source"
   },
   {
-    "command": "timeline.toggleExcludeSource",
-    "to_ebd": "timeline toggle exclude source"
-  },
-  {
     "command": "timeline.toggleFollowActiveEditor",
     "to_ebd": "timeline toggle follow active editor"
   },
@@ -8479,418 +7250,6 @@
   {
     "command": "variables.collapse",
     "to_ebd": "variables collapse"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
-  },
-  {
-    "command": "vscode",
-    "to_ebd": "vscode"
   },
   {
     "command": "vscode",
@@ -9661,10 +8020,6 @@
     "to_ebd": "workbench action open request feature url"
   },
   {
-    "command": "workbench.action.openSettings",
-    "to_ebd": "workbench action open settings"
-  },
-  {
     "command": "workbench.action.openSettingsJson",
     "to_ebd": "workbench action open settings json"
   },
@@ -9723,50 +8078,6 @@
   {
     "command": "workbench.action.output.show.extHostLog",
     "to_ebd": "workbench action output show ext host log"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
-  },
-  {
-    "command": "workbench.action.output.show.extension",
-    "to_ebd": "workbench action output show extension"
   },
   {
     "command": "workbench.action.output.show.extension",
@@ -10175,38 +8486,6 @@
   {
     "command": "workbench.action.terminal.focus",
     "to_ebd": "workbench action terminal focus"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
-  },
-  {
-    "command": "workbench.action.terminal.focusAtIndex",
-    "to_ebd": "workbench action terminal focus at index"
   },
   {
     "command": "workbench.action.terminal.focusAtIndex",
@@ -11353,20 +9632,8 @@
     "to_ebd": "workbench view extension jupyter"
   },
   {
-    "command": "workbench.view.extension.jupyter",
-    "to_ebd": "workbench view extension jupyter"
-  },
-  {
-    "command": "workbench.view.extension.jupyter",
-    "to_ebd": "workbench view extension jupyter"
-  },
-  {
     "command": "workbench.view.extension.jupyter.resetViewContainerLocation",
     "to_ebd": "workbench view extension jupyter reset view container location"
-  },
-  {
-    "command": "workbench.view.extension.references",
-    "to_ebd": "workbench view extension references"
   },
   {
     "command": "workbench.view.extension.references",

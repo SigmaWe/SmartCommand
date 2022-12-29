@@ -13,10 +13,9 @@ We promise that SmartCommand will keep the models trained using your data open t
 
 SmartCommand is open source and we are deciding between MIT, Apache, and BSD, in terms of the license.
 
-## File structure
-* NLP: All scripts related to the NLP core part of this project, including preprocessing data, pre-embedding commands, testing different strategies. 
-* Backend: The backend server. 
-* Plugin: The VSCode plug-in itself. 
+## Folder structure
+* NLP_and_backend: All scripts related to the NLP core part of this project, including preprocessing data, pre-embedding commands, testing different strategies. The backend app is in `NLP_and_backend/app.py`
+* Plugin: The VSCode plug-in itself (currently going over refactorization). 
 
 ## Architecture
 
@@ -27,7 +26,6 @@ graph TD;
     B-->|Enter query|C(Query, e.g., set Python kernel);
     G(Command selected, e.g, Python: Select Interpreter);
 
-
     subgraph Backend
         E(Pre-embedded command candidates);
         D[Computing cosinse similarity];
@@ -37,34 +35,33 @@ graph TD;
         D-->F;
     end
 
-
     F-->|Select a command|G;
     G-->|Fine-tune|E;
 
 ```
 
-## Backend
+## NLP and Backend
 
-At our backend, we leverage two language models, the original BERT-base-uncased and the Sentence-Transformer (also known as the SBERT or Sentence-BERT). 
-
-### Backend end points
+At our backend, we leverage Sentence-Transformer (also known as the SBERT or Sentence-BERT). 
 
 1. `Search`: 
     * Method: GET
-    * Request body and example: 
+    * Request body (all kwargs) and example: 
         ```json
         {
-            "q": "markdown preview"
+            "q": "markdown preview", 
+            "k": 15, 
+            "p": 0.1
         }
         ```
     * Response: 
         ```json
-        ["command 1", "command 2", "command 3"]
+        ["command 1", "command 2", "command 3", ...] 
         ```
 
-        The response list can be just a single entry `["None of above"]` in case the confidence is too low for all candidate commands.
 2. `Feedback`: not implemented yet
 
+**Content below are to be updated***
 
 ## Building and running the plug-in locally
 

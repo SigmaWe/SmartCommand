@@ -25,10 +25,31 @@ def load_commands_wo_shortcuts(json_file):
                 commands.append({"command":matches.group(1)})
     return commands 
 
+def remove_repeat_commands(command_dict_list:list[dict]) -> list[dict]:
+    """Remove commands that have the same command string
+
+    command_dict_list: a list of commands, 
+                       each a dict: 
+                    {"key":str, "command":str, "when":str, "to-ebd": str}
+                    to-ebd is the string to embed the command itself or its label
+
+    """
+    command_strings = [c['command'] for c in command_dict_list]
+    unique_commands = []
+    for i, command in enumerate(command_dict_list):
+        if command_strings[i] not in command_strings[:i]:
+            unique_commands.append(command)
+    return unique_commands
+
 def load_all_commands(jsonfile):
     commands_w_shortcuts = load_commands_w_shortcuts(jsonfile)
     commands_wo_shortcuts = load_commands_wo_shortcuts(jsonfile)
-    return commands_w_shortcuts + commands_wo_shortcuts
+    all_commands = commands_w_shortcuts + commands_wo_shortcuts
+    print ("total commands before removing repeats: ", len(all_commands))
+    all_commands = remove_repeat_commands(all_commands)
+    print ("total commands after removing repeats: ", len(all_commands))
+    return all_commands
+
 
 # %%
 

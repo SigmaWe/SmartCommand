@@ -1,3 +1,7 @@
+# Pre-embed commands extracted by clean_commands.py
+# You can select the approach and models at the end
+
+
 import json, pickle, typing 
 
 import sentence_transformers
@@ -10,17 +14,34 @@ def load_commands(command_json):
 
 def emb_sbert(sentences: typing.List[str], model:str):
     """Embed a list of sentences using Sentence-transformers/SBERT 
+
+    Return is a 2D numpy array. 
+
     """
 
     embedder = sentence_transformers.SentenceTransformer(model)
-    embedder.encode(sentences)
+    embeddings = embedder.encode(sentences, 
+                    convert_to_numpy=True, 
+                    normalize_embeddings=True)
 
-    return embedder
+    return embeddings
 
 def embed_commands(command_dict_list, method:str, model:str):
     """Embed command strings 
 
-    command_dict_list: list of dicts of keys: "key", "command", "when", "to_ebd"
+        command_dict_list: a list of commands, 
+                       each a dict: 
+                    {"key":str, "command":str, "when":str, "to-ebd": str}
+                    to-ebd is the string to embed the command itself or its label
+
+
+    Depending on the approach, the embeddings are of different shapes. 
+    For SBERT, the embedding is at the sentence level. Hence, 
+    the embeddings are 2D arrays, with axis-0 for each command. 
+    For BERTScore, the embedding is at the token level. Hence, the 
+    embeddings are 3D arrays, with axis 0 for each command, and 
+    axis 1 for each token. 
+
     """
     command_strings = [c["to_ebd"] for c in command_dict_list]
     if method == "sbert":
