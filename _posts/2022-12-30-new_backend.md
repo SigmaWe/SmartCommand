@@ -1,6 +1,6 @@
 # Refactorized backend, initial report
 
-Now you can try our refactorized backend at https://search-small-ovrqou53aq-uc.a.run.app/?q=%22set%20python%20kernel%22&k=50 
+Now you can try our refactorized backend as easy as visiting https://search-small-ovrqou53aq-uc.a.run.app/?q=%22set%20python%20kernel%22&k=50 from your browser. 
 Only three parameters to be passed in the URL via GET:
 * `q` for your query, space separated terms, 
 * `k` and `p` for [top-k and top-p](https://docs.cohere.ai/docs/controlling-generation-with-top-k-top-p) cutoffs. 
