@@ -108,15 +108,16 @@ def main(query, command_embedding_pickle, command_dict_list_json, method, model,
 
 if __name__ == "__main__":
     import sys, os
-    query = sys.argv[1]
-    data_root = "../NLP"
-    command_dict_list_json = os.path.join(data_root, "commands_processed.json")
-    method = "sbert"
-    model = "all-MiniLM-L6-v2"
-    command_embedding_pickle = os.path.join(data_root, f"command_embeddings_{method}_{model}.pickle")
+    query = sys.argv[1]   
     k, p = 20, 0.8
     [k, p] = sys.argv[2:4]
     k, p = int(k), float(p)
-    results = main(query, command_embedding_pickle, command_dict_list_json, method, model, k, p)
+
+    import config
+    results = main(query, 
+                   config.command_embedding_pickle, 
+                   config.command_dict_list_json, 
+                   config.method, 
+                   config.model, k, p)
     for (command, score) in results:
         print (command.ljust(40), f"{score:.3f}")

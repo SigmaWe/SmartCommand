@@ -92,7 +92,5 @@ def main(jsonfile="keybindings.json", savefile="commands_processed.json"):
     pickle_commands(commands, savefile)
 
 
-
-
 if __name__ == "__main__":
     main()

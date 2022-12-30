@@ -56,15 +56,14 @@ def pickle_embeddings(embeddings:numpy.ndarray, pickle_file):
     with open(pickle_file, 'wb') as f:
         pickle.dump(embeddings, f)
 
-
 def main(command_json, pickle_file, method, model):
     commands = load_commands(command_json)
     embeddings= embed_commands(commands, method, model)
     pickle_embeddings(embeddings, pickle_file)
 
 if __name__ == "__main__":
-    command_json = "commands_processed.json"
-    method = "sbert"
-    model = 'all-MiniLM-L6-v2'
-    pickle_file = f"command_embeddings_{method}_{model}.pickle"
-    main(command_json, pickle_file, method, model)
+    import config 
+
+    main(config.command_dict_list_json, 
+         config.command_embedding_pickle, 
+         config.method, config.model)
