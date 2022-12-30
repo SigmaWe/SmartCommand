@@ -1,7 +1,8 @@
 data_root = "./"
 method = "sbert"
 #    model = 'all-MiniLM-L6-v2'
-model = './pre_trained_models/multi-qa-mpnet-base-dot-v1'
+# model = './pre_trained_models/multi-qa-mpnet-base-dot-v1'
+model = './pre_trained_models/all-MiniLM-L6-v2'
 
 # If you change the model above, be sure to change accordingly in run_all.sh as well
 

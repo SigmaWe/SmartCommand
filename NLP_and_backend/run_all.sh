@@ -1,7 +1,8 @@
 
 # Configuration, need to be consistent with the one in config.py
 method=sbert
-model=./pre_trained_models/multi-qa-mpnet-base-dot-v1
+# model=./pre_trained_models/multi-qa-mpnet-base-dot-v1
+model=./pre_trained_models/all-MiniLM-L6-v2
 ### If you change here, be sure to change in config.py as well
 # End of configuration
 

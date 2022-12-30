@@ -36,15 +36,8 @@ def search_main(query, command_embeddings, command_dict_list, method, model, k, 
 
 @functions_framework.http
 def search(request):
-    request_json = request.get_json(silent=True)
-    q="insert cursor above"; k=15; p=0.7 # default values
-    if request_json:
-        for key in request_json:
-            if key == 'q':
-                q = request_json['q']
-            elif key == 'k':
-                k = request_json['k']
-            elif key == 'p':
-                p = request_json['p']
+    q = request.args.get('q', "insert cursor above")
+    k = int(request.args.get('k', 15))
+    p = float(request.args.get('p', 0.7))
     
     return search_main(q, command_embeddings, command_dict_list, method, model, k, p)
