@@ -21,12 +21,14 @@ def export_commands():
         with open(file, 'r', encoding='utf-8') as f:
             package = json.load(f)
             extension_name = package['name']
+            extension_version = package['version']  # Read the version from package.json
 
             if 'contributes' in package and 'commands' in package['contributes']:
                 commands = package['contributes']['commands']
 
                 for command in commands:
                     command['source'] = extension_name
+                    command['version'] = extension_version  # Add version information to each command
                     all_commands.append(command)
 
     # Add default commands
@@ -42,12 +44,13 @@ def export_commands():
                 command['source'] = 'default'
                 all_commands.append(command)
 
-    output_file = "all_commands_full_info.json"
+    output_file = "PlugInCommandsOutput.json"
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
         json.dump(all_commands, outfile, indent=2)
 
     print(f"All command information for all extensions and default commands have been exported to '{output_file}'.")
+
 
 if __name__ == "__main__":
     export_commands()
