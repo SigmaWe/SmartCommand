@@ -79,8 +79,8 @@ def clone_vscode_repository(repo_url, target_dir):
 def main():
     repo_url = "https://github.com/microsoft/vscode.git"
     target_dir = "vscode_cloned"
-    output_json_file = "output1.json"
-    output_subfolders_json_file = "output2.json"
+    output_json_file = "builtInCommandsOutput1.json"
+    output_subfolders_json_file = "builtInCommandsOutput2.json"
 
     clone_vscode_repository(repo_url, target_dir)
 
@@ -111,7 +111,7 @@ def main():
     combined_data = data_output1 + data_output2
 
     # Write the combined data to output.json
-    with open("output.json", 'w', encoding='utf-8') as file:
+    with open("builtInCommandsOutput.json", 'w', encoding='utf-8') as file:
         json.dump(combined_data, file, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
