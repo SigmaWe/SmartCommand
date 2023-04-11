@@ -11,15 +11,15 @@ This will create an `AllCommands.json` file in the same directory, containing th
 ### *Option 2: Call the file from a different Python script:*
 You can also use the `AllCommands.py` script as a module and call its `ExportCommands()` function from a different Python script. To do this, follow these steps:
 
-1. 1. Import the main function from `AllCommands.py` in your new Python script:
-2. ```
-3. from AllCommands import ExportCommands
-4. ```
-5. 2. Call the ExportCommands() function in your new script:
-6. ```
-7. merged_data = ExportCommands()
-8. ```
-9. This will execute the merging process and return the combined data as a dictionary. The `AllCommands.json` file will also be created in the same directory as `AllCommands.py`.
+1. Import the main function from `AllCommands.py` in your new Python script:
+```
+from AllCommands import ExportCommands
+```
+2. Call the ExportCommands() function in your new script:
+```
+merged_data = ExportCommands()
+```
+3. This will execute the merging process and return the combined data as a dictionary. The `AllCommands.json` file will also be created in the same directory as `AllCommands.py`.
 
 Here's an example of how to use the ExportCommands() function from a different Python script:
 ```
