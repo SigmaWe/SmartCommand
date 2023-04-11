@@ -76,7 +76,7 @@ def clone_vscode_repository(repo_url, target_dir):
     if not os.path.exists(target_dir):
         subprocess.run(["git", "clone", repo_url, target_dir])
 
-def orig_Extension(path):##############################################################################
+def orig_Extension(path):
     package_nls_files = find_package_nls_files(path)
     command_data_list = []
     for package_nls_file in package_nls_files:
