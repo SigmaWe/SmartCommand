@@ -130,6 +130,4 @@ def main():
     with open("builtInCommandsOutput.json", 'w', encoding='utf-8') as file:
         json.dump(combined_data, file, ensure_ascii=False, indent=2)
 
-
-if __name__ == "__main__":
-    main()
+    return combined_data
