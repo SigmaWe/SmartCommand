@@ -11,11 +11,11 @@ def get_extension_folder():
 def get_default_keybindings_file():
     return 'package.json'
 
-def export_commands():
+def main():
     extension_folder = get_extension_folder()
     extension_json_files = glob.glob(f'{extension_folder}/**/package.json', recursive=True)
 
-    all_commands = []
+    all_extensions = {}
 
     for file in extension_json_files:
         with open(file, 'r', encoding='utf-8') as f:
@@ -26,10 +26,17 @@ def export_commands():
             if 'contributes' in package and 'commands' in package['contributes']:
                 commands = package['contributes']['commands']
 
+                # Group commands by extension name and version
+                key = f"{extension_name}@{extension_version}"
+                if key not in all_extensions:
+                    all_extensions[key] = {
+                        "source": extension_name,
+                        "version": extension_version,
+                        "commands": []
+                    }
+
                 for command in commands:
-                    command['source'] = extension_name
-                    command['version'] = extension_version  # Add version information to each command
-                    all_commands.append(command)
+                    all_extensions[key]['commands'].append(command)
 
     # Add default commands
     default_keybindings_file = get_default_keybindings_file()
@@ -42,15 +49,14 @@ def export_commands():
 
             for command in commands:
                 command['source'] = 'default'
-                all_commands.append(command)
+                all_extensions['default'] = {
+                    "source": "default",
+                    "commands": commands
+                }
 
     output_file = "PlugInCommandsOutput.json"
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(all_commands, outfile, indent=2)
+        json.dump(list(all_extensions.values()), outfile, indent=2)
 
-    print(f"All command information for all extensions and default commands have been exported to '{output_file}'.")
-
-
-if __name__ == "__main__":
-    export_commands()
+    return list(all_extensions.values())
