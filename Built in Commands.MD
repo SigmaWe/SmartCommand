@@ -15,7 +15,7 @@ The results are saved into three separate JSON files, which are then combined in
 * The script will output a file named `builtInCommandsOutput.json` in the same directory containing all the built-in command information.
 
 ### *Code Explanation:*
-import os, json, subprocess, glob, re: Import required libraries for file manipulation, Git, and regular expressions.
+* import os, json, subprocess, glob, re: Import required libraries for file manipulation, Git, and regular expressions.
 ```
 pip install os json subprocess glob re
 ```
