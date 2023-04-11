@@ -76,11 +76,20 @@ def clone_vscode_repository(repo_url, target_dir):
     if not os.path.exists(target_dir):
         subprocess.run(["git", "clone", repo_url, target_dir])
 
+def orig_Extension(path):##############################################################################
+    package_nls_files = find_package_nls_files(path)
+    command_data_list = []
+    for package_nls_file in package_nls_files:
+        command_data_list.extend(process_package_nls_file(package_nls_file))
+    return command_data_list
+
+
 def main():
     repo_url = "https://github.com/microsoft/vscode.git"
     target_dir = "vscode_cloned"
     output_json_file = "builtInCommandsOutput1.json"
     output_subfolders_json_file = "builtInCommandsOutput2.json"
+    output_orig_extension_json_file = "origExtensionOutput.json"
 
     clone_vscode_repository(repo_url, target_dir)
 
@@ -101,18 +110,26 @@ def main():
     with open(output_subfolders_json_file, 'w', encoding='utf-8') as file:
         json.dump(subfolder_data, file, ensure_ascii=False, indent=2)
 
-    # Load the data from output1.json and output2.json
+    # Call orig_Extension function and save the results to origExtensionOutput.json
+    orig_extension_data = orig_Extension(vscode_main_path)
+    with open(output_orig_extension_json_file, 'w', encoding='utf-8') as file:
+        json.dump(orig_extension_data, file, ensure_ascii=False, indent=2)
+
+    # Load the data from builtInCommandsOutput1.json, builtInCommandsOutput2.json and origExtensionOutput.json
     with open(output_json_file, 'r', encoding='utf-8') as file:
         data_output1 = json.load(file)
     with open(output_subfolders_json_file, 'r', encoding='utf-8') as file:
         data_output2 = json.load(file)
+    with open(output_orig_extension_json_file, 'r', encoding='utf-8') as file:
+        data_output3 = json.load(file)
 
     # Combine the data
-    combined_data = data_output1 + data_output2
+    combined_data = data_output1 + data_output2 + data_output3
 
     # Write the combined data to output.json
     with open("builtInCommandsOutput.json", 'w', encoding='utf-8') as file:
         json.dump(combined_data, file, ensure_ascii=False, indent=2)
+
 
 if __name__ == "__main__":
     main()
