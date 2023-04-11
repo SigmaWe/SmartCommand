@@ -2,9 +2,11 @@
 This Python script, `BuiltInCommands.py`, exports all built-in command information for Visual Studio Code (VSCode) into a JSON file named `builtInCommandsOutput.json`.
 
 
+
 ### *Description:*
 The script clones the [VSCode repository](https://github.com/microsoft/vscode), processes the `package.nls.json` files from the `vscode_cloned\extensions\*` subfolders, and `*.contribution.ts` files from the contrib folder located `~\vscode\src\vs\workbench\contrib\*` to extract built-in command information. 
 The results are saved into three separate JSON files, which are then combined into a final JSON file containing all the command information.
+
 
 
 ### *Usage:*
@@ -15,6 +17,7 @@ The results are saved into three separate JSON files, which are then combined in
  python3 BuiltInCommands.py
  ``` 
 * The script will output a file named `builtInCommandsOutput.json` in the same directory containing all the built-in command information.
+
 
 
 ### *Code Explanation:*
