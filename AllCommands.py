@@ -2,7 +2,7 @@ import json
 import PlugInCommands
 import builtInCommands
 
-def main():
+def ExportCommands():
     plugin_data = PlugInCommands.main()
     builtin_data = builtInCommands.main()
 
@@ -14,4 +14,4 @@ def main():
     return merged_data
 
 if __name__ == "__main__":
-    main()
+    ExportCommands()
