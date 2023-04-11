@@ -1,0 +1,596 @@
+[
+  {
+    "category": "Apply Refactoring",
+    "command": "refactorPreview.apply",
+    "title": "Apply Refactoring",
+    "source": "refactorPreview"
+  },
+  {
+    "category": "Refactor Preview",
+    "command": "refactorPreview.discard",
+    "title": "Refactor Preview",
+    "source": "refactorPreview"
+  },
+  {
+    "category": "Discard Refactoring",
+    "command": "refactorPreview.toggleCheckedState",
+    "title": "Discard Refactoring",
+    "source": "refactorPreview"
+  },
+  {
+    "category": "Refactor Preview",
+    "command": "refactorPreview.groupByFile",
+    "title": "Refactor Preview",
+    "source": "refactorPreview"
+  },
+  {
+    "category": "Toggle Change",
+    "command": "refactorPreview.groupByType",
+    "title": "Toggle Change",
+    "source": "refactorPreview"
+  },
+  {
+    "category": "Refactor Preview",
+    "command": "refactorPreview.toggleGrouping",
+    "title": "Refactor Preview",
+    "source": "refactorPreview"
+  },
+  {
+    "category": "Peek Call Hierarchy",
+    "command": "editor.showCallHierarchy",
+    "title": "Peek Call Hierarchy",
+    "source": "editor"
+  },
+  {
+    "category": "Show Incoming Calls",
+    "command": "editor.showIncomingCalls",
+    "title": "Show Incoming Calls",
+    "source": "editor"
+  },
+  {
+    "category": "Show Outgoing Calls",
+    "command": "editor.showOutgoingCalls",
+    "title": "Show Outgoing Calls",
+    "source": "editor"
+  },
+  {
+    "category": "Refocus Call Hierarchy",
+    "command": "editor.refocusCallHierarchy",
+    "title": "Refocus Call Hierarchy",
+    "source": "editor"
+  },
+  {
+    "category": "Run Commands",
+    "command": "runCommands",
+    "title": "Run Commands",
+    "source": "runCommands"
+  },
+  {
+    "category": "Terminate Thread",
+    "command": "debug.installAdditionalDebuggers",
+    "title": "Terminate Thread",
+    "source": "debug"
+  },
+  {
+    "category": "Focus on Debug Console View",
+    "command": "workbench.debug.action.toggleRepl",
+    "title": "Focus on Debug Console View",
+    "source": "workbench"
+  },
+  {
+    "category": "Jump to Cursor",
+    "command": "workbench.debug.action.focusVariablesView",
+    "title": "Jump to Cursor",
+    "source": "workbench"
+  },
+  {
+    "category": "Set Next Statement",
+    "command": "workbench.debug.action.focusWatchView",
+    "title": "Set Next Statement",
+    "source": "workbench"
+  },
+  {
+    "category": "Run to Cursor",
+    "command": "workbench.debug.action.focusCallStackView",
+    "title": "Run to Cursor",
+    "source": "workbench"
+  },
+  {
+    "category": "Evaluate in Debug Console",
+    "command": "workbench.debug.action.focusBreakpointsView",
+    "title": "Evaluate in Debug Console",
+    "source": "workbench"
+  },
+  {
+    "category": "Add to Watch",
+    "command": "debug",
+    "title": "Add to Watch",
+    "source": "debug"
+  },
+  {
+    "category": "Continue Working On...",
+    "command": "_workbench.editSessions.actions.continueEditSession",
+    "title": "Continue Working On...",
+    "source": "_workbench"
+  },
+  {
+    "category": "Open In Local Folder",
+    "command": "_workbench.editSessions.actions.continueEditSession.openLocalFolder",
+    "title": "Open In Local Folder",
+    "source": "_workbench"
+  },
+  {
+    "category": "Show Log",
+    "command": "workbench.editSessions.actions.showOutputChannel",
+    "title": "Show Log",
+    "source": "workbench"
+  },
+  {
+    "category": "Show Cloud Changes",
+    "command": "workbench.action.continueOn.extensions",
+    "title": "Show Cloud Changes",
+    "source": "workbench"
+  },
+  {
+    "category": "Resume Latest Changes from Cloud",
+    "command": "autoStoreWorkingChanges",
+    "title": "Resume Latest Changes from Cloud",
+    "source": "autoStoreWorkingChanges"
+  },
+  {
+    "category": "Store Working Changes in Cloud",
+    "command": "workbench.editSessions.actions.showEditSessions",
+    "title": "Store Working Changes in Cloud",
+    "source": "workbench"
+  },
+  {
+    "category": "Open New External Terminal",
+    "command": "externalTerminal",
+    "title": "Open New External Terminal",
+    "source": "externalTerminal"
+  },
+  {
+    "category": "Interactive Window",
+    "command": "vscode-interactive-input",
+    "title": "Interactive Window",
+    "source": "vscode-interactive-input"
+  },
+  {
+    "category": "Open Interactive Window",
+    "command": "interactive",
+    "title": "Open Interactive Window",
+    "source": "interactive"
+  },
+  {
+    "category": "Execute Code",
+    "command": "_interactive.open",
+    "title": "Execute Code",
+    "source": "_interactive"
+  },
+  {
+    "category": "Clear the interactive window input editor contents",
+    "command": "interactive.execute",
+    "title": "Clear the interactive window input editor contents",
+    "source": "interactive"
+  },
+  {
+    "category": "Previous value in history",
+    "command": "interactive.input.clear",
+    "title": "Previous value in history",
+    "source": "interactive"
+  },
+  {
+    "category": "Next value in history",
+    "command": "interactive.history.previous",
+    "title": "Next value in history",
+    "source": "interactive"
+  },
+  {
+    "category": "Focus Input Editor",
+    "command": "interactive.history.next",
+    "title": "Focus Input Editor",
+    "source": "interactive"
+  },
+  {
+    "category": "Focus History",
+    "command": "interactive.scrollToTop",
+    "title": "Focus History",
+    "source": "interactive"
+  },
+  {
+    "category": "Toggle Keyboard Shortcuts Troubleshooting",
+    "command": "workbench.action.toggleKeybindingsLog",
+    "title": "Toggle Keyboard Shortcuts Troubleshooting",
+    "source": "workbench"
+  },
+  {
+    "category": "Detect Language from Content",
+    "command": "status.editor.mode",
+    "title": "Detect Language from Content",
+    "source": "status"
+  },
+  {
+    "category": "Reset Language Status Interaction Counter",
+    "command": "status.editor.mode",
+    "title": "Reset Language Status Interaction Counter",
+    "source": "status"
+  },
+  {
+    "category": "Set Default Log Level",
+    "command": "workbench.action.setDefaultLogLevel",
+    "title": "Set Default Log Level",
+    "source": "workbench"
+  },
+  {
+    "category": "Focus Problems (Errors, Warnings, Infos)",
+    "command": "workbench.actions.view.problems",
+    "title": "Focus Problems (Errors, Warnings, Infos)",
+    "source": "workbench"
+  },
+  {
+    "category": "Copy",
+    "command": "workbench.action.problems.focus",
+    "title": "Copy",
+    "source": "workbench"
+  },
+  {
+    "category": "Show Output Channels...",
+    "command": "workbench.action.output.toggleOutput",
+    "title": "Show Output Channels...",
+    "source": "workbench"
+  },
+  {
+    "category": "Output",
+    "command": "workbench.action.showOutputChannels",
+    "title": "Output",
+    "source": "workbench"
+  },
+  {
+    "category": "Clear Output",
+    "command": "workbench.action.showLogs",
+    "title": "Clear Output",
+    "source": "workbench"
+  },
+  {
+    "category": "Toggle Auto Scrolling",
+    "command": "workbench.action.openLogFile",
+    "title": "Toggle Auto Scrolling",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Log Output File",
+    "command": "output",
+    "title": "Open Log Output File",
+    "source": "output"
+  },
+  {
+    "category": "Open Settings (UI)",
+    "command": "workbench.action.openSettings2",
+    "title": "Open Settings (UI)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open User Settings (JSON)",
+    "command": "workbench.action.openSettingsJson",
+    "title": "Open User Settings (JSON)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Current Profile Settings (JSON)",
+    "command": "workbench.action.openApplicationSettingsJson",
+    "title": "Open Current Profile Settings (JSON)",
+    "source": "workbench"
+  },
+  {
+    "category": "Preferences",
+    "command": "workbench.action.openGlobalSettings",
+    "title": "Preferences",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Settings (UI)",
+    "command": "workbench.action.openRawDefaultSettings",
+    "title": "Open Settings (UI)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open User Settings",
+    "command": "_workbench.openUserSettingsEditor",
+    "title": "Open User Settings",
+    "source": "_workbench"
+  },
+  {
+    "category": "Open Default Settings (JSON)",
+    "command": "workbench.action.openWorkspaceSettings",
+    "title": "Open Default Settings (JSON)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Settings (JSON)",
+    "command": "workbench.action.openAccessibilitySettings",
+    "title": "Open Settings (JSON)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Settings (JSON)",
+    "command": "workbench.action.openWorkspaceSettingsFile",
+    "title": "Open Settings (JSON)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Workspace Settings",
+    "command": "workbench.action.openFolderSettings",
+    "title": "Open Workspace Settings",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Accessibility Settings",
+    "command": "workbench.action.openFolderSettingsFile",
+    "title": "Open Accessibility Settings",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Workspace Settings (JSON)",
+    "command": "_workbench.action.openFolderSettings",
+    "title": "Open Workspace Settings (JSON)",
+    "source": "_workbench"
+  },
+  {
+    "category": "Open Folder Settings",
+    "command": "workbench.action.openRemoteSettings",
+    "title": "Open Folder Settings",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Folder Settings (JSON)",
+    "command": "workbench.action.openRemoteSettingsFile",
+    "title": "Open Folder Settings (JSON)",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Folder Settings",
+    "command": "workbench.action.openGlobalKeybindings",
+    "title": "Open Folder Settings",
+    "source": "workbench"
+  },
+  {
+    "category": "Show untrusted workspace settings",
+    "command": "workbench.action.openGlobalKeybindings",
+    "title": "Show untrusted workspace settings",
+    "source": "workbench"
+  },
+  {
+    "category": "Focus Settings Search",
+    "command": "workbench.action.openGlobalKeybindings",
+    "title": "Focus Settings Search",
+    "source": "workbench"
+  },
+  {
+    "category": "Clear Settings Search Results",
+    "command": "workbench.action.openDefaultKeybindingsFile",
+    "title": "Clear Settings Search Results",
+    "source": "workbench"
+  },
+  {
+    "category": "Focus Settings Table of Contents",
+    "command": "workbench.action.openGlobalKeybindingsFile",
+    "title": "Focus Settings Table of Contents",
+    "source": "workbench"
+  },
+  {
+    "category": "Show Setting Context Menu",
+    "command": "editor.action.defineKeybinding",
+    "title": "Show Setting Context Menu",
+    "source": "editor"
+  },
+  {
+    "category": "Connection: Trigger Reconnect",
+    "command": "workbench.action.triggerReconnect",
+    "title": "Connection: Trigger Reconnect",
+    "source": "workbench"
+  },
+  {
+    "category": "Connection: Pause socket writing",
+    "command": "workbench.action.pauseSocketWriting",
+    "title": "Connection: Pause socket writing",
+    "source": "workbench"
+  },
+  {
+    "category": "Search",
+    "command": "search",
+    "title": "Search",
+    "source": "search"
+  },
+  {
+    "category": "Search Editor",
+    "command": "search.searchEditor.action.deleteFileResults",
+    "title": "Search Editor",
+    "source": "search"
+  },
+  {
+    "category": "Delete File Results",
+    "command": "search.action.openNewEditorFromView",
+    "title": "Delete File Results",
+    "source": "search"
+  },
+  {
+    "category": "Open Workspace Tasks",
+    "command": "workbench.action.tasks.runTask",
+    "title": "Open Workspace Tasks",
+    "source": "workbench"
+  },
+  {
+    "category": "Configure Task",
+    "command": "workbench.action.tasks.build",
+    "title": "Configure Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Show Task Log",
+    "command": "workbench.action.tasks.showTasks",
+    "title": "Show Task Log",
+    "source": "workbench"
+  },
+  {
+    "category": "Run Task",
+    "command": "workbench.action.tasks.restartTask",
+    "title": "Run Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Rerun Last Task",
+    "command": "workbench.action.tasks.terminate",
+    "title": "Rerun Last Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Restart Running Task",
+    "command": "workbench.action.tasks.configureTaskRunner",
+    "title": "Restart Running Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Show Running Tasks",
+    "command": "workbench.action.tasks.configureDefaultBuildTask",
+    "title": "Show Running Tasks",
+    "source": "workbench"
+  },
+  {
+    "category": "Terminate Task",
+    "command": "workbench.action.tasks.openWorkspaceFileTasks",
+    "title": "Terminate Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Run Build Task",
+    "command": "workbench.action.tasks.showLog",
+    "title": "Run Build Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Run Test Task",
+    "command": "workbench.action.tasks.runTask",
+    "title": "Run Test Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Configure Default Build Task",
+    "command": "workbench.action.tasks.reRunTask",
+    "title": "Configure Default Build Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Configure Default Test Task",
+    "command": "workbench.action.tasks.restartTask",
+    "title": "Configure Default Test Task",
+    "source": "workbench"
+  },
+  {
+    "category": "Open User Tasks",
+    "command": "workbench.action.tasks.showTasks",
+    "title": "Open User Tasks",
+    "source": "workbench"
+  },
+  {
+    "category": "Peek Type Hierarchy",
+    "command": "editor.showTypeHierarchy",
+    "title": "Peek Type Hierarchy",
+    "source": "editor"
+  },
+  {
+    "category": "Show Supertypes",
+    "command": "editor.showSupertypes",
+    "title": "Show Supertypes",
+    "source": "editor"
+  },
+  {
+    "category": "Show Subtypes",
+    "command": "editor.showSubtypes",
+    "title": "Show Subtypes",
+    "source": "editor"
+  },
+  {
+    "category": "Refocus Type Hierarchy",
+    "command": "editor.refocusTypeHierarchy",
+    "title": "Refocus Type Hierarchy",
+    "source": "editor"
+  },
+  {
+    "category": "Show Release Notes",
+    "command": "update.checkForUpdate",
+    "title": "Show Release Notes",
+    "source": "update"
+  },
+  {
+    "category": "Check for Updates...",
+    "command": "update.downloadUpdate",
+    "title": "Check for Updates...",
+    "source": "update"
+  },
+  {
+    "category": "Download Update",
+    "command": "update.installUpdate",
+    "title": "Download Update",
+    "source": "update"
+  },
+  {
+    "category": "Install Update",
+    "command": "update.restartToUpdate",
+    "title": "Install Update",
+    "source": "update"
+  },
+  {
+    "category": "Restart to Update",
+    "command": "_update.applyupdate",
+    "title": "Restart to Update",
+    "source": "_update"
+  },
+  {
+    "category": "Open URL",
+    "command": "workbench.action.url.openUrl",
+    "title": "Open URL",
+    "source": "workbench"
+  },
+  {
+    "category": "Open Local Backups Folder",
+    "command": "workbench.userData.actions.openSyncBackupsFolder",
+    "title": "Open Local Backups Folder",
+    "source": "workbench"
+  },
+  {
+    "category": "Welcome",
+    "command": "workbench.action.openWalkthrough",
+    "title": "Welcome",
+    "source": "workbench"
+  },
+  {
+    "category": "Welcome",
+    "command": "welcome.goBack",
+    "title": "Welcome",
+    "source": "welcome"
+  },
+  {
+    "category": "Go Back",
+    "command": "walkthroughs.selectStep",
+    "title": "Go Back",
+    "source": "walkthroughs"
+  },
+  {
+    "category": "Open Walkthrough...",
+    "command": "welcome.markStepComplete",
+    "title": "Open Walkthrough...",
+    "source": "welcome"
+  },
+  {
+    "category": "Workspaces",
+    "command": "security",
+    "title": "Workspaces",
+    "source": "security"
+  },
+  {
+    "category": "Open Workspace",
+    "command": "workspaces.dontPromptToOpen",
+    "title": "Open Workspace",
+    "source": "workspaces"
+  }
+]
