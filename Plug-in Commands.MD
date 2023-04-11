@@ -2,7 +2,7 @@
 This Python script, `PlugInCommands.py`, exports all plug-in commands information for Visual Studio Code (VSCode) into a JSON file named `PlugInCommandsOutput.json`.
 
 ### *Description:*
-The script goes through the installed extensions in the user's `.vscode/extensions` folder, extracts command information from the `package.json` files of each extension. The result is a list of all available commands, including the source and version information.
+The script goes through the installed extensions in the user's `.vscode/extensions` folder, extracts command information from the `package.json` files of each extension, and groups them by extension name and version. The result is a list of all available commands, including the source and version information.
 
 ### *Usage:*
 * Ensure you have Python 3.x installed on your system.
@@ -31,7 +31,7 @@ pip install json glob2 os
 ##### *Functions:*
 * `get_extension_folder()`: Returns the path to the `.vscode/extensions` folder based on the OS (Windows or Unix-based).
 * `get_default_keybindings_file()`: Returns the file name of the default keybindings file, which is `package.json`.
-* `PlugInCommands()`: Main function to collect all command information and save it to a JSON file.
+* `main()`: Main function to collect all command information and save it to a JSON file.
 
 ### *Files and Paths:*
 
