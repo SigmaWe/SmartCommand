@@ -1,133 +1,113 @@
-import os
-import json
-import subprocess
 import glob
 import re
-
-def find_package_nls_files(path):
-    package_nls_files = []
-    for root, _, files in os.walk(path):
-        for file in files:
-            if file == "package.nls.json":
-                package_nls_files.append(os.path.join(root, file))
-    return package_nls_files
-
-def process_subfolders(path):
-    subfolder_data = []
-
-    for entry in os.scandir(path):
-        if entry.is_dir():
-            subfolder_data.extend(process_subfolders(entry.path))
-        else:
-            if entry.path.endswith(".contribution.ts"):
-                subfolder_name = os.path.basename(os.path.dirname(entry.path))
-                ts_file = entry.path
-
-                with open(ts_file, "r") as file:
-                    typescript_code = file.read()
-
-                id_pattern = r'id:\s*[\'"](.+?)[\'"]'
-                original_pattern = r'original:\s*[\'"](.+?)[\'"]'
-
-                ids = re.findall(id_pattern, typescript_code)
-                originals = re.findall(original_pattern, typescript_code)
-
-                subfolder_data = []
-
-                for command_value, title_value in zip(ids, originals):
-                    subfolder_data.append({
-                        "category": title_value,
-                        "command": command_value,
-                        "title": title_value,
-                        "source": command_value.split('.')[0]  # Extract the prefix before the first dot as the source
-                    })
-
-    return subfolder_data
-
-
-
-def process_package_nls_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        package_nls = json.load(file)
-
-    command_data = []
-    for key, value in package_nls.items():
-        if isinstance(value, str):
-            command_id = key
-            parts = command_id.split('.')
-            if len(parts) >= 2:
-                source = parts[0]
-                category = parts[1]
-                command_data.append({
-                    "category": category,
-                    "command": command_id,
-                    "title": value,
-                    "source": source
-                })
-
-    return command_data
-
-def get_subfolders(path):
-    subfolders = [os.path.basename(f.path) for f in os.scandir(path) if f.is_dir()]
-    return subfolders
-
+import json
+import subprocess
+import os
 
 def clone_vscode_repository(repo_url, target_dir):
     if not os.path.exists(target_dir):
         subprocess.run(["git", "clone", repo_url, target_dir])
+    else:
+        print(f"Target directory {target_dir} already exists. Skipping cloning.")
 
-def orig_Extension(path):
-    package_nls_files = find_package_nls_files(path)
-    command_data_list = []
-    for package_nls_file in package_nls_files:
-        command_data_list.extend(process_package_nls_file(package_nls_file))
-    return command_data_list
+# Regular expression patterns
+command_pattern = re.compile(r'"(?:command|id)":\s*"([^"]+)"')
+title_pattern = re.compile(r'"(?:title|original)":\s*"([^"]+)"')
+category_pattern = re.compile(r'"category":\s*"([^"]+)"')
+source_pattern = re.compile(r'"source":\s*"([^"]+)"')
 
+# Updated TypeScript patterns
+ts_command_pattern = re.compile(r'id:\s*(?:\'|\")(.+?)(?:\'|\")')
+ts_title_pattern = re.compile(r'title:\s*nls\.localize\((?:\'|\")([^"]+)(?:\'|\")')
+
+def extract_commands_and_titles(file_path, file_type):
+    commands_and_titles = []
+    with open(file_path, "r", encoding="utf-8") as file:
+        content = file.read()
+
+        if file_type == "json":
+            commands = command_pattern.findall(content)
+            titles = title_pattern.findall(content)
+            categories = category_pattern.findall(content)
+            sources = source_pattern.findall(content)
+        else:  # file_type == "typescript"
+            commands = ts_command_pattern.findall(content)
+            titles = ts_title_pattern.findall(content)
+            categories = []
+            sources = []
+
+        for i, command in enumerate(commands):
+            title = titles[i] if i < len(titles) else None
+            category = categories[i] if i < len(categories) else None
+            source = sources[i] if i < len(sources) else None
+            commands_and_titles.append({
+                "command": command,
+                "title": title,
+                "category": category,
+                "source": source,
+                "file_path": file_path  # Add the file path to the dictionary
+            })
+
+    return commands_and_titles
+
+
+
+def find_missing_info(target_dir, unique_commands):
+    source_path = f"{target_dir}/**/*.json"
+    typescript_files = f"{target_dir}/**/*.ts"
+
+    for file_path in glob.glob(source_path, recursive=True):
+        commands_and_titles = extract_commands_and_titles(file_path, "json")
+        for item in commands_and_titles:
+            command_id = item["command"]
+            if command_id in unique_commands:
+                unique_commands[command_id].update({k: v for k, v in item.items() if v is not None and k not in unique_commands[command_id]})
+
+    for file_path in glob.glob(typescript_files, recursive=True):
+        commands_and_titles = extract_commands_and_titles(file_path, "typescript")
+        for item in commands_and_titles:
+            command_id = item["command"]
+            if command_id in unique_commands:
+                unique_commands[command_id].update({k: v for k, v in item.items() if v is not None and k not in unique_commands[command_id]})
 
 def main():
     repo_url = "https://github.com/microsoft/vscode.git"
     target_dir = "vscode_cloned"
-    output_json_file = "builtInCommandsOutput1.json"
-    output_subfolders_json_file = "builtInCommandsOutput2.json"
-    output_orig_extension_json_file = "origExtensionOutput.json"
-
     clone_vscode_repository(repo_url, target_dir)
 
-    vscode_main_path = os.path.join(target_dir, "extensions")
+    source_path = f"{target_dir}/**/*.json"
+    typescript_files = f"{target_dir}/**/*.ts"
 
-    package_nls_files = find_package_nls_files(vscode_main_path)
+    unique_commands = {}
+    for file_path in glob.glob(source_path, recursive=True):
+        commands_and_titles = extract_commands_and_titles(file_path, "json")
+        for item in commands_and_titles:
+            command_id = item["command"]
+            if command_id in unique_commands:
+                unique_commands[command_id].update({k: v for k, v in item.items() if v is not None})
+            else:
+                unique_commands[command_id] = item
 
-    command_data_list = []
-    for package_nls_file in package_nls_files:
-        command_data_list.extend(process_package_nls_file(package_nls_file))
+    for file_path in glob.glob(typescript_files, recursive=True):
+        commands_and_titles = extract_commands_and_titles(file_path, "typescript")
+        for item in commands_and_titles:
+            command_id = item["command"]
+            if command_id in unique_commands:
+                unique_commands[command_id].update({k: v for k, v in item.items() if v is not None})
+            else:
+                unique_commands[command_id] = item
 
-    with open(output_json_file, 'w', encoding='utf-8') as file:
-        json.dump(command_data_list, file, ensure_ascii=False, indent=2)
+    find_missing_info(target_dir, unique_commands)
 
-    workbench_contrib_path = os.path.join(target_dir, "src", "vs", "workbench", "contrib")
-    subfolder_data = process_subfolders(workbench_contrib_path)
-
-    with open(output_subfolders_json_file, 'w', encoding='utf-8') as file:
-        json.dump(subfolder_data, file, ensure_ascii=False, indent=2)
-
-    # Call orig_Extension function and save the results to origExtensionOutput.json
-    orig_extension_data = orig_Extension(vscode_main_path)
-    with open(output_orig_extension_json_file, 'w', encoding='utf-8') as file:
-        json.dump(orig_extension_data, file, ensure_ascii=False, indent=2)
-
-    # Load the data from builtInCommandsOutput1.json, builtInCommandsOutput2.json and origExtensionOutput.json
-    with open(output_json_file, 'r', encoding='utf-8') as file:
-        data_output1 = json.load(file)
-    with open(output_subfolders_json_file, 'r', encoding='utf-8') as file:
-        data_output2 = json.load(file)
-    with open(output_orig_extension_json_file, 'r', encoding='utf-8') as file:
-        data_output3 = json.load(file)
-
-    # Combine the data
-    combined_data = data_output1 + data_output2 + data_output3
+    combined_data = list(unique_commands.values())
 
     # Write the combined data to output.json
-    with open("builtInCommandsOutput.json", 'w', encoding='utf-8') as file:
-        json.dump(combined_data, file, ensure_ascii=False, indent=2)
+    with open("AllCommands.json", "w", encoding="utf-8") as output_file:
+        json.dump(combined_data, output_file, ensure_ascii=False, indent=2)
+
+    # print("Commands and titles have been successfully extracted and saved to AllCommands.json.")
 
     return combined_data
+
+if __name__ == "__main__":
+    main()

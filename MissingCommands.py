@@ -36,15 +36,10 @@ for command_k in command_id_keybindings:
         found_commands_list.append(command_k)
         command_found = True
         break
-    else:
-      if command_k in command_e:
-        found_commands_list.append(command_k)
-        command_found = True
-        break
-      elif command_e in command_k:
-        found_commands_list.append(command_k)
-        command_found = True
-        break
+    elif (command_k in command_e) or (command_e in command_k):
+      found_commands_list.append(command_k)
+      command_found = True
+      break
   if not(command_found):
     missing_commands_list.append(command_k)
 
