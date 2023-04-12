@@ -26,16 +26,24 @@ command_id_keybindings = [*set(command_id_keybindings)]
 missing_commands_list = []
 found_commands_list = []
 
-for command in command_id_keybindings:
-  if command not in command_id_extracted:
-    missing_commands_list.append(command)
-  else:
-    found_commands_list.append(command)
+for command_k in command_id_keybindings:
+  command_found = False
+  for command_e in command_id_extracted:
+    if command_k in command_e:
+      found_commands_list.append(command_e)
+      command_found = True
+      break
+    elif command_e in command_k:
+      found_commands_list.append(command_k)
+      command_found = True
+      break
+  if not(command_found):
+    missing_commands_list.append(command_k)
 
 missing_commands_dic = {"num_missing_commands": len(missing_commands_list),
                     "missing_commands": missing_commands_list}
 
-found_commands_dic = {"num_found_commands": len(command_id_keybindings) - len(missing_commands_list),
+found_commands_dic = {"num_found_commands": len(found_commands_list),
                       "found_commands": found_commands_list}
 
 with open('MissingCommands.json', 'w') as f_out:
