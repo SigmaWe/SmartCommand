@@ -33,9 +33,13 @@ for command in command_id_keybindings:
     found_commands_list.append(command)
 
 missing_commands_dic = {"num_missing_commands": len(missing_commands_list),
-                    "num_found_commands": len(command_id_keybindings) - len(missing_commands_list),
-                    "missing_commands": missing_commands_list,
-                    "found_commands": found_commands_list}
+                    "missing_commands": missing_commands_list}
+
+found_commands_dic = {"num_found_commands": len(command_id_keybindings) - len(missing_commands_list),
+                      "found_commands": found_commands_list}
 
 with open('MissingCommands.json', 'w') as f_out:
   json.dump(missing_commands_dic, f_out, indent=2)
+
+with open('FoundCommands.json', 'w') as f_out:
+  json.dump(found_commands_dic, f_out, indent=2)
