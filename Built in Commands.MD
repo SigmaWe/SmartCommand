@@ -56,11 +56,11 @@ pip install os json subprocess glob re
 
 * `main():` This is the main function of the script. It performs the following steps:
 
-** Define the repository URL and target directory.
-** Clone the VSCode repository using the `clone_vscode_repository()` function.
-** Define the search patterns for JSON and TypeScript files.
-** Create an empty dictionary to store unique commands.
-** Iterate through the JSON and TypeScript files, extract the command information using the `extract_commands_and_titles()` function, and store it in the unique_commands dictionary.
-** Update the `unique_commands` dictionary with any missing information using the `find_missing_info()` function.
-** Convert the `unique_commands` dictionary to a list of values.
-** Save the combined data to a JSON file named `builtInCommandsOutput.json`.
+  * Define the repository URL and target directory.
+  * Clone the VSCode repository using the `clone_vscode_repository()` function.
+  * Define the search patterns for JSON and TypeScript files.
+  * Create an empty dictionary to store unique commands.
+  * Iterate through the JSON and TypeScript files, extract the command information using the `extract_commands_and_titles()` function, and store it in the unique_commands dictionary.
+  * Update the `unique_commands` dictionary with any missing information using the `find_missing_info()` function.
+  * Convert the `unique_commands` dictionary to a list of values.
+  * Save the combined data to a JSON file named `builtInCommandsOutput.json`.
