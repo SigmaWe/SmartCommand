@@ -40,6 +40,9 @@ for command_k in command_id_keybindings:
   if not(command_found):
     missing_commands_list.append(command_k)
 
+found_commands_list = [*set(found_commands_list)]
+missing_commands_list = [*set(missing_commands_list)]
+
 missing_commands_dic = {"num_missing_commands": len(missing_commands_list),
                     "missing_commands": missing_commands_list}
 
