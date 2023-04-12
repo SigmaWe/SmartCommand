@@ -1,6 +1,8 @@
 import json
 from NLP_and_backend import clean_commands
 
+EXACT_MATCH = False
+
 with open('AllCommands.json', 'r') as read_file:
   commands_extracted = json.load(read_file)
 
@@ -29,14 +31,20 @@ found_commands_list = []
 for command_k in command_id_keybindings:
   command_found = False
   for command_e in command_id_extracted:
-    if command_k in command_e:
-      found_commands_list.append(command_e)
-      command_found = True
-      break
-    elif command_e in command_k:
-      found_commands_list.append(command_k)
-      command_found = True
-      break
+    if EXACT_MATCH:
+      if command_k == command_e:
+        found_commands_list.append(command_k)
+        command_found = True
+        break
+    else:
+      if command_k in command_e:
+        found_commands_list.append(command_e)
+        command_found = True
+        break
+      elif command_e in command_k:
+        found_commands_list.append(command_k)
+        command_found = True
+        break
   if not(command_found):
     missing_commands_list.append(command_k)
 
