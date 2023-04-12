@@ -1,5 +1,5 @@
 # **Missing Commands**
-Make sure you run the `AllCommands.py` script before running this one. This Python script goes through each command in `keybindings.json`, checks if it is present in `AllCommands.json`, and compiles its results in `MissingCommands.json`
+This Python script goes through each command in `keybindings.json`, checks if it is present in `AllCommands.json`, and compiles its results in `MissingCommands.json`
 
 ### *How To Run the script:*
 To run the code directly, simply execute the `MissingCommands.py` script in your terminal:
