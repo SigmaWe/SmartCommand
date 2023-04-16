@@ -2,9 +2,13 @@
 
 ## Explanation of the JSON files
 `AllKeybindingCommands.json` - Contains all the commands found in keybindings.json with their associated titles (if they have titles, otherwise the title is an empty string)
+
 `CommandsWithTitle.json` - All the commands from `AllKeybindingCommands.json` that have available titles
+
 `CommandsWithoutTitle.json` - All the commands from `AllKeybindingCommands.json` that don't have titles (their titles are empty strings)
+
 `CommandsWithoutTitleFound.json` - All the commands from `CommandsWithoutTitle.json` that can be found in vscode_cloned
+
 `CommandsWithoutTitleNotFound.json` - All the commands from `CommandsWithoutTitle.json` that cannot be found in vscode_cloned
 
 ## How AllKeybindingCommands.json was created
