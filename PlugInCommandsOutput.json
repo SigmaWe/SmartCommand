@@ -1,0 +1,3464 @@
+[
+  {
+    "source": "vscode-eslint",
+    "version": "2.4.0",
+    "commands": [
+      {
+        "title": "Fix all auto-fixable Problems",
+        "category": "ESLint",
+        "command": "eslint.executeAutofix"
+      },
+      {
+        "title": "Create ESLint configuration",
+        "category": "ESLint",
+        "command": "eslint.createConfig"
+      },
+      {
+        "title": "Show Output Channel",
+        "category": "ESLint",
+        "command": "eslint.showOutputChannel"
+      },
+      {
+        "title": "Migrate Settings",
+        "category": "ESLint",
+        "command": "eslint.migrateSettings"
+      },
+      {
+        "title": "Restart ESLint Server",
+        "category": "ESLint",
+        "command": "eslint.restart"
+      }
+    ]
+  },
+  {
+    "source": "docker-explorer",
+    "version": "0.1.7",
+    "commands": [
+      {
+        "command": "docker-explorer.refreshDockerContainers",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "docker-explorer.refreshDockerImages",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "docker-explorer.refreshAzureRegistries",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "docker-explorer.refreshDockerHub",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "docker-explorer.startContainer",
+        "title": "Start"
+      },
+      {
+        "command": "docker-explorer.stopContainer",
+        "title": "Stop"
+      },
+      {
+        "command": "docker-explorer.restartContainer",
+        "title": "Restart"
+      },
+      {
+        "command": "docker-explorer.attachContainer",
+        "title": "Attach"
+      },
+      {
+        "command": "docker-explorer.showContainerStatistics",
+        "title": "Statistics"
+      },
+      {
+        "command": "docker-explorer.showContainerLogs",
+        "title": "Logs"
+      },
+      {
+        "command": "docker-explorer.inspectContainer",
+        "title": "Inspect"
+      },
+      {
+        "command": "docker-explorer.removeContainer",
+        "title": "Remove"
+      },
+      {
+        "command": "docker-explorer.searchContainer",
+        "title": "Search"
+      },
+      {
+        "command": "docker-explorer.executeCommandInContainer",
+        "title": "Execute"
+      },
+      {
+        "command": "docker-explorer.executeInBashInContainer",
+        "title": "Execute In Bash"
+      },
+      {
+        "command": "docker-explorer.runFromImage",
+        "title": "Run"
+      },
+      {
+        "command": "docker-explorer.inspectImage",
+        "title": "Inspect"
+      },
+      {
+        "command": "docker-explorer.removeImage",
+        "title": "Remove"
+      },
+      {
+        "command": "docker-explorer.pushImageToACR",
+        "title": "Push to ACR"
+      },
+      {
+        "command": "docker-explorer.pushImage",
+        "title": "Push"
+      },
+      {
+        "command": "docker-explorer.pullImage",
+        "title": "Pull"
+      },
+      {
+        "command": "docker-explorer.deployToAzure",
+        "title": "Deploy"
+      },
+      {
+        "command": "docker-explorer.loginAzureCli",
+        "title": "Login",
+        "icon": {
+          "light": "resources/light/login.png",
+          "dark": "resources/dark/login.png"
+        }
+      },
+      {
+        "command": "docker-explorer.logoutAzureCli",
+        "title": "Logout",
+        "icon": {
+          "light": "resources/light/logout.png",
+          "dark": "resources/dark/logout.png"
+        }
+      },
+      {
+        "command": "docker-explorer.loginDockerHub",
+        "title": "Login",
+        "icon": {
+          "light": "resources/light/login.png",
+          "dark": "resources/dark/login.png"
+        }
+      },
+      {
+        "command": "docker-explorer.logoutDockerHub",
+        "title": "Logout",
+        "icon": {
+          "light": "resources/light/logout.png",
+          "dark": "resources/dark/logout.png"
+        }
+      },
+      {
+        "command": "docker-explorer.pullFromDockerHub",
+        "title": "Pull"
+      },
+      {
+        "command": "docker-explorer.pullLatestFromDockerHub",
+        "title": "Pull latest"
+      },
+      {
+        "command": "docker-explorer.openDockerHubPage",
+        "title": "Open Docker Hub page"
+      }
+    ]
+  },
+  {
+    "source": "nbpreviewer",
+    "version": "1.2.2",
+    "commands": [
+      {
+        "command": "jupyter.showPreview",
+        "title": "Show preview",
+        "category": "Jupyter"
+      }
+    ]
+  },
+  {
+    "source": "vscode-docker",
+    "version": "1.25.0",
+    "commands": [
+      {
+        "command": "vscode-docker.compose.down",
+        "title": "%vscode-docker.commands.compose.down%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.compose.restart",
+        "title": "%vscode-docker.commands.compose.restart%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.compose.up",
+        "title": "%vscode-docker.commands.compose.up%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.compose.up.subset",
+        "title": "%vscode-docker.commands.compose.up.subset%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.configure",
+        "title": "%vscode-docker.commands.configure%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.configureCompose",
+        "title": "%vscode-docker.commands.configureCompose%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.installDocker",
+        "title": "%vscode-docker.commands.installDocker%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.containers.attachShell",
+        "title": "%vscode-docker.commands.containers.attachShell%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.browse",
+        "title": "%vscode-docker.commands.containers.browse%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.configureExplorer",
+        "title": "%vscode-docker.commands.containers.configureExplorer%",
+        "category": "%vscode-docker.commands.category.dockerContainers%",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "vscode-docker.containers.downloadFile",
+        "title": "%vscode-docker.commands.containers.downloadFile%",
+        "category": "%vscode-docker.commands.category.dockerContainers%",
+        "icon": "$(desktop-download)"
+      },
+      {
+        "command": "vscode-docker.containers.inspect",
+        "title": "%vscode-docker.commands.containers.inspect%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.openFile",
+        "title": "%vscode-docker.commands.containers.openFile%",
+        "category": "%vscode-docker.commands.category.dockerContainers%",
+        "icon": "$(go-to-file)"
+      },
+      {
+        "command": "vscode-docker.containers.prune",
+        "title": "%vscode-docker.commands.containers.prune%",
+        "category": "%vscode-docker.commands.category.dockerContainers%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "vscode-docker.containers.refresh",
+        "title": "%vscode-docker.commands.containers.refresh%",
+        "category": "%vscode-docker.commands.category.dockerContainers%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "vscode-docker.containers.remove",
+        "title": "%vscode-docker.commands.containers.remove%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.group.remove",
+        "title": "%vscode-docker.commands.containers.group.remove%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.restart",
+        "title": "%vscode-docker.commands.containers.restart%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.select",
+        "title": "%vscode-docker.commands.containers.select%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.start",
+        "title": "%vscode-docker.commands.containers.start%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.stop",
+        "title": "%vscode-docker.commands.containers.stop%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.stats",
+        "title": "%vscode-docker.commands.containers.stats%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.containers.viewLogs",
+        "title": "%vscode-docker.commands.containers.viewLogs%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.composeGroup.logs",
+        "title": "%vscode-docker.commands.containers.composeGroup.logs%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.composeGroup.start",
+        "title": "%vscode-docker.commands.containers.composeGroup.start%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.composeGroup.stop",
+        "title": "%vscode-docker.commands.containers.composeGroup.stop%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.composeGroup.restart",
+        "title": "%vscode-docker.commands.containers.composeGroup.restart%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.containers.composeGroup.down",
+        "title": "%vscode-docker.commands.containers.composeGroup.down%",
+        "category": "%vscode-docker.commands.category.dockerContainers%"
+      },
+      {
+        "command": "vscode-docker.debugging.initializeForDebugging",
+        "title": "%vscode-docker.commands.debugging.initializeForDebugging%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.images.build",
+        "title": "%vscode-docker.commands.images.build%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.configureExplorer",
+        "title": "%vscode-docker.commands.images.configureExplorer%",
+        "category": "%vscode-docker.commands.category.dockerImages%",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "vscode-docker.images.inspect",
+        "title": "%vscode-docker.commands.images.inspect%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.prune",
+        "title": "%vscode-docker.commands.images.prune%",
+        "category": "%vscode-docker.commands.category.dockerImages%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "vscode-docker.images.showDangling",
+        "title": "%vscode-docker.commands.images.showDangling%",
+        "category": "%vscode-docker.commands.category.dockerImages%",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "vscode-docker.images.hideDangling",
+        "title": "%vscode-docker.commands.images.hideDangling%",
+        "category": "%vscode-docker.commands.category.dockerImages%",
+        "icon": "$(eye-closed)"
+      },
+      {
+        "command": "vscode-docker.images.pull",
+        "title": "%vscode-docker.commands.images.pull%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.push",
+        "title": "%vscode-docker.commands.images.push%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.refresh",
+        "title": "%vscode-docker.commands.images.refresh%",
+        "category": "%vscode-docker.commands.category.dockerImages%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "vscode-docker.images.remove",
+        "title": "%vscode-docker.commands.images.remove%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.group.remove",
+        "title": "%vscode-docker.commands.images.group.remove%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.run",
+        "title": "%vscode-docker.commands.images.run%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.runAzureCli",
+        "title": "%vscode-docker.commands.images.runAzureCli%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.runInteractive",
+        "title": "%vscode-docker.commands.images.runInteractive%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.tag",
+        "title": "%vscode-docker.commands.images.tag%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.images.copyFullTag",
+        "title": "%vscode-docker.commands.images.copyFullTag%",
+        "category": "%vscode-docker.commands.category.dockerImages%"
+      },
+      {
+        "command": "vscode-docker.networks.configureExplorer",
+        "title": "%vscode-docker.commands.networks.configureExplorer%",
+        "category": "%vscode-docker.commands.category.dockerNetworks%",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "vscode-docker.networks.create",
+        "title": "%vscode-docker.commands.networks.create%",
+        "category": "%vscode-docker.commands.category.dockerNetworks%",
+        "icon": "$(add)"
+      },
+      {
+        "command": "vscode-docker.networks.inspect",
+        "title": "%vscode-docker.commands.networks.inspect%",
+        "category": "%vscode-docker.commands.category.dockerNetworks%"
+      },
+      {
+        "command": "vscode-docker.networks.prune",
+        "title": "%vscode-docker.commands.networks.prune%",
+        "category": "%vscode-docker.commands.category.dockerNetworks%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "vscode-docker.networks.refresh",
+        "title": "%vscode-docker.commands.networks.refresh%",
+        "category": "%vscode-docker.commands.category.dockerNetworks%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "vscode-docker.networks.remove",
+        "title": "%vscode-docker.commands.networks.remove%",
+        "category": "%vscode-docker.commands.category.dockerNetworks%"
+      },
+      {
+        "command": "vscode-docker.pruneSystem",
+        "title": "%vscode-docker.commands.pruneSystem%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.buildImage",
+        "title": "%vscode-docker.commands.registries.azure.buildImage%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.createRegistry",
+        "title": "%vscode-docker.commands.registries.azure.createRegistry%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.deleteRegistry",
+        "title": "%vscode-docker.commands.registries.azure.deleteRegistry%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.deleteRepository",
+        "title": "%vscode-docker.commands.registries.azure.deleteRepository%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.openInPortal",
+        "title": "%vscode-docker.commands.registries.azure.openInPortal%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.runFileAsTask",
+        "title": "%vscode-docker.commands.registries.azure.runFileAsTask%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.runTask",
+        "title": "%vscode-docker.commands.registries.azure.runTask%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.selectSubscriptions",
+        "title": "%vscode-docker.commands.registries.azure.selectSubscriptions%",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "vscode-docker.registries.azure.untagImage",
+        "title": "%vscode-docker.commands.registries.azure.untagImage%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.viewProperties",
+        "title": "%vscode-docker.commands.registries.azure.viewProperties%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%"
+      },
+      {
+        "command": "vscode-docker.registries.azure.viewTaskLogs",
+        "title": "%vscode-docker.commands.registries.azure.viewLogs%",
+        "category": "%vscode-docker.commands.category.azureContainerRegistry%",
+        "icon": "$(output)"
+      },
+      {
+        "command": "vscode-docker.registries.connectRegistry",
+        "title": "%vscode-docker.commands.registries.connect%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%",
+        "icon": "$(plug)"
+      },
+      {
+        "command": "vscode-docker.registries.copyImageDigest",
+        "title": "%vscode-docker.commands.registries.copyImageDigest%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.copyRemoteFullTag",
+        "title": "%vscode-docker.commands.registries.copyRemoteFullTag%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.deleteImage",
+        "title": "%vscode-docker.commands.registries.deleteImage%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.deployImageToAzure",
+        "title": "%vscode-docker.commands.registries.deployImageToAzure%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.deployImageToAca",
+        "title": "%vscode-docker.commands.registries.deployImageToAca%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.disconnectRegistry",
+        "title": "%vscode-docker.commands.registries.disconnectRegistry%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.dockerHub.openInBrowser",
+        "title": "%vscode-docker.commands.registries.dockerHub.openInBrowser%",
+        "category": "%vscode-docker.commands.category.dockerHub%"
+      },
+      {
+        "command": "vscode-docker.registries.help",
+        "title": "%vscode-docker.commands.registries.help%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%",
+        "icon": "$(question)"
+      },
+      {
+        "command": "vscode-docker.registries.logInToDockerCli",
+        "title": "%vscode-docker.commands.registries.logInToDockerCli%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.logOutOfDockerCli",
+        "title": "%vscode-docker.commands.registries.logOutOfDockerCli%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.pullImage",
+        "title": "%vscode-docker.commands.registries.pullImage%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.pullRepository",
+        "title": "%vscode-docker.commands.registries.pullRepository%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.reconnectRegistry",
+        "title": "%vscode-docker.commands.registries.reconnectRegistry%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%"
+      },
+      {
+        "command": "vscode-docker.registries.refresh",
+        "title": "%vscode-docker.commands.registries.refresh%",
+        "category": "%vscode-docker.commands.category.dockerRegistries%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "vscode-docker.volumes.configureExplorer",
+        "title": "%vscode-docker.commands.volumes.configureExplorer%",
+        "category": "%vscode-docker.commands.category.dockerVolumes%",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "vscode-docker.volumes.inspect",
+        "title": "%vscode-docker.commands.volumes.inspect%",
+        "category": "%vscode-docker.commands.category.dockerVolumes%"
+      },
+      {
+        "command": "vscode-docker.volumes.prune",
+        "title": "%vscode-docker.commands.volumes.prune%",
+        "category": "%vscode-docker.commands.category.dockerVolumes%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "vscode-docker.volumes.refresh",
+        "title": "%vscode-docker.commands.volumes.refresh%",
+        "category": "%vscode-docker.commands.category.dockerVolumes%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "vscode-docker.volumes.remove",
+        "title": "%vscode-docker.commands.volumes.remove%",
+        "category": "%vscode-docker.commands.category.dockerVolumes%"
+      },
+      {
+        "command": "vscode-docker.help",
+        "title": "%vscode-docker.commands.help%",
+        "category": "%vscode-docker.commands.category.docker%",
+        "icon": "$(question)"
+      },
+      {
+        "command": "vscode-docker.help.reportIssue",
+        "title": "%vscode-docker.commands.help.reportIssue%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.help.openWalkthrough",
+        "title": "%vscode-docker.commands.help.openWalkthrough%",
+        "category": "%vscode-docker.commands.category.docker%"
+      },
+      {
+        "command": "vscode-docker.contexts.use",
+        "title": "%vscode-docker.commands.contexts.use%",
+        "category": "%vscode-docker.commands.category.contexts%",
+        "icon": "$(check)"
+      },
+      {
+        "command": "vscode-docker.contexts.remove",
+        "title": "%vscode-docker.commands.contexts.remove%",
+        "category": "%vscode-docker.commands.category.contexts%"
+      },
+      {
+        "command": "vscode-docker.contexts.inspect",
+        "title": "%vscode-docker.commands.contexts.inspect%",
+        "category": "%vscode-docker.commands.category.contexts%"
+      },
+      {
+        "command": "vscode-docker.contexts.configureExplorer",
+        "title": "%vscode-docker.commands.contexts.configureExplorer%",
+        "category": "%vscode-docker.commands.category.contexts%",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "vscode-docker.contexts.refresh",
+        "title": "%vscode-docker.commands.contexts.refresh%",
+        "category": "%vscode-docker.commands.category.contexts%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "vscode-docker.contexts.help",
+        "title": "%vscode-docker.commands.contexts.help%",
+        "category": "%vscode-docker.commands.category.contexts%",
+        "icon": "$(question)"
+      }
+    ]
+  },
+  {
+    "source": "pyright",
+    "version": "1.1.303",
+    "commands": [
+      {
+        "command": "pyright.organizeimports",
+        "title": "Organize Imports",
+        "category": "Pyright"
+      },
+      {
+        "command": "pyright.restartserver",
+        "title": "Restart Server",
+        "category": "Pyright"
+      },
+      {
+        "command": "pyright.dumpTokens",
+        "title": "Dump token streams ...",
+        "category": "Pyright",
+        "enablement": "editorLangId == python && pyright.development"
+      },
+      {
+        "command": "pyright.dumpNodes",
+        "title": "Dump parse tree ...",
+        "category": "Pyright",
+        "enablement": "editorLangId == python && pyright.development"
+      },
+      {
+        "command": "pyright.dumpTypes",
+        "title": "Dump type info ...",
+        "category": "Pyright",
+        "enablement": "editorLangId == python && pyright.development"
+      },
+      {
+        "command": "pyright.dumpCachedTypes",
+        "title": "Dump cached type info ...",
+        "category": "Pyright",
+        "enablement": "editorLangId == python && pyright.development"
+      },
+      {
+        "command": "pyright.dumpCodeFlowGraph",
+        "title": "Dump code flow graph for node ...",
+        "category": "Pyright",
+        "enablement": "editorLangId == python && pyright.development"
+      }
+    ]
+  },
+  {
+    "source": "isort",
+    "version": "2022.8.0",
+    "commands": [
+      {
+        "title": "%command.restartServer%",
+        "category": "isort Formatter",
+        "command": "isort.restart"
+      }
+    ]
+  },
+  {
+    "source": "python",
+    "version": "2023.6.0",
+    "commands": [
+      {
+        "title": "%python.command.python.createNewFile.title%",
+        "shortTitle": "%python.menu.createNewFile.title%",
+        "category": "Python",
+        "command": "python.createNewFile"
+      },
+      {
+        "category": "Python",
+        "command": "python.analysis.restartLanguageServer",
+        "title": "%python.command.python.analysis.restartLanguageServer.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearCacheAndReload",
+        "title": "%python.command.python.clearCacheAndReload.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearWorkspaceInterpreter",
+        "title": "%python.command.python.clearWorkspaceInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.configureTests",
+        "title": "%python.command.python.configureTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createTerminal",
+        "title": "%python.command.python.createTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createEnvironment",
+        "title": "%python.command.python.createEnvironment.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableLinting",
+        "title": "%python.command.python.enableLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableSourceMapSupport",
+        "title": "%python.command.python.enableSourceMapSupport.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal",
+        "title": "%python.command.python.execInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal-icon",
+        "icon": "$(play)",
+        "title": "%python.command.python.execInTerminalIcon.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.debugInTerminal",
+        "icon": "$(debug-alt)",
+        "title": "%python.command.python.debugInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInDjangoShell",
+        "title": "%python.command.python.execSelectionInDjangoShell.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInTerminal",
+        "title": "%python.command.python.execSelectionInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.launchTensorBoard",
+        "title": "%python.command.python.launchTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.refreshTensorBoard",
+        "enablement": "python.hasActiveTensorBoardSession",
+        "icon": "$(refresh)",
+        "title": "%python.command.python.refreshTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.reportIssue",
+        "title": "%python.command.python.reportIssue.title%"
+      },
+      {
+        "category": "Test",
+        "command": "testing.reRunFailTests",
+        "icon": "$(run-errors)",
+        "title": "%python.command.testing.rerunFailedTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.runLinting",
+        "title": "%python.command.python.runLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setInterpreter",
+        "title": "%python.command.python.setInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setLinter",
+        "title": "%python.command.python.setLinter.title%"
+      },
+      {
+        "category": "Python Refactor",
+        "command": "python.sortImports",
+        "title": "%python.command.python.sortImports.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.startREPL",
+        "title": "%python.command.python.startREPL.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewLanguageServerOutput",
+        "enablement": "python.hasLanguageServerOutputChannel",
+        "title": "%python.command.python.viewLanguageServerOutput.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewOutput",
+        "icon": {
+          "dark": "resources/dark/repl.svg",
+          "light": "resources/light/repl.svg"
+        },
+        "title": "%python.command.python.viewOutput.title%"
+      },
+      {
+        "title": "%python.command.python.createNewFile.title%",
+        "shortTitle": "%python.menu.createNewFile.title%",
+        "category": "Python",
+        "command": "python.createNewFile"
+      },
+      {
+        "category": "Python",
+        "command": "python.analysis.restartLanguageServer",
+        "title": "%python.command.python.analysis.restartLanguageServer.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearCacheAndReload",
+        "title": "%python.command.python.clearCacheAndReload.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearWorkspaceInterpreter",
+        "title": "%python.command.python.clearWorkspaceInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.configureTests",
+        "title": "%python.command.python.configureTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createTerminal",
+        "title": "%python.command.python.createTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createEnvironment",
+        "title": "%python.command.python.createEnvironment.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableLinting",
+        "title": "%python.command.python.enableLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableSourceMapSupport",
+        "title": "%python.command.python.enableSourceMapSupport.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal",
+        "title": "%python.command.python.execInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal-icon",
+        "icon": "$(play)",
+        "title": "%python.command.python.execInTerminalIcon.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.debugInTerminal",
+        "icon": "$(debug-alt)",
+        "title": "%python.command.python.debugInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInDjangoShell",
+        "title": "%python.command.python.execSelectionInDjangoShell.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInTerminal",
+        "title": "%python.command.python.execSelectionInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.launchTensorBoard",
+        "title": "%python.command.python.launchTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.refreshTensorBoard",
+        "enablement": "python.hasActiveTensorBoardSession",
+        "icon": "$(refresh)",
+        "title": "%python.command.python.refreshTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.reportIssue",
+        "title": "%python.command.python.reportIssue.title%"
+      },
+      {
+        "category": "Test",
+        "command": "testing.reRunFailTests",
+        "icon": "$(run-errors)",
+        "title": "%python.command.testing.rerunFailedTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.runLinting",
+        "title": "%python.command.python.runLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setInterpreter",
+        "title": "%python.command.python.setInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setLinter",
+        "title": "%python.command.python.setLinter.title%"
+      },
+      {
+        "category": "Python Refactor",
+        "command": "python.sortImports",
+        "title": "%python.command.python.sortImports.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.startREPL",
+        "title": "%python.command.python.startREPL.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewLanguageServerOutput",
+        "enablement": "python.hasLanguageServerOutputChannel",
+        "title": "%python.command.python.viewLanguageServerOutput.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewOutput",
+        "icon": {
+          "dark": "resources/dark/repl.svg",
+          "light": "resources/light/repl.svg"
+        },
+        "title": "%python.command.python.viewOutput.title%"
+      }
+    ]
+  },
+  {
+    "source": "python",
+    "version": "2023.6.1",
+    "commands": [
+      {
+        "title": "%python.command.python.createNewFile.title%",
+        "shortTitle": "%python.menu.createNewFile.title%",
+        "category": "Python",
+        "command": "python.createNewFile"
+      },
+      {
+        "category": "Python",
+        "command": "python.analysis.restartLanguageServer",
+        "title": "%python.command.python.analysis.restartLanguageServer.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearCacheAndReload",
+        "title": "%python.command.python.clearCacheAndReload.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearWorkspaceInterpreter",
+        "title": "%python.command.python.clearWorkspaceInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.configureTests",
+        "title": "%python.command.python.configureTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createTerminal",
+        "title": "%python.command.python.createTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createEnvironment",
+        "title": "%python.command.python.createEnvironment.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableLinting",
+        "title": "%python.command.python.enableLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableSourceMapSupport",
+        "title": "%python.command.python.enableSourceMapSupport.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal",
+        "title": "%python.command.python.execInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal-icon",
+        "icon": "$(play)",
+        "title": "%python.command.python.execInTerminalIcon.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.debugInTerminal",
+        "icon": "$(debug-alt)",
+        "title": "%python.command.python.debugInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInDjangoShell",
+        "title": "%python.command.python.execSelectionInDjangoShell.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInTerminal",
+        "title": "%python.command.python.execSelectionInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.launchTensorBoard",
+        "title": "%python.command.python.launchTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.refreshTensorBoard",
+        "enablement": "python.hasActiveTensorBoardSession",
+        "icon": "$(refresh)",
+        "title": "%python.command.python.refreshTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.reportIssue",
+        "title": "%python.command.python.reportIssue.title%"
+      },
+      {
+        "category": "Test",
+        "command": "testing.reRunFailTests",
+        "icon": "$(run-errors)",
+        "title": "%python.command.testing.rerunFailedTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.runLinting",
+        "title": "%python.command.python.runLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setInterpreter",
+        "title": "%python.command.python.setInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setLinter",
+        "title": "%python.command.python.setLinter.title%"
+      },
+      {
+        "category": "Python Refactor",
+        "command": "python.sortImports",
+        "title": "%python.command.python.sortImports.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.startREPL",
+        "title": "%python.command.python.startREPL.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewLanguageServerOutput",
+        "enablement": "python.hasLanguageServerOutputChannel",
+        "title": "%python.command.python.viewLanguageServerOutput.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewOutput",
+        "icon": {
+          "dark": "resources/dark/repl.svg",
+          "light": "resources/light/repl.svg"
+        },
+        "title": "%python.command.python.viewOutput.title%"
+      },
+      {
+        "title": "%python.command.python.createNewFile.title%",
+        "shortTitle": "%python.menu.createNewFile.title%",
+        "category": "Python",
+        "command": "python.createNewFile"
+      },
+      {
+        "category": "Python",
+        "command": "python.analysis.restartLanguageServer",
+        "title": "%python.command.python.analysis.restartLanguageServer.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearCacheAndReload",
+        "title": "%python.command.python.clearCacheAndReload.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearWorkspaceInterpreter",
+        "title": "%python.command.python.clearWorkspaceInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.configureTests",
+        "title": "%python.command.python.configureTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createTerminal",
+        "title": "%python.command.python.createTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createEnvironment",
+        "title": "%python.command.python.createEnvironment.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableLinting",
+        "title": "%python.command.python.enableLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableSourceMapSupport",
+        "title": "%python.command.python.enableSourceMapSupport.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal",
+        "title": "%python.command.python.execInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal-icon",
+        "icon": "$(play)",
+        "title": "%python.command.python.execInTerminalIcon.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.debugInTerminal",
+        "icon": "$(debug-alt)",
+        "title": "%python.command.python.debugInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInDjangoShell",
+        "title": "%python.command.python.execSelectionInDjangoShell.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInTerminal",
+        "title": "%python.command.python.execSelectionInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.launchTensorBoard",
+        "title": "%python.command.python.launchTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.refreshTensorBoard",
+        "enablement": "python.hasActiveTensorBoardSession",
+        "icon": "$(refresh)",
+        "title": "%python.command.python.refreshTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.reportIssue",
+        "title": "%python.command.python.reportIssue.title%"
+      },
+      {
+        "category": "Test",
+        "command": "testing.reRunFailTests",
+        "icon": "$(run-errors)",
+        "title": "%python.command.testing.rerunFailedTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.runLinting",
+        "title": "%python.command.python.runLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setInterpreter",
+        "title": "%python.command.python.setInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setLinter",
+        "title": "%python.command.python.setLinter.title%"
+      },
+      {
+        "category": "Python Refactor",
+        "command": "python.sortImports",
+        "title": "%python.command.python.sortImports.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.startREPL",
+        "title": "%python.command.python.startREPL.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewLanguageServerOutput",
+        "enablement": "python.hasLanguageServerOutputChannel",
+        "title": "%python.command.python.viewLanguageServerOutput.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewOutput",
+        "icon": {
+          "dark": "resources/dark/repl.svg",
+          "light": "resources/light/repl.svg"
+        },
+        "title": "%python.command.python.viewOutput.title%"
+      }
+    ]
+  },
+  {
+    "source": "vscode-pylance",
+    "version": "2023.4.20",
+    "commands": [
+      {
+        "command": "pylance.reportIssue",
+        "title": "Pylance: Report Issue..."
+      },
+      {
+        "command": "pylance.dumpTokens",
+        "title": "Dump token streams ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpNodes",
+        "title": "Dump parse tree ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpTypes",
+        "title": "Dump type info ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpCachedTypes",
+        "title": "Pylance: Dump cached type info ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpCodeFlowGraph",
+        "title": "Pylance: Dump code flow graph for node ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      }
+    ]
+  },
+  {
+    "source": "jupyter",
+    "version": "2023.3.1201040234",
+    "commands": [
+      {
+        "command": "dataScience.ClearCache",
+        "title": "%jupyter.command.dataScience.clearCache.title%",
+        "category": "Jupyter (Dev)",
+        "enablement": "jupyter.development"
+      },
+      {
+        "command": "dataScience.ClearUserProviderJupyterServerCache",
+        "title": "%jupyter.command.dataScience.clearUserProviderJupyterServerCache.title%",
+        "category": "Jupyter (Dev)",
+        "enablement": "jupyter.development"
+      },
+      {
+        "command": "jupyter.replayPylanceLog",
+        "title": "%jupyter.command.jupyter.replayPylanceLog.title%",
+        "category": "Jupyter (Dev)",
+        "enablement": "jupyter.development && notebookType == jupyter-notebook && isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.replayPylanceLogStep",
+        "title": "%jupyter.command.jupyter.replayPylanceLogStep.title%",
+        "category": "Jupyter (Dev)",
+        "icon": "$(debug-start)",
+        "enablement": "jupyter.development && notebookType == jupyter-notebook && isWorkspaceTrusted && jupyter.replayLogLoaded && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.filterKernels",
+        "title": "%jupyter.command.jupyter.filterKernels.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension && config.notebook.kernelPicker.type != mru"
+      },
+      {
+        "command": "jupyter.runByLine",
+        "title": "%jupyter.command.jupyter.runByLine.title%",
+        "icon": "$(debug-line-by-line)",
+        "category": "Jupyter",
+        "enablement": "notebookKernel =~ /^ms-toolsai.jupyter\\// && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted && resource not in jupyter.notebookeditor.debugDocuments || !notebookKernel && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runAndDebugCell",
+        "title": "%jupyter.command.jupyter.debugCell.title%",
+        "icon": "$(debug-alt-small)",
+        "category": "Jupyter",
+        "enablement": "notebookKernel =~ /^ms-toolsai.jupyter\\// && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted && resource not in jupyter.notebookeditor.debugDocuments || !notebookKernel && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runByLineNext",
+        "title": "%jupyter.command.jupyter.runByLineNext.title%",
+        "icon": "$(debug-line-by-line)",
+        "category": "Jupyter",
+        "enablement": "notebookCellResource in jupyter.notebookeditor.runByLineCells"
+      },
+      {
+        "command": "jupyter.runByLineStop",
+        "title": "%jupyter.command.jupyter.runByLineStop.title%",
+        "icon": "$(debug-continue-small)",
+        "category": "Jupyter",
+        "enablement": "notebookCellResource in jupyter.notebookeditor.runByLineCells"
+      },
+      {
+        "command": "jupyter.viewOutput",
+        "title": "%jupyter.command.jupyter.viewOutput.title%",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.notebookeditor.export",
+        "title": "%DataScience.notebookExportAs%",
+        "shortTitle": "%DataScience.notebookExportAs.shorttitle%",
+        "category": "Notebook",
+        "icon": {
+          "light": "resources/light/export_to_python.svg",
+          "dark": "resources/dark/export_to_python.svg"
+        },
+        "enablement": "notebookType == jupyter-notebook && isWorkspaceTrusted && !jupyter.webExtension || notebookType == jupyter-notebook && isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.export",
+        "title": "%DataScience.notebookExportAs%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.exportAsPythonScript",
+        "title": "%jupyter.command.jupyter.exportAsPythonScript.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.exportToHTML",
+        "title": "%jupyter.command.jupyter.exportToHTML.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.exportToPDF",
+        "title": "%jupyter.command.jupyter.exportToPDF.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.selectJupyterInterpreter",
+        "title": "%jupyter.command.jupyter.selectJupyterInterpreter.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runcurrentcell",
+        "title": "%jupyter.command.jupyter.runcurrentcell.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugcell",
+        "title": "%jupyter.command.jupyter.debugcell.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugstepover",
+        "title": "%jupyter.command.jupyter.debugstepover.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugstop",
+        "title": "%jupyter.command.jupyter.debugstop.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugcontinue",
+        "title": "%jupyter.command.jupyter.debugcontinue.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.insertCellBelowPosition",
+        "title": "%jupyter.command.jupyter.insertCellBelowPosition.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.insertCellBelow",
+        "title": "%jupyter.command.jupyter.insertCellBelow.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.insertCellAbove",
+        "title": "%jupyter.command.jupyter.insertCellAbove.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.deleteCells",
+        "title": "%jupyter.command.jupyter.deleteCells.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.selectCell",
+        "title": "%jupyter.command.jupyter.selectCell.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.selectCellContents",
+        "title": "%jupyter.command.jupyter.selectCellContents.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.extendSelectionByCellAbove",
+        "title": "%jupyter.command.jupyter.extendSelectionByCellAbove.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.extendSelectionByCellBelow",
+        "title": "%jupyter.command.jupyter.extendSelectionByCellBelow.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.moveCellsUp",
+        "title": "%jupyter.command.jupyter.moveCellsUp.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.moveCellsDown",
+        "title": "%jupyter.command.jupyter.moveCellsDown.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.changeCellToMarkdown",
+        "title": "%jupyter.command.jupyter.changeCellToMarkdown.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.changeCellToCode",
+        "title": "%jupyter.command.jupyter.changeCellToCode.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.gotoNextCellInFile",
+        "title": "%jupyter.command.jupyter.gotoNextCellInFile.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.gotoPrevCellInFile",
+        "title": "%jupyter.command.jupyter.gotoPrevCellInFile.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runcurrentcelladvance",
+        "title": "%jupyter.command.jupyter.runcurrentcelladvance.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runcurrentcellandallbelow.palette",
+        "title": "%jupyter.command.jupyter.runcurrentcellandallbelow.palette.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runallcellsabove.palette",
+        "title": "%jupyter.command.jupyter.runallcellsabove.palette.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugcurrentcell.palette",
+        "title": "%jupyter.command.jupyter.debugcurrentcell.palette.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.execSelectionInteractive",
+        "title": "%jupyter.command.jupyter.execSelectionInteractive.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.createnewinteractive",
+        "title": "%jupyter.command.jupyter.createnewinteractive.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runFileInteractive",
+        "title": "%jupyter.command.jupyter.runFileInteractive.title%",
+        "icon": "$(play)",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugFileInteractive",
+        "title": "%jupyter.command.jupyter.debugFileInteractive.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runallcells",
+        "title": "%jupyter.command.jupyter.runallcells.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runallcellsabove",
+        "title": "%jupyter.command.jupyter.runallcellsabove.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runcellandallbelow",
+        "title": "%jupyter.command.jupyter.runcellandallbelow.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runcell",
+        "title": "%jupyter.command.jupyter.runcell.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runtoline",
+        "title": "%jupyter.command.jupyter.runtoline.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runfromline",
+        "title": "%jupyter.command.jupyter.runfromline.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.selectjupyteruri",
+        "title": "%jupyter.command.jupyter.selectjupyteruri.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.importnotebook",
+        "title": "%jupyter.command.jupyter.importnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.importnotebookfile",
+        "title": "%jupyter.command.jupyter.importnotebookfile.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.exportoutputasnotebook",
+        "title": "%jupyter.command.jupyter.exportoutputasnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.exportfileasnotebook",
+        "title": "%jupyter.command.jupyter.exportfileasnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.exportfileandoutputasnotebook",
+        "title": "%jupyter.command.jupyter.exportfileandoutputasnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.undocells",
+        "title": "%jupyter.command.jupyter.undocells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.redocells",
+        "title": "%jupyter.command.jupyter.redocells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.interruptkernel",
+        "title": "%jupyter.command.jupyter.interruptkernel.title%",
+        "shortTitle": "%jupyter.command.jupyter.interruptkernel.shorttitle%",
+        "category": "Jupyter",
+        "icon": {
+          "light": "resources/light/interrupt.svg",
+          "dark": "resources/dark/interrupt.svg"
+        },
+        "enablement": "isWorkspaceTrusted && jupyter.interactive.canInterruptNotebookKernel"
+      },
+      {
+        "command": "jupyter.restartkernel",
+        "title": "%jupyter.command.jupyter.restartkernel.title%",
+        "shortTitle": "%jupyter.command.jupyter.restartkernel.shorttitle%",
+        "category": "Jupyter",
+        "icon": {
+          "light": "resources/light/restart-kernel.svg",
+          "dark": "resources/dark/restart-kernel.svg"
+        },
+        "enablement": "isWorkspaceTrusted && jupyter.interactive.canRestartNotebookKernel"
+      },
+      {
+        "command": "jupyter.notebookeditor.restartkernel",
+        "title": "%jupyter.command.jupyter.restartkernel.title%",
+        "shortTitle": "%jupyter.command.jupyter.restartkernel.shorttitle%",
+        "category": "Notebook",
+        "icon": {
+          "light": "resources/light/restart-kernel.svg",
+          "dark": "resources/dark/restart-kernel.svg"
+        },
+        "enablement": "notebookKernel =~ /^ms-toolsai.jupyter\\// && jupyter.notebookeditor.canrestartNotebookkernel && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.selectNativeJupyterUriFromToolBar",
+        "title": "%jupyter.command.jupyter.selectjupyteruri.title%",
+        "category": "Jupyter",
+        "icon": "$(debug-disconnect)",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension && config.notebook.kernelPicker.type != mru"
+      },
+      {
+        "command": "jupyter.notebookeditor.addcellbelow",
+        "title": "%jupyter.command.jupyter.notebookeditor.addcellbelow.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.removeallcells",
+        "title": "%jupyter.command.jupyter.notebookeditor.removeallcells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.expandallcells",
+        "title": "%jupyter.command.jupyter.notebookeditor.expandallcells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.collapseallcells",
+        "title": "%jupyter.command.jupyter.notebookeditor.collapseallcells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.expandallcells",
+        "title": "%jupyter.command.jupyter.expandallcells.title%",
+        "shortTitle": "%jupyter.command.jupyter.expandallcells.shorttitle%",
+        "category": "Jupyter",
+        "icon": "$(expand-all)"
+      },
+      {
+        "command": "jupyter.collapseallcells",
+        "title": "%jupyter.command.jupyter.collapseallcells.title%",
+        "shortTitle": "%jupyter.command.jupyter.collapseallcells.shorttitle%",
+        "category": "Jupyter",
+        "icon": "$(collapse-all)"
+      },
+      {
+        "command": "jupyter.addcellbelow",
+        "title": "%jupyter.command.jupyter.addcellbelow.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.createnewnotebook",
+        "title": "%jupyter.command.jupyter.createnewnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.scrolltocell",
+        "title": "%jupyter.command.jupyter.scrolltocell.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.latestExtension",
+        "title": "DataScience.latestExtension",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.enableDebugLogging",
+        "title": "%jupyter.command.jupyter.enableDebugLogging.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.resetLoggingLevel",
+        "title": "%jupyter.command.jupyter.resetLoggingLevel.title%",
+        "enablement": "!jupyter.webExtension",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.showDataViewer",
+        "title": "%jupyter.command.jupyter.showDataViewer.title%",
+        "enablement": "!jupyter.webExtension",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.clearSavedJupyterUris",
+        "title": "%jupyter.command.jupyter.clearSavedJupyterUris.title%",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.openVariableView",
+        "title": "%jupyter.command.jupyter.openVariableView.title%",
+        "shortTitle": "%jupyter.command.jupyter.openVariableView.shorttitle%",
+        "icon": "$(variable-group)",
+        "category": "Jupyter",
+        "enablement": "notebookType == jupyter-notebook && isWorkspaceTrusted || notebookType == interactive && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.openOutlineView",
+        "title": "%jupyter.command.jupyter.openOutlineView.title%",
+        "shortTitle": "%jupyter.command.jupyter.openOutlineView.shorttitle%",
+        "icon": "$(list-unordered)",
+        "category": "Jupyter",
+        "enablement": "notebookType == jupyter-notebook"
+      },
+      {
+        "command": "jupyter.refreshDataViewer",
+        "title": "%DataScience.refreshDataViewerCommandPalette%",
+        "category": "Jupyter",
+        "enablement": "jupyter.dataViewerActive && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.interactive.clearAllCells",
+        "title": "%DataScience.interactiveClearAllCells%",
+        "icon": "$(close)",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.goToCode",
+        "title": "%DataScience.interactiveGoToCode%",
+        "icon": "$(go-to-file)",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.exportasnotebook",
+        "title": "%DataScience.exportDialogTitle%",
+        "shortTitle": "%DataScience.exportAsNotebook.shorttitle%",
+        "icon": "$(save-as)",
+        "enablement": "notebookType == interactive",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.exportas",
+        "title": "%DataScience.notebookExport%",
+        "icon": {
+          "light": "resources/light/export_to_python.svg",
+          "dark": "resources/dark/export_to_python.svg"
+        },
+        "enablement": "notebookType == interactive",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.copyCell",
+        "title": "%DataScience.interactiveCopyCell%",
+        "icon": "$(copy)",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.runInDedicatedExtensionHost",
+        "title": "%DataScience.runInDedicatedExtensionHost%",
+        "enablement": "!jupyter.webExtension",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.installPythonExtensionViaKernelPicker",
+        "title": "%DataScience.installPythonExtensionViaKernelPickerTitle%"
+      },
+      {
+        "command": "jupyter.installPythonViaKernelPicker",
+        "title": "%DataScience.installPythonTitle%"
+      },
+      {
+        "command": "jupyter.switchToRemoteKernels",
+        "title": "%DataScience.switchToRemoteKernelsTitle%"
+      }
+    ]
+  },
+  {
+    "source": "vscode-jupyter-cell-tags",
+    "version": "0.1.8",
+    "commands": [
+      {
+        "command": "jupyter-cell-tags.removeTag",
+        "title": "Remove Cell Tag",
+        "icon": "$(close)"
+      },
+      {
+        "command": "jupyter-cell-tags.addTag",
+        "title": "Add Cell Tag",
+        "icon": "$(add)"
+      },
+      {
+        "command": "jupyter-cell-tags.editTagsInJSON",
+        "title": "Edit Cell Tags (JSON)",
+        "icon": "$(go-to-file)"
+      },
+      {
+        "command": "jupyter-cell-tags.paramaterize",
+        "title": "Mark Cell as Parameters"
+      }
+    ]
+  },
+  {
+    "source": "vscode-jupyter-powertoys",
+    "version": "0.0.6",
+    "commands": [
+      {
+        "command": "vscode-notebook-groups.executeGroup1",
+        "title": "Execute Group 1",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupOne/RunGroupOneRun-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupOne/RunGroupOneRun-dark.svg"
+        },
+        "enablement": "resource in notebookRunGroups.groupOneDocuments"
+      },
+      {
+        "command": "vscode-notebook-groups.addGroup1",
+        "title": "Add Group 1",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupOne/RunGroupOneAdd-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupOne/RunGroupOneAdd-dark.svg"
+        }
+      },
+      {
+        "command": "vscode-notebook-groups.removeGroup1",
+        "title": "Remove Group 1",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupOne/RunGroupOneRemove-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupOne/RunGroupOneRemove-dark.svg"
+        }
+      },
+      {
+        "command": "vscode-notebook-groups.executeGroup2",
+        "title": "Execute Group 2",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupTwo/RunGroupTwoRun-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupTwo/RunGroupTwoRun-dark.svg"
+        },
+        "enablement": "resource in notebookRunGroups.groupTwoDocuments"
+      },
+      {
+        "command": "vscode-notebook-groups.addGroup2",
+        "title": "Add Group 2",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupTwo/RunGroupTwoAdd-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupTwo/RunGroupTwoAdd-dark.svg"
+        }
+      },
+      {
+        "command": "vscode-notebook-groups.removeGroup2",
+        "title": "Remove Group 2",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupTwo/RunGroupTwoRemove-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupTwo/RunGroupTwoRemove-dark.svg"
+        }
+      },
+      {
+        "command": "vscode-notebook-groups.executeGroup3",
+        "title": "Execute Group 3",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupThree/RunGroupThreeRun-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupThree/RunGroupThreeRun-dark.svg"
+        },
+        "enablement": "resource in notebookRunGroups.groupThreeDocuments"
+      },
+      {
+        "command": "vscode-notebook-groups.addGroup3",
+        "title": "Add Group 3",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupThree/RunGroupThreeAdd-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupThree/RunGroupThreeAdd-dark.svg"
+        }
+      },
+      {
+        "command": "vscode-notebook-groups.removeGroup3",
+        "title": "Remove Group 3",
+        "category": "Notebook Run Groups",
+        "icon": {
+          "light": "images/notebookRunGroups/icons/RunGroupThree/RunGroupThreeRemove-light.svg",
+          "dark": "images/notebookRunGroups/icons/RunGroupThree/RunGroupThreeRemove-dark.svg"
+        }
+      },
+      {
+        "command": "jupyter-kernelManager.shutdownKernel",
+        "title": "Shutdown Kernel",
+        "category": "Notebook",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "jupyter-kernelManager.refreshKernels",
+        "title": "Refresh Kernels",
+        "category": "Notebook",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "jupyter-kernelManager.interruptKernel",
+        "title": "Interrupt Kernel",
+        "category": "Notebook",
+        "icon": "$(debug-stop)"
+      },
+      {
+        "command": "jupyter-kernelManager.restartKernel",
+        "title": "Restart Kernel",
+        "category": "Notebook",
+        "icon": "$(debug-restart)"
+      },
+      {
+        "command": "jupyter-kernelManager.createnewinteractive",
+        "title": "Create Interactive Window",
+        "category": "Notebook",
+        "icon": "$(window)"
+      },
+      {
+        "command": "jupyter.notebookeditor.openContextualHelp",
+        "title": "%jupyter.command.jupyter.openContextualHelp.title%",
+        "category": "Notebook",
+        "enablement": "notebookType == jupyter-notebook && isWorkspaceTrusted && jupyter.ispythonnotebook"
+      },
+      {
+        "command": "jupyter-kernelManager.editKernelSpec",
+        "title": "Edit KernelSpec",
+        "category": "Notebook",
+        "icon": "$(json)"
+      },
+      {
+        "command": "jupyter-kernelManager.inspectKernelMessages",
+        "title": "Inspect Kernel Messages",
+        "category": "Notebook",
+        "icon": "$(inspect)"
+      },
+      {
+        "command": "jupyter-kernelManager.clearKernelMessages",
+        "title": "Clear",
+        "category": "Notebook",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "jupyter-kernelManager.viewKernelMessagesAsTree",
+        "title": "Tree View",
+        "category": "Notebook",
+        "icon": "$(list-tree)"
+      },
+      {
+        "command": "jupyter-kernelManager.viewKernelMessagesAsList",
+        "title": "List View",
+        "category": "Notebook",
+        "icon": "$(list-flat)"
+      },
+      {
+        "command": "jupyter-kernelManager.kernelMessageCopy",
+        "title": "Copy",
+        "category": "Notebook",
+        "icon": "$(copy)"
+      }
+    ]
+  },
+  {
+    "source": "vscode-jupyter-slideshow",
+    "version": "0.1.5",
+    "commands": [
+      {
+        "command": "jupyter-slideshow.switchSlideType",
+        "title": "Switch Slide Type"
+      },
+      {
+        "command": "jupyter-slideshow.editSlideShowInJSON",
+        "title": "Edit Slide Type (JSON)",
+        "icon": "$(go-to-file)"
+      }
+    ]
+  },
+  {
+    "source": "remote-containers",
+    "version": "0.288.1",
+    "commands": [
+      {
+        "command": "remote-containers.reopenInContainer",
+        "title": "Reopen in Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.rebuildAndReopenInContainer",
+        "title": "Rebuild and Reopen in Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.rebuildNoCacheAndReopenInContainer",
+        "title": "Rebuild Without Cache and Reopen in Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.reopenLocally",
+        "title": "Reopen Folder Locally",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.reopenInWSL",
+        "title": "Reopen Folder in WSL",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.reopenInSSH",
+        "title": "Reopen Folder in SSH",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openFolder",
+        "title": "Open Folder in Container...",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/reopen-folder.svg",
+          "dark": "resources/dark/reopen-folder.svg"
+        }
+      },
+      {
+        "command": "remote-containers.startAndOpenFolder",
+        "title": "Open Folder in Container",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/reopen-folder.svg",
+          "dark": "resources/dark/reopen-folder.svg"
+        }
+      },
+      {
+        "command": "remote-containers.openInformationAboutMountPerformance",
+        "title": "Clone repository in Docker volume for better I/O performance.",
+        "category": "Dev Containers",
+        "icon": "$(info)"
+      },
+      {
+        "command": "remote-containers.openRepositoryInVolume",
+        "title": "Clone Repository in Named Container Volume...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openRepositoryInUniqueVolume",
+        "title": "Clone Repository in Container Volume...",
+        "icon": "$(repo-clone)",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openRepositoryFromRemoteHubWithEditSession",
+        "title": "Clone Repository in a Container Volume",
+        "icon": "$(repo-clone)",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openRepositoryFromGitWithEditSession",
+        "title": "Clone Repository in a Container Volume",
+        "icon": "$(repo-clone)",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openPullRequestInVolume",
+        "title": "Clone GitHub Pull Request in Container Volume...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.inspectVolume",
+        "title": "Explore a Volume in a Dev Container...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openWorkspace",
+        "title": "Open Workspace in Container...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.attachToRunningContainer",
+        "title": "Attach to Running Container...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.attachToRunningContainerFromViewlet",
+        "title": "Attach Visual Studio Code",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.inspectVolumeFromViewlet",
+        "title": "Explore in a Dev Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.cloneInVolumeFromViewlet",
+        "title": "Clone into existing Volume",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.cleanUpDevContainers",
+        "title": "Clean Up Dev Containers...",
+        "category": "Dev Containers",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "remote-containers.pruneVolumes",
+        "title": "Clean Up Dev Volumes...",
+        "category": "Dev Containers",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "remote-containers.explorerVolumesRefresh",
+        "title": "Refresh",
+        "category": "Dev Containers",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "remote-containers.attachToK8sContainerFromViewlet",
+        "title": "Attach Visual Studio Code",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.rebuildContainer",
+        "title": "Rebuild Container",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/tools.svg",
+          "dark": "resources/dark/tools.svg"
+        }
+      },
+      {
+        "command": "remote-containers.rebuildContainerNoCache",
+        "title": "Rebuild Container Without Cache",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/tools.svg",
+          "dark": "resources/dark/tools.svg"
+        }
+      },
+      {
+        "command": "remote-containers.createDevContainerFile",
+        "title": "Add Dev Container Configuration Files...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.createDevContainer",
+        "title": "New Dev Container...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.settings",
+        "title": "Settings",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.getHelp",
+        "title": "Help",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.getStarted",
+        "title": "Get Started with Dev Containers",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.trySample",
+        "title": "Try a Dev Container Sample...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.reportIssue",
+        "title": "Report Issue...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.provideFeedback",
+        "title": "Provide Feedback",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openDevContainerFile",
+        "title": "Open Container Configuration File",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/gear.svg",
+          "dark": "resources/dark/gear.svg"
+        }
+      },
+      {
+        "command": "remote-containers.openAttachConfigByNameFile",
+        "title": "Open Named Container Configuration File",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openAttachDevContainerFile",
+        "title": "Open Attached Container Configuration File...",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.revealLogTerminal",
+        "title": "Show Container Log",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.openLogFile",
+        "title": "Show All Logs...",
+        "category": "Dev Containers Developer"
+      },
+      {
+        "command": "remote-containers.openLastLogFile",
+        "title": "Show Previous Log",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.attachToContainer",
+        "title": "Attach to Container",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/empty-window.svg",
+          "dark": "resources/dark/empty-window.svg"
+        }
+      },
+      {
+        "command": "remote-containers.attachToContainerNewWindow",
+        "title": "Attach in New Window",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.stopContainer",
+        "title": "Stop Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.startContainer",
+        "title": "Start Container",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/vm-start.svg",
+          "dark": "resources/dark/vm-start.svg"
+        }
+      },
+      {
+        "command": "remote-containers.removeContainer",
+        "title": "Remove Container",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/remove.svg",
+          "dark": "resources/dark/remove.svg"
+        }
+      },
+      {
+        "command": "remote-containers.removeRecentFolder",
+        "title": "Remove Recent Folder",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/remove.svg",
+          "dark": "resources/dark/remove.svg"
+        }
+      },
+      {
+        "command": "remote-containers.showDetails",
+        "title": "Show Details",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.explorerTargetsRefresh",
+        "title": "Refresh",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "remote-containers.explorerDetailsRefresh",
+        "title": "Refresh",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "remote-containers.inspectDockerResource",
+        "title": "Inspect",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.inspectInBasicDevContainer",
+        "title": "Explore in Dev Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.cloneInVolume",
+        "title": "Clone Repository in Volume",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.removeVolume",
+        "title": "Remove",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.newContainer",
+        "title": "New Dev Container",
+        "category": "Dev Containers",
+        "icon": {
+          "light": "resources/light/plus.svg",
+          "dark": "resources/dark/plus.svg"
+        }
+      },
+      {
+        "command": "remote-containers.showContainerLog",
+        "title": "Show Container Log",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.addExtensionToConfig",
+        "title": "Add to devcontainer.json",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.checkoutPRInVolume",
+        "title": "Checkout Pull Request in Dev Container",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.showReopenInContainerNotificationReset",
+        "title": "Reset Don't Show Reopen Notification",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.showRecoveryContainerNotificationReset",
+        "title": "Reset Don't Show Recovery Container Notification",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.labelPortAndUpdateConfig",
+        "title": "Set Label and Update devcontainer.json",
+        "category": "Dev Containers",
+        "icon": "$(tag)"
+      },
+      {
+        "command": "remote-containers.installDocker",
+        "title": "Install Docker",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.installUserCLI",
+        "title": "Install devcontainer CLI",
+        "category": "Dev Containers"
+      },
+      {
+        "command": "remote-containers.configureContainerFeatures",
+        "title": "Configure Container Features...",
+        "category": "Dev Containers"
+      }
+    ]
+  },
+  {
+    "source": "remote-ssh",
+    "version": "0.100.0",
+    "commands": [
+      {
+        "command": "opensshremotes.openWebUI",
+        "title": "%commands.openWebUI.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.openEmptyWindow",
+        "title": "%commands.openEmptyWindow,title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.openEmptyWindowOnCurrentHost",
+        "title": "%commands.openEmptyWindowOnCurrentHost.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.openEmptyWindowInCurrentWindow",
+        "title": "%commands.openEmptyWindowInCurrentWindow.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.openConfigFile",
+        "title": "%commands.openConfigFile.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.addNewSshHost",
+        "title": "%commands.addNewSshHost.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.cleanDevBox",
+        "title": "%commands.cleanDevBox.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.cleanRemoteServer",
+        "title": "%commands.cleanRemoteServer.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.cleanCurrentRemoteServer",
+        "title": "%commands.cleanCurrentRemoteServer.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.cleanLocalServer",
+        "title": "%commands.cleanLocalServer.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.getHelp",
+        "title": "%commands.getHelp.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.getStarted",
+        "title": "%commands.getStarted.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.reportIssue",
+        "title": "%commands.reportIssue.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.settings",
+        "title": "%commands.settings.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.provideFeedback",
+        "title": "%commands.provideFeedback.title%",
+        "category": "Remote-SSH"
+      },
+      {
+        "command": "opensshremotes.showLog",
+        "title": "%commands.showLog.title%",
+        "category": "Remote-SSH"
+      }
+    ]
+  },
+  {
+    "source": "cmake-tools",
+    "version": "1.13.45",
+    "commands": [
+      {
+        "command": "cmake.openCMakePresets",
+        "title": "%cmake-tools.command.cmake.openCMakePresets.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.addConfigurePreset",
+        "title": "%cmake-tools.command.cmake.addConfigurePreset.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.addBuildPreset",
+        "title": "%cmake-tools.command.cmake.addBuildPreset.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.addTestPreset",
+        "title": "%cmake-tools.command.cmake.addTestPreset.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.selectConfigurePreset",
+        "title": "%cmake-tools.command.cmake.selectConfigurePreset.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.selectBuildPreset",
+        "title": "%cmake-tools.command.cmake.selectBuildPreset.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.selectTestPreset",
+        "title": "%cmake-tools.command.cmake.selectTestPreset.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.viewLog",
+        "title": "%cmake-tools.command.cmake.viewLog.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.logDiagnostics",
+        "title": "%cmake-tools.command.cmake.logDiagnostics.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.selectActiveFolder",
+        "title": "%cmake-tools.command.cmake.selectActiveFolder.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.editKits",
+        "title": "%cmake-tools.command.cmake.editKits.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.scanForKits",
+        "title": "%cmake-tools.command.cmake.scanForKits.title%",
+        "when": "cmake:enableFullFeatureSet && !useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.scanForCompilers",
+        "title": "%cmake-tools.command.cmake.scanForCompilers.title%",
+        "when": "cmake:enableFullFeatureSet && useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.selectKit",
+        "title": "%cmake-tools.command.cmake.selectKit.title%",
+        "when": "cmake:enableFullFeatureSet && !useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.setVariant",
+        "title": "%cmake-tools.command.cmake.setVariant.title%",
+        "when": "cmake:enableFullFeatureSet && !useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.setVariantAll",
+        "title": "%cmake-tools.command.cmake.setVariantAll.title%",
+        "when": "cmake:enableFullFeatureSet && !useCMakePresets",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.configure",
+        "title": "%cmake-tools.command.cmake.configure.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.showConfigureCommand",
+        "title": "%cmake-tools.command.cmake.showConfigureCommand.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.configureAll",
+        "title": "%cmake-tools.command.cmake.configureAll.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.configure",
+        "title": "%cmake-tools.command.cmake.configure.title%",
+        "icon": {
+          "dark": "res/dark/configure-icon.svg",
+          "light": "res/light/configure-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.outline.configureAll",
+        "title": "%cmake-tools.command.cmake.configureAll.title%",
+        "icon": {
+          "dark": "res/dark/configure-icon.svg",
+          "light": "res/light/configure-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.build",
+        "title": "%cmake-tools.command.cmake.build.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.showBuildCommand",
+        "title": "%cmake-tools.command.cmake.showBuildCommand.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.buildAll",
+        "title": "%cmake-tools.command.cmake.buildAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.buildNamedTarget",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.buildNamedTarget.title%"
+      },
+      {
+        "command": "cmake.outline.build",
+        "title": "%cmake-tools.command.cmake.build.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/build-icon.svg",
+          "light": "res/light/build-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.outline.buildAll",
+        "title": "%cmake-tools.command.cmake.buildAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/build-icon.svg",
+          "light": "res/light/build-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.compileFile",
+        "title": "%cmake-tools.command.cmake.compileFile.title%",
+        "category": "CMake",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/build-icon.svg",
+          "light": "res/light/build-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.outline.compileFile",
+        "title": "%cmake-tools.command.cmake.outline.compileFile.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/build-icon.svg",
+          "light": "res/light/build-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.outline.selectWorkspace",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.selectActiveFolder.title%",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "cmake.install",
+        "title": "%cmake-tools.command.cmake.install.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.installAll",
+        "title": "%cmake-tools.command.cmake.installAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.buildWithTarget",
+        "title": "%cmake-tools.command.cmake.buildWithTarget.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.setDefaultTarget",
+        "title": "%cmake-tools.command.cmake.setDefaultTarget.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.cleanConfigure",
+        "title": "%cmake-tools.command.cmake.cleanConfigure.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.cleanConfigureAll",
+        "title": "%cmake-tools.command.cmake.cleanConfigureAll.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.cleanConfigure",
+        "title": "%cmake-tools.command.cmake.outline.cleanConfigure.title%"
+      },
+      {
+        "command": "cmake.outline.cleanConfigureAll",
+        "title": "%cmake-tools.command.cmake.outline.cleanConfigureAll.title%"
+      },
+      {
+        "command": "cmake.clean",
+        "title": "%cmake-tools.command.cmake.clean.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.cleanAll",
+        "title": "%cmake-tools.command.cmake.cleanAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.clean",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.clean.title%"
+      },
+      {
+        "command": "cmake.outline.cleanAll",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.cleanAll.title%"
+      },
+      {
+        "command": "cmake.cleanRebuild",
+        "title": "%cmake-tools.command.cmake.cleanRebuild.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.cleanRebuildAll",
+        "title": "%cmake-tools.command.cmake.cleanRebuildAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.cleanRebuild",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.cleanRebuild.title%"
+      },
+      {
+        "command": "cmake.outline.cleanRebuildAll",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.cleanRebuildAll.title%"
+      },
+      {
+        "command": "cmake.editCacheUI",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.editCacheUI.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.editCacheUI",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.editCacheUI.title%"
+      },
+      {
+        "command": "cmake.ctest",
+        "title": "%cmake-tools.command.cmake.ctest.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.ctestAll",
+        "title": "%cmake-tools.command.cmake.ctestAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.editCache",
+        "title": "%cmake-tools.command.cmake.editCache.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.quickStart",
+        "title": "%cmake-tools.command.cmake.quickStart.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.debugTarget",
+        "title": "%cmake-tools.command.cmake.debugTarget.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.debugTargetAll",
+        "title": "%cmake-tools.command.cmake.debugTargetAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.launchTarget",
+        "title": "%cmake-tools.command.cmake.launchTarget.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.launchTargetAll",
+        "title": "%cmake-tools.command.cmake.launchTargetAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.selectLaunchTarget",
+        "title": "%cmake-tools.command.cmake.selectLaunchTarget.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.stop",
+        "title": "%cmake-tools.command.cmake.stop.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.stopAll",
+        "title": "%cmake-tools.command.cmake.stopAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.stop",
+        "title": "%cmake-tools.command.cmake.stop.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/stop-icon.svg",
+          "light": "res/light/stop-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.outline.stopAll",
+        "title": "%cmake-tools.command.cmake.stopAll.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/stop-icon.svg",
+          "light": "res/light/stop-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.resetState",
+        "title": "%cmake-tools.command.cmake.resetState.title%",
+        "category": "CMake"
+      },
+      {
+        "command": "cmake.outline.buildTarget",
+        "title": "%cmake-tools.command.cmake.build.title%",
+        "when": "cmake:enableFullFeatureSet",
+        "icon": {
+          "dark": "res/dark/build-icon.svg",
+          "light": "res/light/build-icon.svg"
+        }
+      },
+      {
+        "command": "cmake.outline.runUtilityTarget",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.outline.runUtilityTarget.title%"
+      },
+      {
+        "command": "cmake.outline.debugTarget",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.outline.debugTarget.title%"
+      },
+      {
+        "command": "cmake.outline.launchTarget",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.outline.launchTarget.title%"
+      },
+      {
+        "command": "cmake.outline.setDefaultTarget",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.outline.setDefaultTarget.title%"
+      },
+      {
+        "command": "cmake.outline.setLaunchTarget",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.outline.setLaunchTarget.title%"
+      },
+      {
+        "command": "cmake.outline.revealInCMakeLists",
+        "when": "cmake:enableFullFeatureSet",
+        "title": "%cmake-tools.command.cmake.outline.revealInCMakeLists.title%"
+      }
+    ]
+  },
+  {
+    "source": "cpptools",
+    "version": "1.14.5",
+    "commands": [
+      {
+        "command": "C_Cpp.ConfigurationSelect",
+        "title": "%c_cpp.command.configurationSelect.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ConfigurationProviderSelect",
+        "title": "%c_cpp.command.configurationProviderSelect.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ConfigurationEditJSON",
+        "title": "%c_cpp.command.configurationEditJSON.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ConfigurationEditUI",
+        "title": "%c_cpp.command.configurationEditUI.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.selectDefaultCompiler",
+        "title": "%c_cpp.command.selectDefaultCompiler.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.SwitchHeaderSource",
+        "title": "%c_cpp.command.switchHeaderSource.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.EnableErrorSquiggles",
+        "title": "%c_cpp.command.enableErrorSquiggles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.DisableErrorSquiggles",
+        "title": "%c_cpp.command.disableErrorSquiggles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ToggleIncludeFallback",
+        "title": "%c_cpp.command.toggleIncludeFallback.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ToggleDimInactiveRegions",
+        "title": "%c_cpp.command.toggleDimInactiveRegions.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ResetDatabase",
+        "title": "%c_cpp.command.resetDatabase.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.TakeSurvey",
+        "title": "%c_cpp.command.takeSurvey.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RestartIntelliSenseForFile",
+        "title": "%c_cpp.command.restartIntelliSenseForFile.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.LogDiagnostics",
+        "title": "%c_cpp.command.logDiagnostics.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RescanWorkspace",
+        "title": "%c_cpp.command.rescanWorkspace.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.VcpkgClipboardInstallSuggested",
+        "title": "%c_cpp.command.vcpkgClipboardInstallSuggested.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.VcpkgOnlineHelpSuggested",
+        "title": "%c_cpp.command.vcpkgOnlineHelpSuggested.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.GenerateEditorConfig",
+        "title": "%c_cpp.command.generateEditorConfig.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.referencesViewGroupByType",
+        "category": "C/C++",
+        "title": "%c_cpp.command.referencesViewGroupByType.title%",
+        "icon": {
+          "light": "assets/ref-group-by-type-light.svg",
+          "dark": "assets/ref-group-by-type-dark.svg"
+        }
+      },
+      {
+        "command": "C_Cpp.referencesViewUngroupByType",
+        "category": "C/C++",
+        "title": "%c_cpp.command.referencesViewUngroupByType.title%",
+        "icon": {
+          "light": "assets/ref-ungroup-by-type-light.svg",
+          "dark": "assets/ref-ungroup-by-type-dark.svg"
+        }
+      },
+      {
+        "command": "C_Cpp.GoToNextDirectiveInGroup",
+        "title": "%c_cpp.command.GoToNextDirectiveInGroup.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.GoToPrevDirectiveInGroup",
+        "title": "%c_cpp.command.GoToPrevDirectiveInGroup.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.CreateDeclarationOrDefinition",
+        "title": "%c_cpp.command.CreateDeclarationOrDefinition.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RunCodeAnalysisOnActiveFile",
+        "title": "%c_cpp.command.RunCodeAnalysisOnActiveFile.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RunCodeAnalysisOnOpenFiles",
+        "title": "%c_cpp.command.RunCodeAnalysisOnOpenFiles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RunCodeAnalysisOnAllFiles",
+        "title": "%c_cpp.command.RunCodeAnalysisOnAllFiles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RemoveAllCodeAnalysisProblems",
+        "title": "%c_cpp.command.RemoveAllCodeAnalysisProblems.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.BuildAndDebugFile",
+        "title": "%c_cpp.command.BuildAndDebugFile.title%",
+        "category": "C/C++",
+        "icon": "$(debug-alt)"
+      },
+      {
+        "command": "C_Cpp.BuildAndRunFile",
+        "title": "%c_cpp.command.BuildAndRunFile.title%",
+        "category": "C/C++",
+        "icon": "$(run)"
+      },
+      {
+        "command": "C_Cpp.AddDebugConfiguration",
+        "title": "%c_cpp.command.AddDebugConfiguration.title%",
+        "category": "C/C++",
+        "icon": "$(debug-configure)"
+      },
+      {
+        "command": "C_Cpp.GenerateDoxygenComment",
+        "title": "%c_cpp.command.GenerateDoxygenComment.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.addSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.addSshTarget.title%",
+        "icon": "$(plus)"
+      },
+      {
+        "command": "C_Cpp.removeSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.removeSshTarget.title%",
+        "icon": "$(remove)"
+      },
+      {
+        "command": "C_Cpp.setActiveSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.setActiveSshTarget.title%",
+        "icon": "$(check)"
+      },
+      {
+        "command": "C_Cpp.selectActiveSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.selectActiveSshTarget.title%"
+      },
+      {
+        "command": "C_Cpp.selectSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.selectSshTarget.title%"
+      },
+      {
+        "command": "C_Cpp.activeSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.activeSshTarget.title%"
+      },
+      {
+        "command": "C_Cpp.refreshCppSshTargetsView",
+        "category": "C/C++",
+        "title": "%c_cpp.command.refreshCppSshTargetsView.title%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "C_Cpp.sshTerminal",
+        "category": "C/C++",
+        "title": "%c_cpp.command.sshTerminal.title%",
+        "icon": "$(terminal)"
+      }
+    ]
+  },
+  {
+    "source": "js-debug-nightly",
+    "version": "2023.4.1317",
+    "commands": [
+      {
+        "command": "extension.js-debug.prettyPrint",
+        "title": "%pretty.print.script%",
+        "category": "Debug",
+        "icon": "$(json)"
+      },
+      {
+        "command": "extension.js-debug.toggleSkippingFile",
+        "title": "%toggle.skipping.this.file%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.addCustomBreakpoints",
+        "title": "%add.browser.breakpoint%",
+        "icon": "$(add)"
+      },
+      {
+        "command": "extension.js-debug.removeCustomBreakpoint",
+        "title": "%remove.browser.breakpoint%",
+        "icon": "$(remove)"
+      },
+      {
+        "command": "extension.js-debug.removeAllCustomBreakpoints",
+        "title": "%remove.browser.breakpoint.all%",
+        "icon": "$(close-all)"
+      },
+      {
+        "command": "extension.pwa-node-debug.attachNodeProcess",
+        "title": "%attach.node.process%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.npmScript",
+        "title": "%debug.npm.script%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.createDebuggerTerminal",
+        "title": "%debug.terminal.label%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.startProfile",
+        "title": "%profile.start%",
+        "category": "Debug",
+        "icon": "$(record)"
+      },
+      {
+        "command": "extension.js-debug.stopProfile",
+        "title": "%profile.stop%",
+        "category": "Debug",
+        "icon": "resources/dark/stop-profiling.svg"
+      },
+      {
+        "command": "extension.js-debug.revealPage",
+        "title": "%browser.revealPage%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.debugLink",
+        "title": "%debugLink.label%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.createDiagnostics",
+        "title": "%createDiagnostics.label%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.getDiagnosticLogs",
+        "title": "%getDiagnosticLogs.label%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.node-debug.startWithStopOnEntry",
+        "title": "%startWithStopOnEntry.label%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.openEdgeDevTools",
+        "title": "%openEdgeDevTools.label%",
+        "icon": "$(inspect)",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.callers.add",
+        "title": "%commands.callersAdd.label%",
+        "category": "Debug"
+      },
+      {
+        "command": "extension.js-debug.callers.remove",
+        "title": "%commands.callersRemove.label%",
+        "icon": "$(close)"
+      },
+      {
+        "command": "extension.js-debug.callers.removeAll",
+        "title": "%commands.callersRemoveAll.label%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "extension.js-debug.callers.goToCaller",
+        "title": "%commands.callersGoToCaller.label%",
+        "icon": "$(call-outgoing)"
+      },
+      {
+        "command": "extension.js-debug.callers.gotToTarget",
+        "title": "%commands.callersGoToTarget.label%",
+        "icon": "$(call-incoming)"
+      },
+      {
+        "command": "extension.js-debug.enableSourceMapStepping",
+        "title": "%commands.enableSourceMapStepping.label%",
+        "icon": "$(compass-dot)"
+      },
+      {
+        "command": "extension.js-debug.disableSourceMapStepping",
+        "title": "%commands.disableSourceMapStepping.label%",
+        "icon": "$(compass)"
+      }
+    ]
+  },
+  {
+    "source": "remote-explorer",
+    "version": "0.4.0",
+    "commands": [
+      {
+        "command": "remote-explorer.signIntoTunnel",
+        "title": "%commands.signIntoGateway.title%",
+        "icon": "$(arrow-right)"
+      },
+      {
+        "command": "remote-explorer.add",
+        "title": "%commands.add.title%",
+        "icon": "$(plus)"
+      },
+      {
+        "command": "remote-explorer.configureSsh",
+        "title": "%commands.configureSsh.title%",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "remote-explorer.refresh",
+        "title": "%commands.refresh.title%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "remote-explorer.connectToRemoteInNewWindow",
+        "title": "%commands.connectToRemoteInNewWindow.title%",
+        "icon": "$(empty-window)"
+      },
+      {
+        "command": "remote-explorer.connectToRemoteInCurrentWindow",
+        "title": "%commands.connectToRemoteInCurrentWindow.title%",
+        "icon": "$(arrow-right)"
+      },
+      {
+        "command": "remote-explorer.connectToFolderInNewWindow",
+        "title": "%commands.connectToFolderInNewWindow.title%",
+        "icon": "$(empty-window)"
+      },
+      {
+        "command": "remote-explorer.connectToFolderInCurrentWindow",
+        "title": "%commands.connectToFolderInCurrentWindow.title%",
+        "icon": "$(arrow-right)"
+      },
+      {
+        "command": "remote-explorer.deleteFolderHistoryItem",
+        "title": "%commands.deleteFolderHistoryItem.title%",
+        "icon": "$(remove)"
+      },
+      {
+        "command": "remote-explorer.unregisterTunnel",
+        "title": "%commands.unregisterTunnel.title%",
+        "icon": "$(remove)"
+      }
+    ]
+  },
+  {
+    "source": "vscode-javascript-booster",
+    "version": "14.0.1",
+    "commands": [
+      {
+        "command": "javascriptBooster.executeCodeMod",
+        "title": "Run Global Code Action",
+        "category": "JS Booster"
+      },
+      {
+        "command": "javascriptBooster.reloadCodeMods",
+        "title": "Reload Code Actions",
+        "category": "JS Booster"
+      },
+      {
+        "command": "javascriptBooster.extendSelection",
+        "title": "Extend selection",
+        "category": "JS Booster"
+      },
+      {
+        "command": "javascriptBooster.shrinkSelection",
+        "title": "Shrink selection",
+        "category": "JS Booster"
+      }
+    ]
+  },
+  {
+    "source": "smart-command",
+    "version": "0.0.1",
+    "commands": [
+      {
+        "command": "smart-command.NLPSearch",
+        "title": "NLPSearch"
+      }
+    ]
+  },
+  {
+    "source": "cmake",
+    "version": "0.0.17",
+    "commands": [
+      {
+        "command": "cmake.onlineHelp",
+        "title": "CMake: Online Help"
+      }
+    ]
+  },
+  {
+    "source": "eno",
+    "version": "2.3.53",
+    "commands": [
+      {
+        "command": "compile-hero.openInBrowser",
+        "title": "Open In Browser"
+      },
+      {
+        "command": "compile-hero.closePort",
+        "title": "Close Port"
+      },
+      {
+        "command": "compile-hero.compileSelected",
+        "title": "Compile Selected"
+      },
+      {
+        "command": "compile-hero.compileFile",
+        "title": "Compile Files"
+      },
+      {
+        "command": "compile-hero.beautify",
+        "title": "Beautify"
+      },
+      {
+        "command": "compile-hero.beautifyFile",
+        "title": "Beautify File"
+      }
+    ]
+  }
+]

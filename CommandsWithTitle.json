@@ -5246,5 +5246,113 @@
   {
     "command_id": "cursorUndo",
     "command_title": "Cursor Undo"
+  },
+  {
+    "command_id": "workbench.view.extension.dockerView",
+    "command_title": "View: Show Docker"
+  },
+  {
+    "command_id": "opensshremotes.addNewSshHost",
+    "command_title": "Remote-SSH: Add New SSH Host..."
+  },
+  {
+    "command_id": "opensshremotes.cleanCurrentRemoteServer",
+    "command_title": "Remote-SSH: Kill Current VS Code Server"
+  },
+  {
+    "command_id": "opensshremotes.cleanDevBox",
+    "command_title": "Remote-SSH: Uninstall VS Code Server from Host..."
+  },
+  {
+    "command_id": "opensshremotes.cleanLocalServer",
+    "command_title": "Remote-SSH: Kill Local Connection Server For Host..."
+  },
+  {
+    "command_id": "opensshremotes.cleanRemoteServer",
+    "command_title": "Remote-SSH: Kill VS Code Server on Host..."
+  },
+  {
+    "command_id": "opensshremotes.getHelp",
+    "command_title": "Remote-SSH: Help"
+  },
+  {
+    "command_id": "opensshremotes.getStarted",
+    "command_title": "Remote-SSH: Get Started with SSH"
+  },
+  {
+    "command_id": "opensshremotes.openConfigFile",
+    "command_title": "Remote-SSH: Open SSH Configuration File..."
+  },
+  {
+    "command_id": "opensshremotes.openEmptyWindow",
+    "command_title": "Remote-SSH: Connect to Host..."
+  },
+  {
+    "command_id": "opensshremotes.openEmptyWindowInCurrentWindow",
+    "command_title": "Remote-SSH: Connect Current Window to Host..."
+  },
+  {
+    "command_id": "opensshremotes.openEmptyWindowOnCurrentHost",
+    "command_title": "Remote-SSH: New Window on Active Host"
+  },
+  {
+    "command_id": "opensshremotes.openWebUI",
+    "command_title": "Remote-SSH: Open Web UI"
+  },
+  {
+    "command_id": "opensshremotes.provideFeedback",
+    "command_title": "Remote-SSH: Provide Feedback"
+  },
+  {
+    "command_id": "opensshremotes.reportIssue",
+    "command_title": "Remote-SSH: Report Issue..."
+  },
+  {
+    "command_id": "opensshremotes.settings",
+    "command_title": "Remote-SSH: Settings"
+  },
+  {
+    "command_id": "opensshremotes.showLog",
+    "command_title": "Remote-SSH: Show Log"
+  },
+  {
+    "command_id": "pyright.organizeimports",
+    "command_title": "Pyright: Organize Imports"
+  },
+  {
+    "command_id": "remoteTargets.focus",
+    "command_title": "Remote Explorer: Focus on Remote View"
+  },
+  {
+    "command_id": "targetsContainers.focus",
+    "command_title": "Remote Explorer: Focus on Dev Containers View"
+  },
+  {
+    "command_id": "dockerContainers.focus",
+    "command_title": "Docker: Focus on Containers View"
+  },
+  {
+    "command_id": "dockerImages.focus",
+    "command_title": "Docker: Focus on Images View"
+  },
+  {
+    "command_id": "dockerNetworks.focus",
+    "command_title": "Docker: Focus on Networks View"
+  },
+  {
+    "command_id": "dockerRegistries.focus",
+    "command_title": "Docker: Focus on Registries View"
+  },
+  {
+    "command_id": "dockerVolumes.focus",
+    "command_title": "Docker: Focus on Volumes View"
+  },
+  {
+    "command_id": "detailsContainers.focus",
+    "command_title": "Remote Explorer: Focus on Details (Containers) View"
+  },
+  {
+    "command_id": "devVolumes.focus",
+    "command_title": "Remote Explorer: Focus on Dev Volumes View"
   }
 ]
