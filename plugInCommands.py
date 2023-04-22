@@ -54,7 +54,8 @@ def main():
                     "commands": commands
                 }
 
-    output_file = "PlugInCommandsOutput.json"
+    output_file = "plugInCommandsOutput.json"
+    print("Commands and titles have been successfully extracted and saved to plugInCommandsOutput.json.")
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
         json.dump(list(all_extensions.values()), outfile, indent=2)
