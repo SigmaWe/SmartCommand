@@ -27,7 +27,7 @@ The generated embeddings are saved in separate pickle files, and the script also
 * `PicklePluginCommands.pkl`
 * `CombinedPickleCommands.pkl`
 
-#### Results:
+#### CombinedPickleCommands.pkl file results:
 ```
 Data loaded from pickle file:
 {'command_id': array(['undo', 'workbench.action.navigatePreviousInNavigationLocations',
