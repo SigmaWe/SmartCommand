@@ -3,12 +3,12 @@ This repository contains a Python script that generates sentence embeddings for 
 
 ## Input:
 * The script takes two JSON files as input with the following command URLs::
-  * A built-in commands file: `AllKeybindingCommands.json`
+  * A built-in commands file: [AllKeybindingCommands.json](https://github.com/parthiv2048/SmartCommand/blob/refactor/NLP_and_backend/AllKeybindingCommands.json)
   ```
   command_url1 = "https://raw.githubusercontent.com/parthiv2048/SmartCommand/refactor/NLP_and_backend/AllKeybindingCommands.json"
   ```
   
-  * A plugin commands file: `PlugInCommandsOutput.json`
+  * A plugin commands file: [PlugInCommandsOutput.json](https://github.com/Aljbab14/SmartCommand/blob/refactor/PlugInCommandsOutput.json)
   ```
   command_url2 = "https://raw.githubusercontent.com/Aljbab14/SmartCommand/refactor/PlugInCommandsOutput.json"
   ```
