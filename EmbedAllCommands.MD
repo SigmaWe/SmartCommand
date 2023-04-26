@@ -23,9 +23,9 @@ This repository contains a Python script that generates sentence embeddings for 
 ## Output:
 The generated embeddings are saved in separate pickle files, and the script also combines the embeddings from both JSON files into a single pickle file:
 
-* `PickleBuiltinCommands`
-* `PicklePluginCommands`
-* `CombinedPickleCommands`
+* `PickleBuiltinCommands.pkl`
+* `PicklePluginCommands.pkl`
+* `CombinedPickleCommands.pkl`
 
 #### Results:
 ```
