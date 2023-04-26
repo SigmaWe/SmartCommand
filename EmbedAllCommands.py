@@ -3,13 +3,6 @@ import requests
 import sentence_transformers
 import numpy
 
-# Set the names for the output pickle files
-Builtincommand_embedding_pickle = 'PickleBuiltinCommands'
-Plugincommand_embedding_pickle = 'PicklePluginCommands'
-combined_pickle = 'CombinedPickleCommands'
-method = 'sbert'
-model = 'sentence-transformers/paraphrase-distilroberta-base-v1'
-
 # Function to fetch JSON data from the given URL
 def load_commands(command_url):
     response = requests.get(command_url)
@@ -85,9 +78,12 @@ if __name__ == "__main__":
     command_url1 = "https://raw.githubusercontent.com/parthiv2048/SmartCommand/refactor/NLP_and_backend/AllKeybindingCommands.json"
     command_url2 = "https://raw.githubusercontent.com/Aljbab14/SmartCommand/refactor/PlugInCommandsOutput.json"
 
+    # Set the names for the output pickle files
     Builtincommand_embedding_pickle = 'PickleBuiltinCommands'
     Plugincommand_embedding_pickle = 'PicklePluginCommands'
     combined_pickle = 'CombinedPickleCommands'
+    method = 'sbert'
+    model = 'sentence-transformers/paraphrase-distilroberta-base-v1'
 
     main(command_url1,
          command_url2,
