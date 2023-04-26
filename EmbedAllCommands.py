@@ -79,9 +79,9 @@ if __name__ == "__main__":
     command_url2 = "https://raw.githubusercontent.com/Aljbab14/SmartCommand/refactor/PlugInCommandsOutput.json"
 
     # Set the names for the output pickle files
-    Builtincommand_embedding_pickle = 'PickleBuiltinCommands'
-    Plugincommand_embedding_pickle = 'PicklePluginCommands'
-    combined_pickle = 'CombinedPickleCommands'
+    Builtincommand_embedding_pickle = 'PickleBuiltinCommands.pkl'
+    Plugincommand_embedding_pickle = 'PicklePluginCommands.pkl'
+    combined_pickle = 'CombinedPickleCommands.pkl'
     method = 'sbert'
     model = 'sentence-transformers/paraphrase-distilroberta-base-v1'
 
