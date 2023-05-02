@@ -61,3 +61,4 @@ def main():
         json.dump(list(all_extensions.values()), outfile, indent=2)
 
     return list(all_extensions.values())
+
