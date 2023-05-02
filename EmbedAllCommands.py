@@ -10,7 +10,35 @@ def load_commands(command_url):
     commands = response.json()
     return commands
 
+# Function to remove duplicate commands from the two JSON files with different formats
+def remove_duplicates(commands1, commands2, json_format1=1, json_format2=2):
+    # Helper function to get the command ID based on the JSON format
+    def get_command_id(command, json_format):
+        if json_format == 1:
+            return command["command_id"]
+        elif json_format == 2:
+            return command["command"]
+        else:
+            raise ValueError("Invalid JSON format")
+
+    # Combine commands from both JSON files
+    combined_commands = commands1 + [cmd for plugin in commands2 for cmd in plugin["commands"]]
+    seen = set()
+    unique_commands = []
+
+    # Iterate over combined_commands and keep track of unique command IDs
+    for command in combined_commands:
+        cmd_id = get_command_id(command, json_format1 if command in commands1 else json_format2)
+
+        if cmd_id not in seen:
+            seen.add(cmd_id)
+            unique_commands.append(command)
+
+    return unique_commands
+
 # Function to encode sentences using the SBERT method
+# We chose this method because it generates high-quality sentence embeddings
+# and is suitable for semantic similarity tasks.
 def emb_sbert(sentences: typing.List[str], model:str):
     embedder = sentence_transformers.SentenceTransformer(model)
     embeddings = embedder.encode(sentences, 
@@ -20,16 +48,20 @@ def emb_sbert(sentences: typing.List[str], model:str):
     return embeddings
 
 # Function to generate embeddings for command titles and command IDs
-def embed_commands(command_dict_list, method:str, model:str, json_format=1):
-    # Extract command titles and command IDs depending on the JSON format
-    if json_format == 1:
-        command_strings = [c["command_id"] for c in command_dict_list]
-        title_strings = [c["command_title"] for c in command_dict_list]
-    elif json_format == 2:
-        command_strings = [cmd["command"] for plugin in command_dict_list for cmd in plugin["commands"]]
-        title_strings = [cmd["title"] for plugin in command_dict_list for cmd in plugin["commands"]]
-    else:
-        raise ValueError("Invalid JSON format")
+def embed_commands(command_dict_list, method:str, model:str):
+    command_strings = []
+    title_strings = []
+    
+    # Extract command titles and command IDs from the unique_commands list
+    for command in command_dict_list:
+        if "command_id" in command:
+            command_strings.append(command["command_id"])
+            title_strings.append(command["command_title"])
+        elif "command" in command:
+            command_strings.append(command["command"])
+            title_strings.append(command["title"])
+        else:
+            raise ValueError("Invalid command format")
 
     # Generate embeddings using the SBERT method
     if method == "sbert":
@@ -52,33 +84,19 @@ def pickle_embeddings(embeddings: dict, pickle_file):
     with open(pickle_file, 'wb') as f:
         pickle.dump(embeddings, f)
 
-# Function to combine two pickle files into a single pickle file
-def combine_pickles(pickle_file1, pickle_file2, combined_pickle):
-    with open(pickle_file1, 'rb') as f1, open(pickle_file2, 'rb') as f2:
-        embeddings1 = pickle.load(f1)
-        embeddings2 = pickle.load(f2)
-    
-    combined_embeddings = {key: numpy.concatenate((embeddings1[key], embeddings2[key])) for key in embeddings1}
-    
-    with open(combined_pickle, 'wb') as f:
-        pickle.dump(combined_embeddings, f)
-
 # Main function to execute the entire process
 def main(command_url1, command_url2, Builtincommand_pickle, Plugincommand_pickle, combined_pickle, method, model):
     commands1 = load_commands(command_url1)
     commands2 = load_commands(command_url2)
-    embeddings1 = embed_commands(commands1, method, model, json_format=1)
-    embeddings2 = embed_commands(commands2, method, model, json_format=2)
+    unique_commands = remove_duplicates(commands1, commands2, json_format1=1, json_format2=2)
+    embeddings1 = embed_commands(unique_commands, method, model)
     pickle_embeddings(embeddings1, Builtincommand_pickle)
-    pickle_embeddings(embeddings2, Plugincommand_pickle)
-    combine_pickles(Builtincommand_pickle, Plugincommand_pickle, combined_pickle)
 
 # Run the script
 if __name__ == "__main__":
     command_url1 = "https://raw.githubusercontent.com/parthiv2048/SmartCommand/refactor/NLP_and_backend/AllKeybindingCommands.json"
     command_url2 = "https://raw.githubusercontent.com/Aljbab14/SmartCommand/refactor/PlugInCommandsOutput.json"
 
-    # Set the names for the output pickle files
     Builtincommand_embedding_pickle = 'PickleBuiltinCommands.pkl'
     Plugincommand_embedding_pickle = 'PicklePluginCommands.pkl'
     combined_pickle = 'CombinedPickleCommands.pkl'
