@@ -92,7 +92,7 @@ def main(command_url1, command_url2, Builtincommand_pickle, Plugincommand_pickle
     embeddings1 = embed_commands(unique_commands, method, model)
     pickle_embeddings(embeddings1, Builtincommand_pickle)
 
-# Run the script
+# Run the script 
 if __name__ == "__main__":
     command_url1 = "https://raw.githubusercontent.com/parthiv2048/SmartCommand/refactor/NLP_and_backend/AllKeybindingCommands.json"
     command_url2 = "https://raw.githubusercontent.com/Aljbab14/SmartCommand/refactor/PlugInCommandsOutput.json"
@@ -110,3 +110,4 @@ if __name__ == "__main__":
          combined_pickle,
          method,
          model)
+# 5/2/23
