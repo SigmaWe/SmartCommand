@@ -14,9 +14,11 @@ This repository contains a Python script that generates sentence embeddings for 
   ```
 
 ## Processing:
-* Load the JSON files from the specified URLs.
-* Encode the sentences using the SBERT method.
-* Generate embeddings for command titles and command IDs, depending on the JSON format.
+* Load the JSON files from the specified URLs using the load_commands function.
+* Remove duplicate commands from the two JSON files with different formats using the remove_duplicates function.
+* Generate sentence embeddings for command titles and command IDs using the embed_commands function, which utilizes the emb_sbert function to encode sentences with the SBERT method.
+* Save the generated embeddings as a pickle file using the pickle_embeddings function.
+* Execute the entire process by running the main function.
 
 ## Output:
 The generated embeddings are saved in separate pickle files, and the script also combines the embeddings from both JSON files into a single pickle file:
