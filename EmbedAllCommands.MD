@@ -88,3 +88,11 @@ Run the main function to execute the entire process. The script will generate se
 * `FastText`: Developed by Facebook, it is a library for learning word vectors and performing various NLP tasks. It is particularly efficient for large-scale text classification.
 
 * We chose `SBERT` because it is specifically designed for sentence embeddings and has shown excellent performance on semantic textual similarity tasks. It can generate high-quality embeddings with minimal effort and supports a wide range of pre-trained models.
+
+
+## Models options:
+
+* `sentence-transformers/paraphrase-MiniLM-L6-v2`: A smaller and faster version of the paraphrase model. It is based on Microsoft's MiniLM architecture, and it has similar performance while being more efficient in terms of speed and memory usage.
+* `sentence-transformers/paraphrase-xlm-r-multilingual-v1`: A multilingual version of the paraphrase model, which supports 50+ languages. It is based on the XLM-R architecture and can be used for multilingual applications.
+* `sentence-transformers/paraphrase-mpnet-base-v2`: This model is based on the MPNet architecture, which has shown strong performance on various NLP tasks. It is an alternative to the DistilRoBERTa model.
+* We chose `sentence-transformers/paraphrase-distilroberta-base-v1` because it is a high-performance model for generating paraphrase embeddings. It is based on the DistilRoBERTa architecture, which has been shown to perform well on various NLP tasks. The model is also fine-tuned specifically for generating semantically similar embeddings, making it a good choice for this application.
