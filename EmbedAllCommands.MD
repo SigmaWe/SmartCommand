@@ -13,12 +13,10 @@ This repository contains a Python script that generates sentence embeddings for 
   command_url2 = "https://raw.githubusercontent.com/Aljbab14/SmartCommand/refactor/PlugInCommandsOutput.json"
   ```
 
-
 ## Processing:
 * Load the JSON files from the specified URLs.
 * Encode the sentences using the SBERT method.
 * Generate embeddings for command titles and command IDs, depending on the JSON format.
-
 
 ## Output:
 The generated embeddings are saved in separate pickle files, and the script also combines the embeddings from both JSON files into a single pickle file:
@@ -82,16 +80,12 @@ Run the main function to execute the entire process. The script will generate se
 
 ## Methods options:
 * Universal Sentence Encoder `(USE)`: Developed by Google, it encodes text into high-dimensional vectors that can be used for various natural language processing tasks. It can produce better embeddings for longer texts than SBERT.
-
 * `Infersent`: Created by Facebook, it is a sentence encoder that provides semantic representations for sentences. It works well with long sentences and can be used for various NLP tasks.
-
 * `FastText`: Developed by Facebook, it is a library for learning word vectors and performing various NLP tasks. It is particularly efficient for large-scale text classification.
-
 * We chose `SBERT` because it is specifically designed for sentence embeddings and has shown excellent performance on semantic textual similarity tasks. It can generate high-quality embeddings with minimal effort and supports a wide range of pre-trained models.
 
 
 ## Models options:
-
 * `sentence-transformers/paraphrase-MiniLM-L6-v2`: A smaller and faster version of the paraphrase model. It is based on Microsoft's MiniLM architecture, and it has similar performance while being more efficient in terms of speed and memory usage.
 * `sentence-transformers/paraphrase-xlm-r-multilingual-v1`: A multilingual version of the paraphrase model, which supports 50+ languages. It is based on the XLM-R architecture and can be used for multilingual applications.
 * `sentence-transformers/paraphrase-mpnet-base-v2`: This model is based on the MPNet architecture, which has shown strong performance on various NLP tasks. It is an alternative to the DistilRoBERTa model.
