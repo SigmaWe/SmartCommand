@@ -79,3 +79,12 @@ pip install numpy requests sentence_transformers
 ```
 Usage
 Run the main function to execute the entire process. The script will generate separate pickle files for built-in commands and plugin commands, and also combine the embeddings into a single pickle file.
+
+## Methods options:
+* Universal Sentence Encoder `(USE)`: Developed by Google, it encodes text into high-dimensional vectors that can be used for various natural language processing tasks. It can produce better embeddings for longer texts than SBERT.
+
+* `Infersent`: Created by Facebook, it is a sentence encoder that provides semantic representations for sentences. It works well with long sentences and can be used for various NLP tasks.
+
+* `FastText`: Developed by Facebook, it is a library for learning word vectors and performing various NLP tasks. It is particularly efficient for large-scale text classification.
+
+* We chose `SBERT` because it is specifically designed for sentence embeddings and has shown excellent performance on semantic textual similarity tasks. It can generate high-quality embeddings with minimal effort and supports a wide range of pre-trained models.
