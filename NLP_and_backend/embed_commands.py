@@ -28,6 +28,10 @@ def emb_sbert(sentences: typing.List[str], model:str):
 
 def embed_command_titles(command_title_list, method:str, model:str):
     command_titles = [c["command_title"] for c in command_title_list]
+    print(len(command_titles))
+    while "" in command_titles:
+        command_titles.remove("")
+    print(len(command_titles))
     if method == "sbert":
         embeddings = emb_sbert(command_titles, model)
     else:
