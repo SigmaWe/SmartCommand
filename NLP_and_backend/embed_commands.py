@@ -26,6 +26,18 @@ def emb_sbert(sentences: typing.List[str], model:str):
 
     return embeddings
 
+def embed_command_titles(command_title_list, method:str, model:str):
+    command_titles = [c["command_title"] for c in command_title_list]
+    while "" in command_titles:
+        command_titles.remove("")
+    if method == "sbert":
+        embeddings = emb_sbert(command_titles, model)
+    else:
+        print ("other embedding methods not implemented yet")
+        exit()
+    
+    return embeddings
+
 def embed_commands(command_dict_list, method:str, model:str):
     """Embed command strings 
 
@@ -43,12 +55,12 @@ def embed_commands(command_dict_list, method:str, model:str):
     axis 1 for each token. 
 
     """
-    command_strings = [c["to_ebd"] for c in command_dict_list]
+    command_strings = [c["command_id"] for c in command_dict_list]
     if method == "sbert":
         embeddings = emb_sbert(command_strings, model)
     else:
         print ("other embedding methods not implemented yet")
-        exit() 
+        exit()
 
     return embeddings
 
@@ -56,14 +68,18 @@ def pickle_embeddings(embeddings:numpy.ndarray, pickle_file):
     with open(pickle_file, 'wb') as f:
         pickle.dump(embeddings, f)
 
-def main(command_json, pickle_file, method, model):
+def main(command_json, pickle_file, pickle_title_file, method, model):
     commands = load_commands(command_json)
-    embeddings= embed_commands(commands, method, model)
+    titles = load_commands(command_json)
+    embeddings = embed_commands(commands, method, model)
+    embeddings_titles = embed_command_titles(titles, method, model)
     pickle_embeddings(embeddings, pickle_file)
+    pickle_embeddings(embeddings_titles, pickle_title_file)
 
 if __name__ == "__main__":
     import config 
 
-    main(config.command_dict_list_json, 
-         config.command_embedding_pickle, 
+    main(config.command_dict_list_json,
+         config.command_embedding_pickle,
+         config.command_embedding_pickle_title, 
          config.method, config.model)
