@@ -5,7 +5,7 @@ Contains a list of all commands found in the Default Keybindings JSON file, alon
 1. Open Visual Studio Code
 2. Press Ctrl-Shift-P and select "Preferences: Open Default Keyboard Shortcuts (JSON)"
 3. Copy the JSON list from the file and paste it into `default_keybindings.json`
-4. Copy the series of comments under the JSON list and paste it into `default_commands_not_bound.txt`
+4. Copy the series of comments under the JSON list and paste it into `default_commands_not_bound.txt` (make sure to add a newline at the end of the file by pressing Enter)
 5. Open the `get_command_using_gui.py` script and find the comment that tells you to copy the test string
 6. Press Ctrl-Shift-P again and select "Open Keyboard Shortcuts"
 7. Open a Terminal within the VSCode editor and run the `get_commands_using_gui.py` script.
