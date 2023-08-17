@@ -1,3 +1,4 @@
 sentence_transformers 
+jsonc_parser 
 numpy 
 functions-framework==3.*
