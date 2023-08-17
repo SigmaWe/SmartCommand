@@ -12,7 +12,7 @@ The workflow:
 graph TD; 
 
 A[Ctrl/CMD Shift P and save];
-B(Data file: default_keybindings.json) 
+B(Data file: default_keybindings.jsonc) 
 C[Run get_commands_using_gui.py]
 D(Data file: command_title_list.json)
 E[Run embed_commands.py]
@@ -30,19 +30,23 @@ It is surprisingly hard to find the list of built-in commands of VS Code, so we 
 0. Be sure that there is no extensions/plug-ins installed via MarketPlace. Thus only commands that are built-in in VSCode can be covered below. 
 1. Open the VS Code Palette by `View->Command Palette` or `Ctrl/Cmd Shift P`.
 2. In the Command Palette, search for `Open Default Keyboard Shortcuts (JSON)` and press Enter, then a file will open.
-4. Save the file using default name `default_keybindings.json`.
+3. Copy the entire contents of the file and past it into an editor
+4. Make sure to add a newline at the end of the file (by pressing Enter)
+5. Save the file using default name `default_keybindings.jsonc`.
 
 ## Getting the titles (English description) of commands
-0. Set up the specific window arrangement for `get_command_titles_using_gui.py` to simulate manual operations. In VSCode, press `Ctrl/Cmd-Shift-P` and enter "Open Keyboard Shortcuts" which will bring up a table view of commands. 
+0. Open the script `get_command_titles_using_gui.py` and find the comment below and copy the test string
+    ![copy test string](./screenshots/copy_test_string.png)
+1. Set up the specific window arrangement for `get_command_titles_using_gui.py` to simulate manual operations. In VSCode, press `Ctrl/Cmd-Shift-P` and enter "Open Keyboard Shortcuts" which will bring up a table view of commands. 
    ![keyboard shortcuts window](./screenshots/keyboard_shortcuts.png)
-1. Run the script `get_command_titles_using_gui.py` Note that our script hardcode the coordinates of mouse clicks to be simulated, assuming that the desktop resolution to 1920x1080 and the VSCode window is maximized. If you have a different resolution, you need to adjust the values accordingly. 
+2. Run the script `get_command_titles_using_gui.py` Note that our script hardcode the coordinates of mouse clicks to be simulated, assuming that the desktop resolution to 1920x1080 and the VSCode window is maximized. If you have a different resolution, you need to adjust the values accordingly. 
    ```python
    pyautogui.click(x=1000, y=120, clicks=6, button='left')
    pyautogui.typewrite('@command:' + keys_list[i])
    pyautogui.click(x=1000, y=200, clicks=1, button='right')
    pyautogui.click(x=1200, y=295, clicks=1, button='left')
    ```
-2. The script `get_command_titles_using_gui.py` will take about 1 hour to run to simulate the manual operation of searching for a command (extracted from `default_keybindings.json`) and using the right click on the Keyboard Shortcut table to "Copy command title." Leave your computer alone until it finishes. 
+3. The script `get_command_titles_using_gui.py` will take about 1 hour to run to simulate the manual operation of searching for a command (extracted from `default_keybindings.jsonc`) and using the right click on the Keyboard Shortcut table to "Copy command title." Leave your computer alone until it finishes. 
     ![copy command title](./screenshots/copy_command_title.png)
 
 ## Preprocessing and pre-embed the commands 

@@ -1,13 +1,13 @@
 import pyautogui
 from tkinter import Tk
 import tkinter as tk
+from jsonc_parser.parser import JsoncParser
 import json
 import time
 
 pyautogui.PAUSE = 0.5
 
-with open("default_keybindings.json") as d_k:
-  default_keybindings = json.load(d_k)
+default_keybindings = JsoncParser.parse_file("default_keybindings.jsonc")
 
 command_title_dic = {}
 
@@ -15,9 +15,10 @@ for keybinding in default_keybindings:
   if keybinding['command'] not in list(command_title_dic.keys()):
     command_title_dic[keybinding['command']] = ''
 
-c_n_b =  open("default_commands_not_bound.txt")
+c_n_b =  open("default_keybindings.jsonc")
 for command in c_n_b:
-  command_title_dic[command[5:-1]] = ''
+  if command[0:6] == "  // -":
+    command_title_dic[command[7:-1]] = ''
 
 # Ctrl-C the test (without single quotes) before running the script
 last_command = 'test'
