@@ -33,8 +33,7 @@ It is surprisingly hard to find the list of built-in commands of VS Code, so we 
 3. Save the file as `default_keybindings.jsonc`.
 
 ## Getting the titles (English description) of commands
-0. Open the script `get_command_titles_using_gui.py` and find the comment below and copy the test string
-    ![copy test string](./screenshots/copy_test_string.png)
+0. Copy this string - "test" into the system clipboard by highlighting it and pressing Ctrl/Cmd + C (don't copy the quotes)
 1. Set up the specific window arrangement for `get_command_titles_using_gui.py` to simulate manual operations. In VSCode, press `Ctrl/Cmd-Shift-P` and enter "Open Keyboard Shortcuts" which will bring up a table view of commands. 
    ![keyboard shortcuts window](./screenshots/keyboard_shortcuts.png)
 2. Run the script `get_command_titles_using_gui.py` Note that our script hardcode the coordinates of mouse clicks to be simulated, assuming that the desktop resolution to 1920x1080 and the VSCode window is maximized. If you have a different resolution, you need to adjust the values accordingly. 
