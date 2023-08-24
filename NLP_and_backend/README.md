@@ -30,9 +30,7 @@ It is surprisingly hard to find the list of built-in commands of VS Code, so we 
 0. Be sure that there is no extensions/plug-ins installed via MarketPlace. Thus only commands that are built-in in VSCode can be covered below. 
 1. Open the VS Code Palette by `View->Command Palette` or `Ctrl/Cmd Shift P`.
 2. In the Command Palette, search for `Open Default Keyboard Shortcuts (JSON)` and press Enter, then a file will open.
-3. Copy the entire contents of the file and past it into an editor
-4. Make sure to add a newline at the end of the file (by pressing Enter)
-5. Save the file using default name `default_keybindings.jsonc`.
+3. Save the file as `default_keybindings.jsonc`.
 
 ## Getting the titles (English description) of commands
 0. Open the script `get_command_titles_using_gui.py` and find the comment below and copy the test string

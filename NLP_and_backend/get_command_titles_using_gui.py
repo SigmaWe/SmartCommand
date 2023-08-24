@@ -18,7 +18,10 @@ for keybinding in default_keybindings:
 c_n_b =  open("default_keybindings.jsonc")
 for command in c_n_b:
   if command[0:6] == "  // -":
-    command_title_dic[command[7:-1]] = ''
+    last_command_n = command[7:]
+    command_title_dic[last_command_n[:-1]] = ''
+command_title_dic.pop(last_command_n[:-1])
+command_title_dic[last_command_n] = ''
 
 # Ctrl-C the test (without single quotes) before running the script
 last_command = 'test'
