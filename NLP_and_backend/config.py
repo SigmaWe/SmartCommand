@@ -8,6 +8,5 @@ model = 'all-MiniLM-L6-v2'
 
 import os
 model_name_base=os.path.basename(model)
-command_dict_list_json = os.path.join(data_root, "command_title_list.json")
+command_dict_list_json = os.path.join(data_root, "commands_processed.json")
 command_embedding_pickle = os.path.join(data_root, f"embeddings_commands_{method}_{model_name_base}.pickle")
-command_embedding_pickle_title = os.path.join(data_root, f"embeddings_titles_{method}_{model_name_base}.pickle")

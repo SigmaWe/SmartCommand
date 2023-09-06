@@ -15,10 +15,12 @@ A[Ctrl/CMD Shift P and save];
 B(Data file: default_keybindings.jsonc) 
 C[Run get_commands_using_gui.py]
 D(Data file: command_title_list.json)
-E[Run embed_commands.py]
-F(Two-column embeddings of commands and their titles in one Pickle file) 
+E[Run clean_commands.py]
+F(Data file: commands_processed.json)
+G[Run embed_commands.py]
+H(Two-column embeddings of commands and their titles in one Pickle file) 
 A-->B-->C-->D-->E
-E-->F
+E-->F-->G-->H
 ```
 
 
