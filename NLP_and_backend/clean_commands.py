@@ -7,9 +7,7 @@ def remove_repeat_commands(command_dict_list:list[dict]) -> list[dict]:
 
     command_dict_list: a list of commands, 
                        each a dict: 
-                    {"key":str, "command":str, "when":str, "to-ebd": str}
-                    to-ebd is the string to embed the command itself or its label
-
+                    {"command_id":str, "command_title":str, "command_id_normalized":str}
     """
     command_strings = [c['command_id'] for c in command_dict_list]
     unique_commands = []
@@ -31,7 +29,7 @@ def load_all_commands(jsonfile):
 
 def normalize_a_command(s):
     """
-    A command itself can be dot-separated, underline_separated, or in CamelCase
+    A command_id itself can be dot-separated, underline_separated, or in CamelCase
     """
     s = s.replace(".", " ")
     # TODO: we may need to preserve dots 
@@ -47,8 +45,7 @@ def normalize_commands(command_dict_list):
     """
     command_dict_list: a list of commands, 
                        each a dict: 
-                    {"key":str, "command":str, "when":str, "to-ebd": str}
-                    to-ebd is the string to embed the command itself or its label
+                    {"command_id":str, "command_title":str, "command_id_normalized":str}
     """
     for command_dict in command_dict_list:
         command_dict["command_id_normalized"] = normalize_a_command(command_dict['command_id'])

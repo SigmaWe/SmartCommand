@@ -29,10 +29,20 @@ def emb_sbert(sentences: typing.List[str], model:str):
 def embed_commands_and_titles(commands_processed, method:str, model:str):
   command_ids_n = [c["command_id_normalized"] for c in commands_processed]
   command_titles = [c["command_title"] for c in commands_processed]
+
+  empty_title_idx_list = []
+  for i in range(len(command_titles)):
+    if command_titles[i] == "":
+      empty_title_idx_list.append(i)
+  
   if method == "sbert":
       embeddings_ids = emb_sbert(command_ids_n, model)
       embeddings_titles = emb_sbert(command_titles, model)
       # embeddings_ids and embeddings_titles dimensions - (2131, 384)
+
+      for idx in empty_title_idx_list:
+        embeddings_titles[idx] = numpy.zeros(384)
+      
       embeddings = numpy.stack((embeddings_ids, embeddings_titles), axis=1)
       # embeddings dimensions - (2131, 2, 384)
   else:
