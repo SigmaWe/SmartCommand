@@ -26,60 +26,56 @@ def emb_sbert(sentences: typing.List[str], model:str):
 
     return embeddings
 
-def embed_command_titles(command_title_list, method:str, model:str):
-    command_titles = [c["command_title"] for c in command_title_list]
-    while "" in command_titles:
-        command_titles.remove("")
-    if method == "sbert":
-        embeddings = emb_sbert(command_titles, model)
-    else:
-        print ("other embedding methods not implemented yet")
-        exit()
-    
-    return embeddings
-
-def embed_commands(command_dict_list, method:str, model:str):
+def embed_commands_and_titles(commands_processed, method:str, model:str):
     """Embed command strings 
 
-        command_dict_list: a list of commands, 
-                       each a dict: 
-                    {"key":str, "command":str, "when":str, "to-ebd": str}
-                    to-ebd is the string to embed the command itself or its label
-
-
+    command_dict_list: a list of commands, 
+                    each a dict: 
+                {"command_id":str, "command_title":str, "command_id_normalized":str}
+    
     Depending on the approach, the embeddings are of different shapes. 
     For SBERT, the embedding is at the sentence level. Hence, 
     the embeddings are 2D arrays, with axis-0 for each command. 
     For BERTScore, the embedding is at the token level. Hence, the 
     embeddings are 3D arrays, with axis 0 for each command, and 
     axis 1 for each token. 
-
     """
-    command_strings = [c["command_id"] for c in command_dict_list]
+    command_ids_n = [c["command_id_normalized"] for c in commands_processed]
+    command_titles = [c["command_title"] for c in commands_processed]
+
+    empty_title_idx_list = []
+    for i in range(len(command_titles)):
+        if command_titles[i] == "":
+          empty_title_idx_list.append(i)
+    
     if method == "sbert":
-        embeddings = emb_sbert(command_strings, model)
+        embeddings_ids = emb_sbert(command_ids_n, model)
+        embeddings_titles = emb_sbert(command_titles, model)
+        # embeddings_ids and embeddings_titles dimensions - (2131, 384)
+
+        for idx in empty_title_idx_list:
+            embeddings_titles[idx] = numpy.zeros(384)
+        
+        embeddings = numpy.stack((embeddings_ids, embeddings_titles), axis=1)
+        # embeddings dimensions - (2131, 2, 384)
     else:
         print ("other embedding methods not implemented yet")
         exit()
-
+    
     return embeddings
 
 def pickle_embeddings(embeddings:numpy.ndarray, pickle_file):
     with open(pickle_file, 'wb') as f:
         pickle.dump(embeddings, f)
 
-def main(command_json, pickle_file, pickle_title_file, method, model):
+def main(command_json, pickle_file, method, model):
     commands = load_commands(command_json)
-    titles = load_commands(command_json)
-    embeddings = embed_commands(commands, method, model)
-    embeddings_titles = embed_command_titles(titles, method, model)
+    embeddings = embed_commands_and_titles(commands, method, model)
     pickle_embeddings(embeddings, pickle_file)
-    pickle_embeddings(embeddings_titles, pickle_title_file)
 
 if __name__ == "__main__":
     import config 
 
     main(config.command_dict_list_json,
          config.command_embedding_pickle,
-         config.command_embedding_pickle_title, 
          config.method, config.model)
