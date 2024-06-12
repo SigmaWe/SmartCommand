@@ -1,0 +1,1391 @@
+[
+  {
+    "source": "vscode-eslint",
+    "version": "2.4.0",
+    "commands": [
+      {
+        "title": "Fix all auto-fixable Problems",
+        "category": "ESLint",
+        "command": "eslint.executeAutofix"
+      },
+      {
+        "title": "Create ESLint configuration",
+        "category": "ESLint",
+        "command": "eslint.createConfig"
+      },
+      {
+        "title": "Show Output Channel",
+        "category": "ESLint",
+        "command": "eslint.showOutputChannel"
+      },
+      {
+        "title": "Migrate Settings",
+        "category": "ESLint",
+        "command": "eslint.migrateSettings"
+      },
+      {
+        "title": "Restart ESLint Server",
+        "category": "ESLint",
+        "command": "eslint.restart"
+      }
+    ]
+  },
+  {
+    "source": "python",
+    "version": "2023.7.11011538",
+    "commands": [
+      {
+        "title": "%python.command.python.createNewFile.title%",
+        "shortTitle": "%python.menu.createNewFile.title%",
+        "category": "Python",
+        "command": "python.createNewFile"
+      },
+      {
+        "category": "Python",
+        "command": "python.analysis.restartLanguageServer",
+        "title": "%python.command.python.analysis.restartLanguageServer.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearCacheAndReload",
+        "title": "%python.command.python.clearCacheAndReload.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearWorkspaceInterpreter",
+        "title": "%python.command.python.clearWorkspaceInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.configureTests",
+        "title": "%python.command.python.configureTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createTerminal",
+        "title": "%python.command.python.createTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createEnvironment",
+        "title": "%python.command.python.createEnvironment.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableLinting",
+        "title": "%python.command.python.enableLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableSourceMapSupport",
+        "title": "%python.command.python.enableSourceMapSupport.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal",
+        "title": "%python.command.python.execInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal-icon",
+        "icon": "$(play)",
+        "title": "%python.command.python.execInTerminalIcon.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.debugInTerminal",
+        "icon": "$(debug-alt)",
+        "title": "%python.command.python.debugInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInDjangoShell",
+        "title": "%python.command.python.execSelectionInDjangoShell.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInTerminal",
+        "title": "%python.command.python.execSelectionInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.launchTensorBoard",
+        "title": "%python.command.python.launchTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.refreshTensorBoard",
+        "enablement": "python.hasActiveTensorBoardSession",
+        "icon": "$(refresh)",
+        "title": "%python.command.python.refreshTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.reportIssue",
+        "title": "%python.command.python.reportIssue.title%"
+      },
+      {
+        "category": "Test",
+        "command": "testing.reRunFailTests",
+        "icon": "$(run-errors)",
+        "title": "%python.command.testing.rerunFailedTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.runLinting",
+        "title": "%python.command.python.runLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setInterpreter",
+        "title": "%python.command.python.setInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setLinter",
+        "title": "%python.command.python.setLinter.title%"
+      },
+      {
+        "category": "Python Refactor",
+        "command": "python.sortImports",
+        "title": "%python.command.python.sortImports.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.startREPL",
+        "title": "%python.command.python.startREPL.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewLanguageServerOutput",
+        "enablement": "python.hasLanguageServerOutputChannel",
+        "title": "%python.command.python.viewLanguageServerOutput.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewOutput",
+        "icon": {
+          "dark": "resources/dark/repl.svg",
+          "light": "resources/light/repl.svg"
+        },
+        "title": "%python.command.python.viewOutput.title%"
+      },
+      {
+        "title": "%python.command.python.createNewFile.title%",
+        "shortTitle": "%python.menu.createNewFile.title%",
+        "category": "Python",
+        "command": "python.createNewFile"
+      },
+      {
+        "category": "Python",
+        "command": "python.analysis.restartLanguageServer",
+        "title": "%python.command.python.analysis.restartLanguageServer.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearCacheAndReload",
+        "title": "%python.command.python.clearCacheAndReload.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.clearWorkspaceInterpreter",
+        "title": "%python.command.python.clearWorkspaceInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.configureTests",
+        "title": "%python.command.python.configureTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createTerminal",
+        "title": "%python.command.python.createTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.createEnvironment",
+        "title": "%python.command.python.createEnvironment.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableLinting",
+        "title": "%python.command.python.enableLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.enableSourceMapSupport",
+        "title": "%python.command.python.enableSourceMapSupport.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal",
+        "title": "%python.command.python.execInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execInTerminal-icon",
+        "icon": "$(play)",
+        "title": "%python.command.python.execInTerminalIcon.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.debugInTerminal",
+        "icon": "$(debug-alt)",
+        "title": "%python.command.python.debugInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInDjangoShell",
+        "title": "%python.command.python.execSelectionInDjangoShell.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.execSelectionInTerminal",
+        "title": "%python.command.python.execSelectionInTerminal.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.launchTensorBoard",
+        "title": "%python.command.python.launchTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.refreshTensorBoard",
+        "enablement": "python.hasActiveTensorBoardSession",
+        "icon": "$(refresh)",
+        "title": "%python.command.python.refreshTensorBoard.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.reportIssue",
+        "title": "%python.command.python.reportIssue.title%"
+      },
+      {
+        "category": "Test",
+        "command": "testing.reRunFailTests",
+        "icon": "$(run-errors)",
+        "title": "%python.command.testing.rerunFailedTests.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.runLinting",
+        "title": "%python.command.python.runLinting.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setInterpreter",
+        "title": "%python.command.python.setInterpreter.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.setLinter",
+        "title": "%python.command.python.setLinter.title%"
+      },
+      {
+        "category": "Python Refactor",
+        "command": "python.sortImports",
+        "title": "%python.command.python.sortImports.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.startREPL",
+        "title": "%python.command.python.startREPL.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewLanguageServerOutput",
+        "enablement": "python.hasLanguageServerOutputChannel",
+        "title": "%python.command.python.viewLanguageServerOutput.title%"
+      },
+      {
+        "category": "Python",
+        "command": "python.viewOutput",
+        "icon": {
+          "dark": "resources/dark/repl.svg",
+          "light": "resources/light/repl.svg"
+        },
+        "title": "%python.command.python.viewOutput.title%"
+      }
+    ]
+  },
+  {
+    "source": "vscode-pylance",
+    "version": "2023.4.10",
+    "commands": [
+      {
+        "command": "pylance.reportIssue",
+        "title": "Pylance: Report Issue..."
+      },
+      {
+        "command": "pylance.dumpTokens",
+        "title": "Dump token streams ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpNodes",
+        "title": "Dump parse tree ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpTypes",
+        "title": "Dump type info ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpCachedTypes",
+        "title": "Pylance: Dump cached type info ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      },
+      {
+        "command": "pylance.dumpCodeFlowGraph",
+        "title": "Pylance: Dump code flow graph for node ...",
+        "category": "Pylance debugging",
+        "enablement": "editorLangId == python && config.pyright.development"
+      }
+    ]
+  },
+  {
+    "source": "jupyter",
+    "version": "2023.3.1000892223",
+    "commands": [
+      {
+        "command": "dataScience.ClearCache",
+        "title": "%jupyter.command.dataScience.clearCache.title%",
+        "category": "Jupyter (Dev)",
+        "enablement": "jupyter.development"
+      },
+      {
+        "command": "dataScience.ClearUserProviderJupyterServerCache",
+        "title": "%jupyter.command.dataScience.clearUserProviderJupyterServerCache.title%",
+        "category": "Jupyter (Dev)",
+        "enablement": "jupyter.development"
+      },
+      {
+        "command": "jupyter.replayPylanceLog",
+        "title": "%jupyter.command.jupyter.replayPylanceLog.title%",
+        "category": "Jupyter (Dev)",
+        "enablement": "jupyter.development && notebookType == jupyter-notebook && isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.replayPylanceLogStep",
+        "title": "%jupyter.command.jupyter.replayPylanceLogStep.title%",
+        "category": "Jupyter (Dev)",
+        "icon": "$(debug-start)",
+        "enablement": "jupyter.development && notebookType == jupyter-notebook && isWorkspaceTrusted && jupyter.replayLogLoaded && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.filterKernels",
+        "title": "%jupyter.command.jupyter.filterKernels.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension && config.notebook.kernelPicker.type != mru"
+      },
+      {
+        "command": "jupyter.runByLine",
+        "title": "%jupyter.command.jupyter.runByLine.title%",
+        "icon": "$(debug-line-by-line)",
+        "category": "Jupyter",
+        "enablement": "notebookKernel =~ /^ms-toolsai.jupyter\\// && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted && resource not in jupyter.notebookeditor.debugDocuments || !notebookKernel && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runAndDebugCell",
+        "title": "%jupyter.command.jupyter.debugCell.title%",
+        "icon": "$(debug-alt-small)",
+        "category": "Jupyter",
+        "enablement": "notebookKernel =~ /^ms-toolsai.jupyter\\// && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted && resource not in jupyter.notebookeditor.debugDocuments || !notebookKernel && jupyter.ispythonnotebook && notebookCellType == code && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runByLineNext",
+        "title": "%jupyter.command.jupyter.runByLineNext.title%",
+        "icon": "$(debug-line-by-line)",
+        "category": "Jupyter",
+        "enablement": "notebookCellResource in jupyter.notebookeditor.runByLineCells"
+      },
+      {
+        "command": "jupyter.runByLineStop",
+        "title": "%jupyter.command.jupyter.runByLineStop.title%",
+        "icon": "$(debug-continue-small)",
+        "category": "Jupyter",
+        "enablement": "notebookCellResource in jupyter.notebookeditor.runByLineCells"
+      },
+      {
+        "command": "jupyter.viewOutput",
+        "title": "%jupyter.command.jupyter.viewOutput.title%",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.notebookeditor.export",
+        "title": "%DataScience.notebookExportAs%",
+        "shortTitle": "%DataScience.notebookExportAs.shorttitle%",
+        "category": "Notebook",
+        "icon": {
+          "light": "resources/light/export_to_python.svg",
+          "dark": "resources/dark/export_to_python.svg"
+        },
+        "enablement": "notebookType == jupyter-notebook && isWorkspaceTrusted && !jupyter.webExtension || notebookType == jupyter-notebook && isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.export",
+        "title": "%DataScience.notebookExportAs%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.exportAsPythonScript",
+        "title": "%jupyter.command.jupyter.exportAsPythonScript.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.exportToHTML",
+        "title": "%jupyter.command.jupyter.exportToHTML.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.exportToPDF",
+        "title": "%jupyter.command.jupyter.exportToPDF.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension || isWorkspaceTrusted && jupyter.webExtension && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+      },
+      {
+        "command": "jupyter.selectJupyterInterpreter",
+        "title": "%jupyter.command.jupyter.selectJupyterInterpreter.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runcurrentcell",
+        "title": "%jupyter.command.jupyter.runcurrentcell.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugcell",
+        "title": "%jupyter.command.jupyter.debugcell.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugstepover",
+        "title": "%jupyter.command.jupyter.debugstepover.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugstop",
+        "title": "%jupyter.command.jupyter.debugstop.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugcontinue",
+        "title": "%jupyter.command.jupyter.debugcontinue.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.insertCellBelowPosition",
+        "title": "%jupyter.command.jupyter.insertCellBelowPosition.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.insertCellBelow",
+        "title": "%jupyter.command.jupyter.insertCellBelow.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.insertCellAbove",
+        "title": "%jupyter.command.jupyter.insertCellAbove.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.deleteCells",
+        "title": "%jupyter.command.jupyter.deleteCells.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.selectCell",
+        "title": "%jupyter.command.jupyter.selectCell.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.selectCellContents",
+        "title": "%jupyter.command.jupyter.selectCellContents.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.extendSelectionByCellAbove",
+        "title": "%jupyter.command.jupyter.extendSelectionByCellAbove.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.extendSelectionByCellBelow",
+        "title": "%jupyter.command.jupyter.extendSelectionByCellBelow.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.moveCellsUp",
+        "title": "%jupyter.command.jupyter.moveCellsUp.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.moveCellsDown",
+        "title": "%jupyter.command.jupyter.moveCellsDown.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.changeCellToMarkdown",
+        "title": "%jupyter.command.jupyter.changeCellToMarkdown.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.changeCellToCode",
+        "title": "%jupyter.command.jupyter.changeCellToCode.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.gotoNextCellInFile",
+        "title": "%jupyter.command.jupyter.gotoNextCellInFile.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.gotoPrevCellInFile",
+        "title": "%jupyter.command.jupyter.gotoPrevCellInFile.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runcurrentcelladvance",
+        "title": "%jupyter.command.jupyter.runcurrentcelladvance.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runcurrentcellandallbelow.palette",
+        "title": "%jupyter.command.jupyter.runcurrentcellandallbelow.palette.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runallcellsabove.palette",
+        "title": "%jupyter.command.jupyter.runallcellsabove.palette.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugcurrentcell.palette",
+        "title": "%jupyter.command.jupyter.debugcurrentcell.palette.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.execSelectionInteractive",
+        "title": "%jupyter.command.jupyter.execSelectionInteractive.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.createnewinteractive",
+        "title": "%jupyter.command.jupyter.createnewinteractive.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runFileInteractive",
+        "title": "%jupyter.command.jupyter.runFileInteractive.title%",
+        "icon": "$(play)",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.debugFileInteractive",
+        "title": "%jupyter.command.jupyter.debugFileInteractive.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runallcells",
+        "title": "%jupyter.command.jupyter.runallcells.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runallcellsabove",
+        "title": "%jupyter.command.jupyter.runallcellsabove.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runcellandallbelow",
+        "title": "%jupyter.command.jupyter.runcellandallbelow.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runcell",
+        "title": "%jupyter.command.jupyter.runcell.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.runtoline",
+        "title": "%jupyter.command.jupyter.runtoline.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.runfromline",
+        "title": "%jupyter.command.jupyter.runfromline.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.selectjupyteruri",
+        "title": "%jupyter.command.jupyter.selectjupyteruri.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.importnotebook",
+        "title": "%jupyter.command.jupyter.importnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.importnotebookfile",
+        "title": "%jupyter.command.jupyter.importnotebookfile.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.exportoutputasnotebook",
+        "title": "%jupyter.command.jupyter.exportoutputasnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.exportfileasnotebook",
+        "title": "%jupyter.command.jupyter.exportfileasnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.exportfileandoutputasnotebook",
+        "title": "%jupyter.command.jupyter.exportfileandoutputasnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.undocells",
+        "title": "%jupyter.command.jupyter.undocells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.redocells",
+        "title": "%jupyter.command.jupyter.redocells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.interruptkernel",
+        "title": "%jupyter.command.jupyter.interruptkernel.title%",
+        "shortTitle": "%jupyter.command.jupyter.interruptkernel.shorttitle%",
+        "category": "Jupyter",
+        "icon": {
+          "light": "resources/light/interrupt.svg",
+          "dark": "resources/dark/interrupt.svg"
+        },
+        "enablement": "isWorkspaceTrusted && jupyter.interactive.canInterruptNotebookKernel"
+      },
+      {
+        "command": "jupyter.restartkernel",
+        "title": "%jupyter.command.jupyter.restartkernel.title%",
+        "shortTitle": "%jupyter.command.jupyter.restartkernel.shorttitle%",
+        "category": "Jupyter",
+        "icon": {
+          "light": "resources/light/restart-kernel.svg",
+          "dark": "resources/dark/restart-kernel.svg"
+        },
+        "enablement": "isWorkspaceTrusted && jupyter.interactive.canRestartNotebookKernel"
+      },
+      {
+        "command": "jupyter.notebookeditor.restartkernel",
+        "title": "%jupyter.command.jupyter.restartkernel.title%",
+        "shortTitle": "%jupyter.command.jupyter.restartkernel.shorttitle%",
+        "category": "Notebook",
+        "icon": {
+          "light": "resources/light/restart-kernel.svg",
+          "dark": "resources/dark/restart-kernel.svg"
+        },
+        "enablement": "notebookKernel =~ /^ms-toolsai.jupyter\\// && jupyter.notebookeditor.canrestartNotebookkernel && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.selectNativeJupyterUriFromToolBar",
+        "title": "%jupyter.command.jupyter.selectjupyteruri.title%",
+        "category": "Jupyter",
+        "icon": "$(debug-disconnect)",
+        "enablement": "isWorkspaceTrusted && !jupyter.webExtension && config.notebook.kernelPicker.type != mru"
+      },
+      {
+        "command": "jupyter.notebookeditor.addcellbelow",
+        "title": "%jupyter.command.jupyter.notebookeditor.addcellbelow.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.removeallcells",
+        "title": "%jupyter.command.jupyter.notebookeditor.removeallcells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.expandallcells",
+        "title": "%jupyter.command.jupyter.notebookeditor.expandallcells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.notebookeditor.collapseallcells",
+        "title": "%jupyter.command.jupyter.notebookeditor.collapseallcells.title%",
+        "category": "Notebook",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.expandallcells",
+        "title": "%jupyter.command.jupyter.expandallcells.title%",
+        "shortTitle": "%jupyter.command.jupyter.expandallcells.shorttitle%",
+        "category": "Jupyter",
+        "icon": "$(expand-all)"
+      },
+      {
+        "command": "jupyter.collapseallcells",
+        "title": "%jupyter.command.jupyter.collapseallcells.title%",
+        "shortTitle": "%jupyter.command.jupyter.collapseallcells.shorttitle%",
+        "category": "Jupyter",
+        "icon": "$(collapse-all)"
+      },
+      {
+        "command": "jupyter.addcellbelow",
+        "title": "%jupyter.command.jupyter.addcellbelow.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.createnewnotebook",
+        "title": "%jupyter.command.jupyter.createnewnotebook.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.scrolltocell",
+        "title": "%jupyter.command.jupyter.scrolltocell.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.latestExtension",
+        "title": "DataScience.latestExtension",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.enableDebugLogging",
+        "title": "%jupyter.command.jupyter.enableDebugLogging.title%",
+        "category": "Jupyter",
+        "enablement": "!jupyter.webExtension"
+      },
+      {
+        "command": "jupyter.resetLoggingLevel",
+        "title": "%jupyter.command.jupyter.resetLoggingLevel.title%",
+        "enablement": "!jupyter.webExtension",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.showDataViewer",
+        "title": "%jupyter.command.jupyter.showDataViewer.title%",
+        "enablement": "!jupyter.webExtension",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.clearSavedJupyterUris",
+        "title": "%jupyter.command.jupyter.clearSavedJupyterUris.title%",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.openVariableView",
+        "title": "%jupyter.command.jupyter.openVariableView.title%",
+        "shortTitle": "%jupyter.command.jupyter.openVariableView.shorttitle%",
+        "icon": "$(variable-group)",
+        "category": "Jupyter",
+        "enablement": "notebookType == jupyter-notebook && isWorkspaceTrusted || notebookType == interactive && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.openOutlineView",
+        "title": "%jupyter.command.jupyter.openOutlineView.title%",
+        "shortTitle": "%jupyter.command.jupyter.openOutlineView.shorttitle%",
+        "icon": "$(list-unordered)",
+        "category": "Jupyter",
+        "enablement": "notebookType == jupyter-notebook"
+      },
+      {
+        "command": "jupyter.refreshDataViewer",
+        "title": "%DataScience.refreshDataViewerCommandPalette%",
+        "category": "Jupyter",
+        "enablement": "jupyter.dataViewerActive && isWorkspaceTrusted"
+      },
+      {
+        "command": "jupyter.interactive.clearAllCells",
+        "title": "%DataScience.interactiveClearAllCells%",
+        "icon": "$(close)",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.goToCode",
+        "title": "%DataScience.interactiveGoToCode%",
+        "icon": "$(go-to-file)",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.exportasnotebook",
+        "title": "%DataScience.exportDialogTitle%",
+        "shortTitle": "%DataScience.exportAsNotebook.shorttitle%",
+        "icon": "$(save-as)",
+        "enablement": "notebookType == interactive",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.exportas",
+        "title": "%DataScience.notebookExport%",
+        "icon": {
+          "light": "resources/light/export_to_python.svg",
+          "dark": "resources/dark/export_to_python.svg"
+        },
+        "enablement": "notebookType == interactive",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.interactive.copyCell",
+        "title": "%DataScience.interactiveCopyCell%",
+        "icon": "$(copy)",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.runInDedicatedExtensionHost",
+        "title": "%DataScience.runInDedicatedExtensionHost%",
+        "enablement": "!jupyter.webExtension",
+        "category": "Jupyter"
+      },
+      {
+        "command": "jupyter.installPythonExtensionViaKernelPicker",
+        "title": "%DataScience.installPythonExtensionViaKernelPickerTitle%"
+      },
+      {
+        "command": "jupyter.installPythonViaKernelPicker",
+        "title": "%DataScience.installPythonTitle%"
+      },
+      {
+        "command": "jupyter.switchToRemoteKernels",
+        "title": "%DataScience.switchToRemoteKernelsTitle%"
+      }
+    ]
+  },
+  {
+    "source": "vscode-jupyter-cell-tags",
+    "version": "0.1.8",
+    "commands": [
+      {
+        "command": "jupyter-cell-tags.removeTag",
+        "title": "Remove Cell Tag",
+        "icon": "$(close)"
+      },
+      {
+        "command": "jupyter-cell-tags.addTag",
+        "title": "Add Cell Tag",
+        "icon": "$(add)"
+      },
+      {
+        "command": "jupyter-cell-tags.editTagsInJSON",
+        "title": "Edit Cell Tags (JSON)",
+        "icon": "$(go-to-file)"
+      },
+      {
+        "command": "jupyter-cell-tags.paramaterize",
+        "title": "Mark Cell as Parameters"
+      }
+    ]
+  },
+  {
+    "source": "vscode-jupyter-slideshow",
+    "version": "0.1.5",
+    "commands": [
+      {
+        "command": "jupyter-slideshow.switchSlideType",
+        "title": "Switch Slide Type"
+      },
+      {
+        "command": "jupyter-slideshow.editSlideShowInJSON",
+        "title": "Edit Slide Type (JSON)",
+        "icon": "$(go-to-file)"
+      }
+    ]
+  },
+  {
+    "source": "azure-account",
+    "version": "0.11.3",
+    "commands": [
+      {
+        "command": "azure-account.createAccount",
+        "title": "%azure-account.commands.createAccount%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.login",
+        "title": "%azure-account.commands.login%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.loginToCloud",
+        "title": "%azure-account.commands.loginToCloud%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.loginWithDeviceCode",
+        "title": "%azure-account.commands.loginWithDeviceCode%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.logout",
+        "title": "%azure-account.commands.logout%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.reportIssue",
+        "title": "%azure-account.commands.reportIssue%",
+        "category": "%azure-account.commands.azureAccount%"
+      },
+      {
+        "command": "azure-account.selectSubscriptions",
+        "title": "%azure-account.commands.selectSubscriptions%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.selectTenant",
+        "title": "%azure-account.commands.selectTenant%",
+        "category": "%azure-account.commands.azure%"
+      },
+      {
+        "command": "azure-account.uploadFileCloudConsole",
+        "title": "%azure-account.commands.uploadFileCloudConsole%",
+        "category": "%azure-account.commands.azure%"
+      }
+    ]
+  },
+  {
+    "source": "cpptools",
+    "version": "1.14.5",
+    "commands": [
+      {
+        "command": "C_Cpp.ConfigurationSelect",
+        "title": "%c_cpp.command.configurationSelect.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ConfigurationProviderSelect",
+        "title": "%c_cpp.command.configurationProviderSelect.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ConfigurationEditJSON",
+        "title": "%c_cpp.command.configurationEditJSON.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ConfigurationEditUI",
+        "title": "%c_cpp.command.configurationEditUI.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.selectDefaultCompiler",
+        "title": "%c_cpp.command.selectDefaultCompiler.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.SwitchHeaderSource",
+        "title": "%c_cpp.command.switchHeaderSource.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.EnableErrorSquiggles",
+        "title": "%c_cpp.command.enableErrorSquiggles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.DisableErrorSquiggles",
+        "title": "%c_cpp.command.disableErrorSquiggles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ToggleIncludeFallback",
+        "title": "%c_cpp.command.toggleIncludeFallback.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ToggleDimInactiveRegions",
+        "title": "%c_cpp.command.toggleDimInactiveRegions.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.ResetDatabase",
+        "title": "%c_cpp.command.resetDatabase.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.TakeSurvey",
+        "title": "%c_cpp.command.takeSurvey.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RestartIntelliSenseForFile",
+        "title": "%c_cpp.command.restartIntelliSenseForFile.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.LogDiagnostics",
+        "title": "%c_cpp.command.logDiagnostics.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RescanWorkspace",
+        "title": "%c_cpp.command.rescanWorkspace.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.VcpkgClipboardInstallSuggested",
+        "title": "%c_cpp.command.vcpkgClipboardInstallSuggested.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.VcpkgOnlineHelpSuggested",
+        "title": "%c_cpp.command.vcpkgOnlineHelpSuggested.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.GenerateEditorConfig",
+        "title": "%c_cpp.command.generateEditorConfig.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.referencesViewGroupByType",
+        "category": "C/C++",
+        "title": "%c_cpp.command.referencesViewGroupByType.title%",
+        "icon": {
+          "light": "assets/ref-group-by-type-light.svg",
+          "dark": "assets/ref-group-by-type-dark.svg"
+        }
+      },
+      {
+        "command": "C_Cpp.referencesViewUngroupByType",
+        "category": "C/C++",
+        "title": "%c_cpp.command.referencesViewUngroupByType.title%",
+        "icon": {
+          "light": "assets/ref-ungroup-by-type-light.svg",
+          "dark": "assets/ref-ungroup-by-type-dark.svg"
+        }
+      },
+      {
+        "command": "C_Cpp.GoToNextDirectiveInGroup",
+        "title": "%c_cpp.command.GoToNextDirectiveInGroup.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.GoToPrevDirectiveInGroup",
+        "title": "%c_cpp.command.GoToPrevDirectiveInGroup.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.CreateDeclarationOrDefinition",
+        "title": "%c_cpp.command.CreateDeclarationOrDefinition.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RunCodeAnalysisOnActiveFile",
+        "title": "%c_cpp.command.RunCodeAnalysisOnActiveFile.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RunCodeAnalysisOnOpenFiles",
+        "title": "%c_cpp.command.RunCodeAnalysisOnOpenFiles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RunCodeAnalysisOnAllFiles",
+        "title": "%c_cpp.command.RunCodeAnalysisOnAllFiles.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.RemoveAllCodeAnalysisProblems",
+        "title": "%c_cpp.command.RemoveAllCodeAnalysisProblems.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.BuildAndDebugFile",
+        "title": "%c_cpp.command.BuildAndDebugFile.title%",
+        "category": "C/C++",
+        "icon": "$(debug-alt)"
+      },
+      {
+        "command": "C_Cpp.BuildAndRunFile",
+        "title": "%c_cpp.command.BuildAndRunFile.title%",
+        "category": "C/C++",
+        "icon": "$(run)"
+      },
+      {
+        "command": "C_Cpp.AddDebugConfiguration",
+        "title": "%c_cpp.command.AddDebugConfiguration.title%",
+        "category": "C/C++",
+        "icon": "$(debug-configure)"
+      },
+      {
+        "command": "C_Cpp.GenerateDoxygenComment",
+        "title": "%c_cpp.command.GenerateDoxygenComment.title%",
+        "category": "C/C++"
+      },
+      {
+        "command": "C_Cpp.addSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.addSshTarget.title%",
+        "icon": "$(plus)"
+      },
+      {
+        "command": "C_Cpp.removeSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.removeSshTarget.title%",
+        "icon": "$(remove)"
+      },
+      {
+        "command": "C_Cpp.setActiveSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.setActiveSshTarget.title%",
+        "icon": "$(check)"
+      },
+      {
+        "command": "C_Cpp.selectActiveSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.selectActiveSshTarget.title%"
+      },
+      {
+        "command": "C_Cpp.selectSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.selectSshTarget.title%"
+      },
+      {
+        "command": "C_Cpp.activeSshTarget",
+        "category": "C/C++",
+        "title": "%c_cpp.command.activeSshTarget.title%"
+      },
+      {
+        "command": "C_Cpp.refreshCppSshTargetsView",
+        "category": "C/C++",
+        "title": "%c_cpp.command.refreshCppSshTargetsView.title%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "C_Cpp.sshTerminal",
+        "category": "C/C++",
+        "title": "%c_cpp.command.sshTerminal.title%",
+        "icon": "$(terminal)"
+      }
+    ]
+  },
+  {
+    "source": "powershell",
+    "version": "2023.3.3",
+    "commands": [
+      {
+        "command": "PowerShell.ExpandAlias",
+        "title": "Expand Alias",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.EnableISEMode",
+        "title": "Enable ISE Mode",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.DisableISEMode",
+        "title": "Disable ISE Mode (restore to defaults)",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.ToggleISEMode",
+        "title": "Toggle ISE Mode",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.RefreshCommandsExplorer",
+        "title": "Refresh Command Explorer",
+        "category": "PowerShell",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "PowerShell.InsertCommand",
+        "title": "Insert Command",
+        "category": "PowerShell",
+        "icon": "$(pencil)"
+      },
+      {
+        "command": "PowerShell.ShowHelp",
+        "title": "Get Help for Command",
+        "category": "PowerShell",
+        "icon": "$(question)"
+      },
+      {
+        "command": "PowerShell.Debug.Start",
+        "title": "Run",
+        "category": "PowerShell",
+        "icon": "$(run)"
+      },
+      {
+        "command": "PowerShell.RunSelection",
+        "title": "Run Selection",
+        "category": "PowerShell",
+        "icon": "$(debug-line-by-line)"
+      },
+      {
+        "command": "PowerShell.RestartSession",
+        "title": "Restart Session",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.ShowLogs",
+        "title": "Show PowerShell Extension Logs",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.OpenLogFolder",
+        "title": "Open PowerShell Extension Logs Folder",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.GenerateBugReport",
+        "title": "Upload Bug Report to GitHub",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.OpenInISE",
+        "title": "Open Current File in PowerShell ISE",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.PowerShellFindModule",
+        "title": "Find/Install PowerShell Modules from the Gallery",
+        "category": "PowerShell",
+        "deprecationMessage": "This feature is no longer available, we're sorry!"
+      },
+      {
+        "command": "PowerShell.ShowAdditionalCommands",
+        "title": "Show Additional Commands from PowerShell Modules",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.ShowSessionMenu",
+        "title": "Show Session Menu",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.ShowSessionConsole",
+        "title": "Show Extension Terminal",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.NewProjectFromTemplate",
+        "title": "Create New Project from Plaster Template",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.RunPesterTestsFromFile",
+        "title": "Run Pester tests",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.DebugPesterTestsFromFile",
+        "title": "Debug Pester tests",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.OpenExamplesFolder",
+        "title": "Open Examples Folder",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.InvokeRegisteredEditorCommand",
+        "title": "Invoke Registered Editor Command",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.WalkthroughTelemetry",
+        "title": "Walkthrough Telemetry",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.ClosePanel",
+        "title": "Close panel",
+        "category": "PowerShell"
+      },
+      {
+        "command": "PowerShell.PositionPanelLeft",
+        "title": "Move panel left",
+        "category": "PowerShell",
+        "icon": "$(layout-sidebar-left)"
+      },
+      {
+        "command": "PowerShell.PositionPanelBottom",
+        "title": "Move panel to bottom",
+        "category": "PowerShell",
+        "icon": "$(layout-panel-right)"
+      }
+    ]
+  },
+  {
+    "source": "test-adapter-converter",
+    "version": "0.1.7",
+    "commands": [
+      {
+        "command": "testExplorerConverter.useNativeTesting",
+        "title": "Use Native Testing"
+      },
+      {
+        "command": "testExplorerConverter.activate",
+        "title": "Activate Test Adapter Converter"
+      }
+    ]
+  },
+  {
+    "source": "smart-command",
+    "version": "0.0.1",
+    "commands": [
+      {
+        "command": "smart-command.NLPSearch",
+        "title": "NLPSearch"
+      }
+    ]
+  }
+]
